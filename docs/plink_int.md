@@ -4,9 +4,7 @@
 
 # Installation
 
-- plink 파일을 다운받아 원하는 폴더에 넣는다.
-
-<a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
+- plink 파일을 다운 : <a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
 
 - plink 파일을 실행 가능한 파일로 만들어준다.
 ```
