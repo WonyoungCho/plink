@@ -46,7 +46,7 @@ $ cat test.bim
 1       disea_3 0       12      d       D
 ```
 
-- 얼만큼의 빈도를 가지고 nullA_#가 나타나는지 확인.
+- 얼만큼의 빈도를 가지고 `nullA_#`가 나타나는지 확인.
 ```
 $ cat test-temporary.simfreq
 1 nullA_0       0.370886 0.370886       1       1
