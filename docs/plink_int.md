@@ -13,8 +13,18 @@
 $ sudo chmod u+x plink
 ```
 
-Another way of plink installation using conda (1.90b4) : <a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
+Another way of plink installation using conda : <a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
 ```
 $ conda install -c bioconda plink
 ```
 
+# Generate a SNP simulation file
+```
+$ emacs wgas.sim
+
+10 null 0 1 1 1
+10 disease 0 1 2 mult
+```
+```
+$ plink --simulate wgas.sim --make-bed --out test2
+```
