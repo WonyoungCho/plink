@@ -82,7 +82,7 @@ $ cat test-temporary.simfreq
 $ emacs info_DS.py
 from pandas_plink import read_plink1_bin
 
-f_nm="test2"
+f_nm="test"
 
 DS = read_plink1_bin(f_nm+".bed", f_nm+".bim", f_nm+".fam", verbose=False)
 
@@ -121,4 +121,9 @@ Coordinates:
  [2. 1. 1. ... 2. 2. 2.]]
 (2000, 12)
 2000
+```
+
+- Default 로 1000명의 case와 1000명의 control 이 생겼다. 100명씩 생성해 보자.
+```
+$ plink --simulate wgas2.sim --make-bed -out test --simulate-ncases 100 --simulate-ncontrols 100 --simulate-prevalence 0.05
 ```
