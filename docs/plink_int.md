@@ -31,7 +31,7 @@ $ emacs wgas.sim
 ```
 각 필드(행)의 값은 다음을 나타낸다.
 
-1 Number of SNPs in this set
+|> 1 Number of SNPs in this set
 2 Label of this set of SNPs
 3 Lower allele frequency range
 4 Upper allele frequency range
