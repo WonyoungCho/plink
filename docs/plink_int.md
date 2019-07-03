@@ -77,3 +77,48 @@ $ cat test-temporary.simfreq
 1 disea_3       0.800109 0.800109       2       4
 ```
 
+- 생성된 데이터에 대한 정보는 다음과 같다.
+```
+$ emacs info_DS.py
+from pandas_plink import read_plink1_bin
+
+f_nm="test2"
+
+DS = read_plink1_bin(f_nm+".bed", f_nm+".bim", f_nm+".fam", verbose=False)
+
+print(DS)
+print("")
+print(DS.values)
+print(DS.shape)
+print(len(DS))
+```
+```
+$ python info_DS.py
+<xarray.DataArray 'genotype' (sample: 2000, variant: 12)>
+dask.array<shape=(2000, 12), dtype=float64, chunksize=(1024, 12)>
+Coordinates:
+  * sample   (sample) object 'per0' 'per1' 'per2' ... 'per1998' 'per1999'
+  * variant  (variant) object '1_nullA_0' '1_nullA_1' ... '1_disea_3'
+    father   (sample) <U1 '0' '0' '0' '0' '0' '0' ... '0' '0' '0' '0' '0' '0'
+    fid      (sample) <U7 'per0' 'per1' 'per2' ... 'per1997' 'per1998' 'per1999'
+    gender   (sample) <U1 '2' '2' '2' '2' '2' '2' ... '2' '2' '2' '2' '2' '2'
+    iid      (sample) <U7 'per0' 'per1' 'per2' ... 'per1997' 'per1998' 'per1999'
+    mother   (sample) <U1 '0' '0' '0' '0' '0' '0' ... '0' '0' '0' '0' '0' '0'
+    trait    (sample) float64 2.0 2.0 2.0 2.0 2.0 2.0 ... 1.0 1.0 1.0 1.0 1.0
+    a0       (variant) <U1 'd' 'd' 'D' 'D' 'D' 'D' 'd' 'd' 'D' 'D' 'D' 'd'
+    a1       (variant) <U1 'D' 'D' 'd' 'd' 'd' 'd' 'D' 'D' 'd' 'd' 'd' 'D'
+    chrom    (variant) <U1 '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1' '1'
+    cm       (variant) float64 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+    pos      (variant) int64 1 2 3 4 5 6 7 8 9 10 11 12
+    snp      (variant) <U7 'nullA_0' 'nullA_1' 'nullA_2' ... 'disea_2' 'disea_3'
+
+[[1. 1. 2. ... 2. 2. 2.]
+ [1. 2. 0. ... 2. 2. 2.]
+ [1. 2. 1. ... 1. 2. 2.]
+ ...
+ [1. 2. 1. ... 1. 2. 2.]
+ [2. 2. 1. ... 2. 2. 2.]
+ [2. 1. 1. ... 2. 2. 2.]]
+(2000, 12)
+2000
+```
