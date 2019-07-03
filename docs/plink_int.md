@@ -9,4 +9,6 @@
 - Put the downloaded file to some directory.
 
 - Make the file to be executable
+```
 $ sudo chmod u+x plink
+```
