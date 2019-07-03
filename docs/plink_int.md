@@ -29,7 +29,7 @@ $ emacs wgas.sim
 4 nullA 0 1 1 1
 4 disea 0 1 2 mult
 ```
-각 필드(행)의 값은 다음을 나타낸다.
+`wgas.sim` 파일의 각 필드(행) 값은 다음을 나타낸다.
 ```
 1 Number of SNPs in this set
 2 Label of this set of SNPs
@@ -38,7 +38,7 @@ $ emacs wgas.sim
 5 Odds ratio for disease, heterozygote
 6 Odds ratio for disease, homozyygote (or "mult")
 ```
-
+- 데이터를 생성하는 명령어.
 ```
 $ plink --simulate wgas.sim --make-bed --out test
 ```
