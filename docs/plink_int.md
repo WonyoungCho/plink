@@ -4,7 +4,9 @@
 
 # Installation
 
-- plink 파일을 다운받아 원하는 폴더에 넣는다. : <a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
+- plink 파일을 다운받아 원하는 폴더에 넣는다.
+
+<a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
 
 - plink 파일을 실행 가능한 파일로 만들어준다.
 ```
@@ -16,7 +18,7 @@ $ sudo chmod u+x plink
 $ sudo chown user1:user1 plink
 ```
 
-Another way of plink installation using conda : <a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
+Conda를 이용한 다른 방법 : <a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
 ```
 $ conda install -c bioconda plink
 ```
@@ -30,7 +32,7 @@ $ emacs wgas.sim
 4 disea 0 1 2 mult
 ```
 `wgas.sim` 파일의 각 필드(행) 값은 다음을 나타낸다.
-```
+```sh
 1 Number of SNPs in this set
 2 Label of this set of SNPs
 3 Lower allele frequency range
