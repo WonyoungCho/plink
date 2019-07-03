@@ -23,7 +23,7 @@ $ conda install -c bioconda plink
 $ emacs wgas.sim
 4 nullA 0 1 1 1
 4 nullA 0 1 1 1
-4 nullB 0 1 2 mult
+4 disea 0 1 2 mult
 ```
 ```
 $ plink --simulate wgas.sim --make-bed --out test
