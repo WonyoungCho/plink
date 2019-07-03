@@ -30,12 +30,14 @@ $ emacs wgas.sim
 4 disea 0 1 2 mult
 ```
 각 필드(행)의 값은 다음을 나타낸다.
-> 1 Number of SNPs in this set
-> 2 Label of this set of SNPs
-> 3 Lower allele frequency range
-> 4 Upper allele frequency range
-> 5 Odds ratio for disease, heterozygote
-> 6 Odds ratio for disease, homozyygote (or "mult")
+```
+1 Number of SNPs in this set
+2 Label of this set of SNPs
+3 Lower allele frequency range
+4 Upper allele frequency range
+5 Odds ratio for disease, heterozygote
+6 Odds ratio for disease, homozyygote (or "mult")
+```
 
 ```
 $ plink --simulate wgas.sim --make-bed --out test
