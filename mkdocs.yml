@@ -1,0 +1,15 @@
+site_name: Genome Analysis
+site_url: https://github.com/WonyoungCho/plink
+site_description: Tutorial review of plink
+repo_url: https://github.com/WonyoungCho/plink/
+site_author: Wonyoung Cho
+
+extra_javascript: [docs.js]
+
+pages:
+    - Home: 'index.md'
+    - Plink:
+        - 'Introduction' : 'plink_int.md'
+        - 'Example' : 'plink_ex.md'
+
+theme: readthedocs
