@@ -13,7 +13,8 @@
 $ sudo chmod u+x plink
 ```
 
-Another way of installation using conda :
+Another way of plink installation using conda (1.90b4):
 ```
 $ conda install -c bioconda plink
 ```
+<a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
