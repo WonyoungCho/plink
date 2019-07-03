@@ -4,13 +4,16 @@
 
 # Installation
 
-- Download the plink program file : <a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
+- plink 파일을 다운받아 원하는 폴더에 넣는다. : <a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
 
-- Copy the downloaded file to some directory.
-
-- Make the file to be executable
+- plink 파일을 실행 가능한 파일로 만들어준다.
 ```
 $ sudo chmod u+x plink
+```
+
+- 만약 사용권한이 제한된어 실행되지 않을 경우, 소유자를 사용자로 바꾸어 준다 (change owner).
+```
+$ sudo chown user1:user1 plink
 ```
 
 Another way of plink installation using conda : <a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
@@ -19,6 +22,7 @@ $ conda install -c bioconda plink
 ```
 
 # Generate a SNP simulation file
+- dataset을 생성하기 위해서는 
 ```
 $ emacs wgas.sim
 4 nullA 0 1 1 1
