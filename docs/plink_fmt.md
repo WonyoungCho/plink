@@ -2,11 +2,15 @@
 # File format reference
 <a href="https://www.cog-genomics.org/plink/1.9/formats" target="_blank"> https://www.cog-genomics.org/plink/1.9/formats </a>
 
-## .bed (PLINK binary biallelic genotype table)
+## .bed
+**(PLINK binary biallelic genotype table)**
+
 Primary representation of genotype calls at biallelic variants. Must be accompanied by .bim and .fam files.
 
 
-## .bim (PLINK extended MAP file)
+## .bim 
+**(PLINK extended MAP file)**
+
 Extended variant information file accompanying a .bed binary genotype table.
 
 A text file with no header line, and one line per variant with the following six fields:
@@ -18,7 +22,9 @@ A text file with no header line, and one line per variant with the following six
 1. Allele 1 (corresponding to clear bits in .bed; usually minor)
 1. Allele 2 (corresponding to set bits in .bed; usually major)
 
-## .fam (PLINK sample information file)
+## .fam 
+**(PLINK sample information file)**
+
 Sample information file accompanying a .bed binary genotype table. 
 
 A text file with no header line, and one line per sample with the following six fields:
