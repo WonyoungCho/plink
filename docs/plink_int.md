@@ -127,9 +127,3 @@ Coordinates:
 ```
 $ plink --simulate wgas2.sim --make-bed -out test --simulate-ncases 100 --simulate-ncontrols 100 --simulate-prevalence 0.05
 ```
-
-# File format reference
-
-## .bim
-
-## .fam
