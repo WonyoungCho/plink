@@ -9,7 +9,7 @@ Primary representation of genotype calls at biallelic variants. Must be accompan
 
 
 ## .bim 
-**(PLINK extended MAP file)**
+**= # of variant (SNP) (PLINK extended MAP file)**
 
 Extended variant information file accompanying a .bed binary genotype table.
 
@@ -23,7 +23,7 @@ A text file with no header line, and one line per variant with the following six
 1. Allele 2 (corresponding to set bits in .bed; usually major)
 
 ## .fam 
-**(PLINK sample information file)**
+**= # of sample (PLINK sample information file)**
 
 Sample information file accompanying a .bed binary genotype table. 
 
