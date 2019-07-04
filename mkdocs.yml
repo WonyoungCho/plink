@@ -10,6 +10,7 @@ pages:
     - Home: 'index.md'
     - Plink:
         - 'Introduction' : 'plink_int.md'
+        - 'File format' : 'plink_fmt.md'
         - 'Example' : 'plink_ex.md'
 
 theme: readthedocs
