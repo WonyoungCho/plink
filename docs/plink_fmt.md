@@ -2,6 +2,13 @@
 # File format reference
 <a href="https://www.cog-genomics.org/plink/1.9/formats" target="_blank"> https://www.cog-genomics.org/plink/1.9/formats </a>
 
+
+```
+plink.bed      ( binary file, genotype information )
+plink.fam      ( first six columns of mydata.ped ) 
+plink.bim      ( extended MAP file: two extra cols = allele names)
+```
+
 ## .bed
 **(PLINK binary biallelic genotype table)**
 
