@@ -2,7 +2,7 @@
 
 <http://zzz.bwh.harvard.edu/plink/index.shtml>
 
-# Generate a SNP simulation file
+# Generate a simulation file
 - 어떤 dataset을 생성할 것인지 정해준다.
 ```
 $ emacs wgas.sim
@@ -108,3 +108,6 @@ Coordinates:
 ```
 $ plink --simulate wgas2.sim --make-bed -out test --simulate-ncases 100 --simulate-ncontrols 100 --simulate-prevalence 0.05
 ```
+
+# Read `.map`, `.ped` files
+
