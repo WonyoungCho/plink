@@ -10,6 +10,11 @@ $ emacs wgas.sim
 4 nullA 0 1 1 1
 4 disea 0 1 2 mult
 ```
+or
+```
+echo -e "1000\tSNP\t0.00\t1.00\t1.00\t1.00" > wgas.sim
+```
+
 `wgas.sim` 파일의 각 필드(행) 값은 다음을 나타낸다.
 ```sh
 1 Number of SNPs in this set
