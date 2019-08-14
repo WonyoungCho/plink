@@ -69,4 +69,16 @@ A text file with no header line, and one line per sample with the following six 
 1. Within-family ID of father ('0' if father isn't in dataset)
 1. Within-family ID of mother ('0' if mother isn't in dataset)
 1. Sex code ('1' = male, '2' = female, '0' = unknown)
-1. Phenotype value ('1' = control, '2' = case, '-9'/'0'/non-numeric = missing data if case/control)
+1. Phenotype value ('1' = control, '2' = case, '-9'/'0'--out/non-numeric = missing data if case/control)
+
+# Conversion
+
+## `.bed`, `.fam`, `.bim` to `.map` and `.ped`
+```
+plink --bfile filename --recode --tab --out out_file
+```
+
+## `.map` and `.ped` to `.bed`, `.fam`, `.bim`
+```
+plink --file filename --make-bed --out out_file
+```
