@@ -102,3 +102,7 @@ $ less plink.epi.cc.summary
    1   P1            1           19      0.05263        184.7    1   P2
    1   P2            1           19      0.05263        184.7    1   P1
 ```
+
+# Networks
+
+![NETWORKS](network.png)
