@@ -109,4 +109,5 @@ $ less plink.epi.cc.summary
 
 # Ternary Plot
 
-![Ternary_Plot]('ternary.PNG'){width=250px}
+<img src="ternary.PNG" alt="drawing" width="200"/>
+![Ternary_Plot](ternary.PNG)
