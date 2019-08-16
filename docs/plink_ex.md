@@ -35,6 +35,15 @@ $ less plink.assoc
 <http://zzz.bwh.harvard.edu/plink/ld.shtml>
 
 ```
+$ plink --bfile mydata --allow-no-sex --r2 inter-chr --ld-window-r2 0.005
+$ less plink.ld
+
+ CHR_A         BP_A SNP_A  CHR_B         BP_B SNP_B           R2
+     1            6   N5      1           20   P2   0.00615137
+     1           19   P1      1           20   P2     0.017151
+```
+
+```
 $ plink --bfile mydata --allow-no-sex --r2 inter-chr --ld-window-r2 0
 $ less plink.ld
 
