@@ -109,4 +109,4 @@ $ less plink.epi.cc.summary
 
 # Ternary Plot
 
-![Ternary Plot](ternary.png)
+![Ternary_Plot](ternary.png)
