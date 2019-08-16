@@ -106,3 +106,7 @@ $ less plink.epi.cc.summary
 # Networks
 
 ![NETWORKS](network.png)
+
+# Ternary Plot
+
+![Ternary Plot](ternary.png)
