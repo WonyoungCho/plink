@@ -3,7 +3,7 @@
 <http://zzz.bwh.harvard.edu/plink/anal.shtml>
 
 ```
-$ plink --bfile filename --assoc --allow-no-sex
+$ plink --bfile mydata --assoc --allow-no-sex
 $ less plink.assoc
 
  CHR  SNP         BP   A1      F_A      F_U   A2        CHISQ            P           OR
@@ -35,7 +35,7 @@ $ less plink.assoc
 <http://zzz.bwh.harvard.edu/plink/ld.shtml>
 
 ```
-$ plink --bfile filename --r2 -ld-snp-list snplist.txt --allow-no-sex
+$ plink --bfile mydata --r2 -ld-snp-list snplist.txt --allow-no-sex
 $ less plink.ld
 
  CHR_A         BP_A SNP_A  CHR_B         BP_B SNP_B           R2
@@ -61,6 +61,21 @@ $ less plink.ld
      1           20   P2      1           20   P2            1
 ```
 
+```
+$ plink --bfile mydata --ld P1 P2 --allow-no-sex
+
+   R-sq = 0.0279074      D' = 0.16754
+
+   Haplotype     Frequency    Expectation under LE
+   ---------     ---------    --------------------
+          AA      0.068063                0.041069
+          RA      0.134124                0.161118
+          AR      0.135062                0.162056
+          RR      0.662751                0.635757
+
+   In phase alleles are AA/RR
+```
+
 There are other options.
 ```
 $ plink --bfile mydata --ld rs2840528 rs7545940  # LD between rs2840528 and rx7545940
@@ -72,7 +87,7 @@ $ plink --bfile mydata --r2 --ld-window 10 --ld-window-kb 1000 --ld-window-r2 0.
 <http://zzz.bwh.harvard.edu/plink/epi.shtml>
 
 ```
-$ plink --bfile filename --epistasis --allow-no-sex
+$ plink --bfile mydata --epistasis --allow-no-sex
 $ less plink.epi.cc
 
 CHR1 SNP1 CHR2 SNP2       OR_INT         STAT            P
