@@ -58,6 +58,7 @@ print(len(cb))
 print(time.time()-start)
 ```
 
+- Memory usage : about 12Gb.
 
 ||python3 (itertools)|python3 (function)|python3 (loop)|pypy3 (itertools)|pypy3 (function)|pypy3 (loop)|
 |-|-|-|-|-|-|-|
