@@ -414,4 +414,4 @@ $ less plink.epi.cc.summary
 
 # Combinations
 
-![combo_result](./image/combo.png)
+![combo_result](./image/combination.png)
