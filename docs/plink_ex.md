@@ -406,8 +406,12 @@ $ less plink.epi.cc.summary
 
 # Networks
 
-![NETWORKS](network.png)
+![NETWORKS](./image/network.png)
 
 # Ternary Plot
 
-![Ternary_Plot](ternary.PNG)
+![Ternary_Plot](./image/ternary.png)
+
+# Combinations
+
+![combo_result](./image/combo.png)
