@@ -18,8 +18,6 @@ print(time.time()-start)
 import time
 
 def combinations(iterable, r):
-    # combinations('ABCD', 2) --> AB AC AD BC BD CD
-    # combinations(range(4), 3) --> 012 013 023 123
     pool = tuple(iterable)
     n = len(pool)
     if r > n:
