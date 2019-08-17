@@ -32,4 +32,5 @@ print(time.time()-start)
 ```
 
 ||python3(itertools)|python3|pypy3|
+|-|-|-|-|
 |sec|42.61518836021423|520.963995218277|244.8389551639557|
