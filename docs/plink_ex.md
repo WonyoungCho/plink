@@ -829,6 +829,7 @@ $ plink --bfile mydata --r2 --ld-window 10 --ld-window-kb 1000 --ld-window-r2 0.
 
 <http://zzz.bwh.harvard.edu/plink/epi.shtml>
 
+<https://www.cog-genomics.org/plink/1.9/epistasis>
 ```
 $ plink --bfile mydata --allow-no-sex --epistasis --epi1 0.0001 --epi2 0.05
 # OR_INT (=Odds ratio for interaction),
