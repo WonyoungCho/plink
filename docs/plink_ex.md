@@ -108,12 +108,12 @@ $ plink --file mydata --maf 0.01
 ## Hardy-Weinberg Equilibrium
 ```
 $ plink --bfile mydata --allow-no-sex --hardy
-# GENO (=Genotype	counts:	11/12/22),
-# A1 (=Minor	allele	code),
-# A2 (=Major	allele	code),
-# O(HET) (=Observed	heterozygosity),
-# E(HET) (=Expected	heterozygosity),
-# P (=H-W	p-value).
+# GENO (=Genotype counts: 11/12/22),
+# A1 (=Minor allele code),
+# A2 (=Major allele code),
+# O(HET) (=Observed heterozygosity),
+# E(HET) (=Expected heterozygosity),
+# P (=H-W p-value).
 $ less plink.hwe
 
  CHR  SNP     TEST   A1   A2                 GENO   O(HET)   E(HET)            P
