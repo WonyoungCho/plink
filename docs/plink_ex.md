@@ -830,13 +830,19 @@ $ plink --bfile mydata --r2 --ld-window 10 --ld-window-kb 1000 --ld-window-r2 0.
 <http://zzz.bwh.harvard.edu/plink/epi.shtml>
 
 ```
-$ plink --bfile mydata --epistasis --allow-no-sex
+$ plink --bfile mydata --allow-no-sex --epistasis --epi1 0.0001 --epi2 0.05
+# OR_INT (=Odds ratio for interaction),
+# STAT (=Chi-square statistic, 1df),
+# P (=Asymptotic p-value).
 $ less plink.epi.cc
 
 CHR1 SNP1 CHR2 SNP2       OR_INT         STAT            P
    1   P1    1   P2    0.0576579      184.702    4.745e-42
    
 $ less plink.epi.cc.summary
+# N_SIG (=Number of significant epistatic tests (p <= "--epi2" threshold)),
+# N_TOT (=Number of valid tests (i.e. non-zero allele counts, etc)),
+# PROP (=Proportion significant of valid tests).
 
  CHR  SNP        N_SIG        N_TOT         PROP   BEST_CHISQ BEST_CHR BEST_SNP
    1   N0            0           18            0        3.289    1   N9
@@ -844,7 +850,7 @@ $ less plink.epi.cc.summary
    1   N2            0           19            0        3.511    1  N11
    1   N3            1           19      0.05263        8.947    1   N7
    1   N4            0           19            0        2.694    1  N12
-   1   N5            1           19      0.05263        7.606    1  N11
+   1   N5            2           19       0.1053        7.606    1  N11
    1   N6            0           19            0        3.183    1   N0
    1   N7            1           19      0.05263        8.947    1   N3
    1   N8            1           19      0.05263        11.93    1  N14
@@ -858,7 +864,71 @@ $ less plink.epi.cc.summary
    1  N16            0           19            0        3.507    1   P1
    1  N17            0           19            0        2.206    1   N7
    1   P1            1           19      0.05263        184.7    1   P2
-   1   P2            1           19      0.05263        184.7    1   P1
+   1   P2            2           19       0.1053        184.7    1   P1
+```
+
+```
+$ plink --bfile mydata --twolocus P1 P2
+$ less plink.twolocus
+
+All individuals
+===============
+                  P2
+                  a/a        a/A        A/A        0/0        */*
+  P1   a/a          0         26         49          0         75
+       a/A         17        245        238          0        500
+       A/A         43        256        726          0       1025
+       0/0          0          0          0          0          0
+       */*         60        527       1013          0       1600
+
+                  P2
+             a/a        a/A        A/A        0/0        */*
+  P1   a/a   0          0.01625    0.030625   0          0.046875
+       a/A   0.010625   0.153125   0.14875    0          0.3125
+       A/A   0.026875   0.16       0.45375    0          0.640625
+       0/0   0          0          0          0          0
+       */*   0.0375     0.329375   0.633125   0          1
+
+
+Cases
+=====
+                  P2
+                  a/a        a/A        A/A        0/0        */*
+  P1   a/a          0         22         20          0         42
+       a/A         14          7        232          0        253
+       A/A         15        235        255          0        505
+       0/0          0          0          0          0          0
+       */*         29        264        507          0        800
+
+                  P2
+             a/a        a/A        A/A        0/0        */*
+  P1   a/a   0          0.0275     0.025      0          0.0525
+       a/A   0.0175     0.00875    0.29       0          0.31625
+       A/A   0.01875    0.29375    0.31875    0          0.63125
+       0/0   0          0          0          0          0
+       */*   0.03625    0.33       0.63375    0          1
+
+
+Controls
+========
+                  P2
+                  a/a        a/A        A/A        0/0        */*
+  P1   a/a          0          4         29          0         33
+       a/A          3        238          6          0        247
+       A/A         28         21        471          0        520
+       0/0          0          0          0          0          0
+       */*         31        263        506          0        800
+
+                  P2
+             a/a        a/A        A/A        0/0        */*
+  P1   a/a   0          0.005      0.03625    0          0.04125
+       a/A   0.00375    0.2975     0.0075     0          0.30875
+       A/A   0.035      0.02625    0.58875    0          0.65
+       0/0   0          0          0          0          0
+       */*   0.03875    0.32875    0.6325     0          1
+```
+```
+
 ```
 
 # Networks
