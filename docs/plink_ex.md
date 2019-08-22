@@ -170,6 +170,11 @@ $ less plink.hwe
    1   P2    UNAFF    a    A           31/263/506   0.3288   0.3237       0.7433
 ```
 
+Option to extract P <= 0.1:
+```
+
+```
+
 # Association
 
 <http://zzz.bwh.harvard.edu/plink/anal.shtml>
