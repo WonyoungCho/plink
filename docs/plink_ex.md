@@ -16,9 +16,9 @@ $ less plink.lmiss
    1   N6        0     1600        0
    1   N7        0     1600        0
    1   N8        0     1600        0
-   1   N9        0     1600        0
+   1   N9        1     1600   0.0113
    1  N10        0     1600        0
-   1  N11        0     1600        0
+   1  N11        1     1600  0.00565
    1  N12        0     1600        0
    1  N13        0     1600        0
    1  N14        0     1600        0
@@ -34,14 +34,23 @@ $ less plink.imiss
      ind_1      ind_1          N        0       20        0
      ind_2      ind_2          N        0       20        0
      ind_3      ind_3          N        0       20        0
-     ind_4      ind_4          N        0       20        0
+     ind_4      ind_4          N        1       20 0.001074
      ind_5      ind_5          N        0       20        0
      ind_6      ind_6          N        0       20        0
      ind_7      ind_7          N        0       20        0
-     ind_8      ind_8          N        0       20        0
+     ind_8      ind_8          N        1       20 0.001074
      ind_9      ind_9          N        0       20        0
     ind_10     ind_10          N        0       20        0
 ...
+```
+**ex)**
+```
+$ plink --bfile mydata --allow-no-sex --test-missing
+$ less plink.missing
+
+ CHR    SNP     F_MISS_A     F_MISS_U            P
+   1     N9            0       0.0113        0.537
+   1    N11            0      0.00565            1
 ```
 
 The way to exclude 10% missing genotype (default):
