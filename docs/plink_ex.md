@@ -191,11 +191,11 @@ $ plink --bfile mydata --hwe2 0.1 # asymptotic
 
 ```
 $ plink --bfile mydata --allow-no-sex --assoc --ci 0.95
-# A1 (=Minor	allele	name	(based	on	whole	sample)),
-# F_A (=Frequency	of	this	allele	in	cases),
-# F_U (=Frequency	of	this	allele	in	controls),
-# A2 (=Major	allele	name),
-# basic	allelic	test	chi-square	(1df), an asymptotic p-value, estimated OR for A1, SE (=Standard	error),
+# A1 (=Minor allele name (based on whole sample)),
+# F_A (=Frequency of this allele in cases),
+# F_U (=Frequency of this allele in controls),
+# A2 (=Major allele name),
+# basic allelic	test	chi-square	(1df), an asymptotic p-value, estimated OR for A1, SE (=Standard	error),
 # SE (=Standard error),
 # L95 (=Lower bound of Confidential Interval of 95%),
 # L95 (=Upper bound of Confidential Interval of 95%).
