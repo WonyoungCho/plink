@@ -172,7 +172,8 @@ $ less plink.hwe
 
 Option to extract P <= 0.1:
 ```
-
+$ plink --bfile mydata --hwe 0.1 # extract
+$ plink --bfile mydata --hwe2 0.1 # asymptotic
 ```
 
 # Association
