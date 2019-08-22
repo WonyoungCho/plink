@@ -1,4 +1,5 @@
 # Statistics
+<http://zzz.bwh.harvard.edu/plink/thresh.shtml>
 
 ## Missing genotype
 ```
@@ -26,9 +27,24 @@ $ less plink.lmiss
    1  N17        0     1600        0
    1   P1        0     1600        0
    1   P2        0     1600        0
+
+$ less plink.imiss
+
+       FID        IID MISS_PHENO   N_MISS   N_GENO   F_MISS
+     ind_1      ind_1          N        0       20        0
+     ind_2      ind_2          N        0       20        0
+     ind_3      ind_3          N        0       20        0
+     ind_4      ind_4          N        0       20        0
+     ind_5      ind_5          N        0       20        0
+     ind_6      ind_6          N        0       20        0
+     ind_7      ind_7          N        0       20        0
+     ind_8      ind_8          N        0       20        0
+     ind_9      ind_9          N        0       20        0
+    ind_10     ind_10          N        0       20        0
+...
 ```
 
-If you want to exclude 10% missing genotype (the default value), then do it like below.
+The way to exclude 10% missing genotype (default):
 ```
 $ plink --file mydata --mind 0.1 --recode --out cleaned
 
@@ -70,6 +86,11 @@ $ less plink.frq
    1  N17    a    A       0.3894     3200
    1   P1    a    A       0.2031     3200
    1   P2    a    A       0.2022     3200
+```
+
+Only include SNPs with MAF >= 0.01 (default):
+```
+$ plink --file mydata --maf 0.01
 ```
 
 ## Hardy-Weinberg Equilibrium
