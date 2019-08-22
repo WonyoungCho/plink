@@ -4,6 +4,9 @@
 ## Missing genotype
 ```
 $ plink --bfile mydata --allow-no-sex --missing
+# N_MISS (=Number	of	missing	SNPs),
+# N_GENO (=Number	of	non-obligatory	missing	genotypes),
+# F_MISS (=Proportion	of	missing	SNPs).
 $ less plink.lmiss
 
  CHR  SNP   N_MISS   N_GENO   F_MISS
