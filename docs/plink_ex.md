@@ -43,7 +43,7 @@ $ less plink.imiss
     ind_10     ind_10          N        0       20        0
 ...
 ```
-**ex)**
+
 ```
 $ plink --bfile mydata --allow-no-sex --test-missing
 $ less plink.missing
