@@ -90,7 +90,7 @@ $ less plink.ld
 
  CHR_A         BP_A SNP_A      MAF_A  CHR_B         BP_B SNP_B      MAF_B           R2           DP
      1            5   N5   0.395625      1           19   P2   0.202188   0.00611992     0.125729
-     1           18   P1   0.203125      1           19   P2   0.202188    0.0279074      0.16754```
+     1           18   P1   0.203125      1           19   P2   0.202188    0.0279074      0.16754
 ```
 ```
 $ plink --bfile mydata --allow-no-sex --r2 dprime inter-chr with-freqs --ld-window-r2 0.001
