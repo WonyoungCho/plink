@@ -1,5 +1,5 @@
 # Statistics
-<http://zzz.bwh.harvard.edu/plink/thresh.shtml>
+<http://zzz.bwh.harvard.edu/plink/summary.shtml>
 
 ## Missing genotype
 ```
