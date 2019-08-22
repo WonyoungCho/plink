@@ -3,7 +3,7 @@
 <http://zzz.bwh.harvard.edu/plink/anal.shtml>
 
 ```
-$ plink --bfile mydata --assoc --allow-no-sex
+$ plink --bfile mydata --allow-no-sex --assoc
 $ less plink.assoc
 
  CHR  SNP         BP   A1      F_A      F_U   A2        CHISQ            P           OR
@@ -29,7 +29,32 @@ $ less plink.assoc
    1   P2         19    a   0.2012   0.2031    A      0.01744       0.8949       0.9884
 ```
 
+```
+$ plink --bfile mydata --allow-no-sex -logistic beta
+$ less plink.assoc.logistic
 
+ CHR  SNP         BP   A1       TEST    NMISS       BETA         STAT            P
+   1   N0          0    a        ADD     1600    -0.1861       -0.527       0.5982
+   1   N1          1    a        ADD     1600     0.1778        1.683      0.09247
+   1   N2          2    a        ADD     1600    -0.0606      -0.8162       0.4144
+   1   N3          3    a        ADD     1600    0.03801       0.5339       0.5934
+   1   N4          4    a        ADD     1600   -0.06851      -0.7166       0.4736
+   1   N5          5    a        ADD     1600   -0.08788       -1.221       0.2219
+   1   N6          6    a        ADD     1600    -0.0198      -0.2438       0.8074
+   1   N7          7    a        ADD     1600   -0.01599       -0.219       0.8266
+   1   N8          8    a        ADD     1600   -0.03002      -0.3241       0.7459
+   1   N9          9    a        ADD     1600    -0.1378       -1.908      0.05637
+   1  N10         10    a        ADD     1600   -0.04574      -0.1512       0.8798
+   1  N11         11    a        ADD     1600     0.1035        1.473       0.1408
+   1  N12         12    a        ADD     1600    0.03066       0.3714       0.7103
+   1  N13         13    a        ADD     1600    -0.1373        -0.74       0.4593
+   1  N14         14    a        ADD     1600   -0.05508       -0.439       0.6607
+   1  N15         15    a        ADD     1600    0.01735       0.2282       0.8195
+   1  N16         16    a        ADD     1600    0.00376      0.04333       0.9654
+   1  N17         17    a        ADD     1600    -0.0657      -0.9239       0.3556
+   1   P1         18    a        ADD     1600    0.08963        1.036          0.3
+   1   P2         19    a        ADD     1600   -0.01188      -0.1335       0.8938
+```
 # LD calculation
 
 <http://zzz.bwh.harvard.edu/plink/ld.shtml>
