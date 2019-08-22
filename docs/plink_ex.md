@@ -105,6 +105,12 @@ $ plink --file mydata --maf 0.01
 ## Hardy-Weinberg Equilibrium
 ```
 $ plink --bfile mydata --allow-no-sex --hardy
+# GENO (=Genotype	counts:	11/12/22),
+# A1 (=Minor	allele	code),
+# A2 (=Major	allele	code),
+# O(HET) (=Observed	heterozygosity),
+# E(HET) (=Expected	heterozygosity),
+# P (=H-W	p-value).
 $ less plink.hwe
 
  CHR  SNP     TEST   A1   A2                 GENO   O(HET)   E(HET)            P
@@ -181,7 +187,15 @@ $ plink --bfile mydata --hwe2 0.1 # asymptotic
 <http://zzz.bwh.harvard.edu/plink/anal.shtml>
 
 ```
-$ plink --bfile mydata --allow-no-sex --assoc --ci 0.95  # with basic	allelic	test	chi-square	(1df), an asymptotic p-value, estimated OR for A1.
+$ plink --bfile mydata --allow-no-sex --assoc --ci 0.95
+# A1 (=Minor	allele	name	(based	on	whole	sample)),
+# F_A (=Frequency	of	this	allele	in	cases),
+# F_U (=Frequency	of	this	allele	in	controls),
+# A2 (=Major	allele	name),
+# basic	allelic	test	chi-square	(1df), an asymptotic p-value, estimated OR for A1, SE (=Standard	error),
+# SE (=Standard error),
+# L95 (=Lower bound of Confidential Interval of 95%),
+# L95 (=Upper bound of Confidential Interval of 95%).
 $ less plink.assoc
 
  CHR  SNP         BP   A1      F_A      F_U   A2        CHISQ            P           OR           SE          L95          U95
@@ -235,7 +249,8 @@ $ less plink.assoc.fisher
 ```
 
 ```
-$ plink --bfile mydata --allow-no-sex --model  # with an asymptotic p-value, DF (= degrees of freedom)
+$ plink --bfile mydata --allow-no-sex --model
+# with an asymptotic p-value, DF (= degrees of freedom)
 $ less plink.model
 
  CHR  SNP   A1   A2     TEST            AFF          UNAFF        CHISQ   DF            P
@@ -343,6 +358,14 @@ $ less plink.model
 
 ```
 $ plink --bfile mydata --allow-no-sex --assoc --adjust qq-plot
+# UNADJ (=Unadjusted	p-value),
+# GC (=Genomic-control	corrected	p-values),
+# BONF (=Bonferroni	single-step	adjusted	p-values),
+# HOLM (=Holm	(1979)	step-down	adjusted	p-values),
+# SIDAK_SS (=Sidak	single-step	adjusted	p-values),
+# SIDAK_SD (=Sidak	step-down	adjusted	p-values),
+# FDR_BH (=Benjamini	&	Hochberg	(1995)	step-up	FDR	control),
+# FDR_BY (=Benjamini	&	Yeku)eli	(2001)	step-up	FDR	control).
 $ less plink.assoc.adjusted
 
  CHR  SNP      UNADJ         GC         QQ       BONF       HOLM   SIDAK_SS   SIDAK_SD     FDR_BH     FDR_BY
@@ -368,7 +391,11 @@ $ less plink.assoc.adjusted
    1  N16     0.9655     0.9655      0.975          1          1          1          1     0.9655          1
 ```
 ```
-$ plink --bfile mydata --allow-no-sex -logistic beta  # with NMISS (=Number	of	non-missing	individuals	included	in	analysis), BETA (=Regression	coefficient	(--linear)	or	odds	ratio	(--logistic)), STAT (=Coefficient	t-statistics), an asymptotic p-value for t-statistics.
+$ plink --bfile mydata --allow-no-sex -logistic beta 
+# with NMISS (=Number	of	non-missing	individuals	included	in	analysis),
+# BETA (=Regression	coefficient	(--linear)	or	odds	ratio	(--logistic)),
+# STAT (=Coefficient	t-statistics),
+# an asymptotic p-value for t-statistics.
 $ less plink.assoc.logistic
 
  CHR  SNP         BP   A1       TEST    NMISS       BETA         STAT            P
