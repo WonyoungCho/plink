@@ -30,7 +30,7 @@ $ less plink.assoc
 ```
 ```
 $ plink --bfile mydata --allow-no-sex --assoc --adjust qq-plot
-$ less plink.assoc
+$ less plink.assoc.adjusted
 
  CHR  SNP      UNADJ         GC         QQ       BONF       HOLM   SIDAK_SS   SIDAK_SD     FDR_BH     FDR_BY
    1   N9    0.05369    0.05369      0.025          1          1     0.6684     0.6684     0.8913          1
