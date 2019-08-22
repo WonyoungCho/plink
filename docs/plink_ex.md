@@ -179,7 +179,7 @@ $ less plink.hwe
    1   P2    UNAFF    a    A           31/263/506   0.3288   0.3237       0.7433
 ```
 
-Option to extract P <= 0.1:
+Option to extract data with P <= 0.1:
 ```
 $ plink --bfile mydata --hwe 0.1 # extract
 $ plink --bfile mydata --hwe2 0.1 # asymptotic
