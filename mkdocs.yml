@@ -12,6 +12,7 @@ pages:
         - 'Introduction' : 'plink_int.md'
         - 'File format' : 'plink_fmt.md'
         - 'Example' : 'plink_ex.md'
+    - Epistasis: 'epistasis.md'
     - Python:
         - 'Combination' : 'python_combo.md'
 
