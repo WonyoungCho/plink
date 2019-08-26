@@ -63,3 +63,26 @@ print(time.time()-start)
 ||python3 (itertools)|python3 (function)|python3 (loop)|pypy3 (itertools)|pypy3 (function)|pypy3 (loop)|
 |-|-|-|-|-|-|-|
 |sec|42.61518836021423|319.5462818145752|520.963995218277|99.43208312988281|193.73589968681335|244.8389551639557|
+
+```
+import itertools
+from tqdm import tqdm
+import time
+
+start=time.time()
+var=1000
+noCombo=3
+
+combo=itertools.combinations(range(var),noCombo)
+print(len(list(combo)))
+
+cc=[]
+for nc in tqdm(combo):
+    for ac in range(var):
+        if nc[1] == var-1:break
+        if ac>nc[1]:
+            cc.append(list(nc)+[ac])
+
+print(len(cc))
+print(time.time()-start)
+```
