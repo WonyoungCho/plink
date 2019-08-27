@@ -147,3 +147,32 @@ with open('c'+str(noCombo)+'_data.pkl', 'wb') as output:
     output.close()
 '''
 ```
+
+# Multi-processing & MPI4Py
+
+MPI4Py code:
+```
+if __name__=='__main__':
+
+    noCombo=3
+    var=1000
+
+    print(total_combo(var,noCombo),'combinations for',noCombo,'of',var,'variants')
+
+    comm = MPI.COMM_WORLD
+    size = comm.Get_size()
+    rank = comm.Get_rank()
+
+    noProc=size
+    interval=total_combo(var,noCombo)/size
+
+    if interval%1==0:
+        print(interval)
+
+        cal_combo(var,noCombo, interval*rank, interval*(rank+1))
+```
+
+||Multiprocessing (python3)|Multiprocessing (pypy3)|MPI4Py (python3)|
+|-|-|-|-|-|
+|iterate speed(it/s)|2.7x10e6|1.5x10e7|2.7x10e6|1.5x10e7|
+|time(s)|41|11|41|10|
