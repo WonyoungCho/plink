@@ -64,6 +64,7 @@ print(time.time()-start)
 |-|-|-|-|-|-|-|
 |sec|42.61518836021423|319.5462818145752|520.963995218277|99.43208312988281|193.73589968681335|244.8389551639557|
 
+# Expand to next combo
 ```
 import itertools
 from tqdm import tqdm
@@ -85,4 +86,69 @@ for nc in tqdm(combo):
 
 print(len(cc))
 print(time.time()-start)
+```
+
+# Multi-processing
+
+```
+import pickle
+import itertools
+from tqdm import tqdm
+from math import factorial
+from multiprocessing import Process
+import itertools
+
+
+def total_combo(n, r):
+    return factorial(n) // factorial(r) // factorial(n-r)
+
+
+
+'''
+def cal_combo(pid,start,end):
+    with open('c3_data.pkl','rb') as pkl_file:
+        data = pickle.load(pkl_file)
+        for i in enumerate(tqdm(data)):
+            if i[0] >= start:
+                if i[0] < start+10: print(i)
+                if i[0] > end: break
+    pkl_file.close()
+'''
+
+def cal_combo(var,noCombo,start,end):
+    data = itertools.combinations(range(var),noCombo)
+    for i in enumerate(tqdm(data)):
+        if i[0] >= start:
+            if i[0] < start+10: print(i)
+            if i[0] > end: break
+
+
+if __name__=='__main__':
+
+    noCombo=3
+    var=1000
+
+    print(total_combo(var,noCombo),'combinations for',noCombo,'of',var,'variants')
+    noProc=6
+    interval=total_combo(var,noCombo)/noProc
+    if interval%1==0:
+        print(interval)
+
+        procs=[]
+
+        for pid in range(noProc):
+            proc = Process(target=cal_combo, args=(var,noCombo, interval*pid, interval*(pid+1)))
+            procs.append(proc)
+            proc.start()
+
+        for proc in procs:
+            proc.join()
+'''
+data_raw=itertools.combinations(range(var),noCombo)
+
+
+with open('c'+str(noCombo)+'_data.pkl', 'wb') as output:
+    pickle.dump(data_raw, output, protocol=pickle.HIGHEST_PROTOCOL)
+    output.close()
+'''
 ```
