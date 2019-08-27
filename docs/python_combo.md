@@ -174,5 +174,5 @@ if __name__=='__main__':
 
 ||Multiprocessing (python3)|Multiprocessing (pypy3)|MPI4Py (python3)|MPI4PY (pypy3)
 |-|-|-|-|-|
-|iterate speed(it/s)|2.7x10e6|1.5x10e7|2.7x10e6|1.5x10e7|
-|time(s)|41|11|41|10|
+|iterate speed (it/s)|2.7x10e6|1.5x10e7|2.7x10e6|1.5x10e7|
+|time (s)|41|11|41|10|
