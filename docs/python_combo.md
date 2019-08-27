@@ -98,11 +98,8 @@ from math import factorial
 from multiprocessing import Process
 import itertools
 
-
 def total_combo(n, r):
     return factorial(n) // factorial(r) // factorial(n-r)
-
-
 
 '''
 def cal_combo(pid,start,end):
@@ -121,7 +118,6 @@ def cal_combo(var,noCombo,start,end):
         if i[0] >= start:
             if i[0] < start+10: print(i)
             if i[0] > end: break
-
 
 if __name__=='__main__':
 
@@ -145,7 +141,6 @@ if __name__=='__main__':
             proc.join()
 '''
 data_raw=itertools.combinations(range(var),noCombo)
-
 
 with open('c'+str(noCombo)+'_data.pkl', 'wb') as output:
     pickle.dump(data_raw, output, protocol=pickle.HIGHEST_PROTOCOL)
