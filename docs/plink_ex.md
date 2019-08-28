@@ -73,6 +73,7 @@ cleaned.fam # generated
 ```
 
 ## Allele Frequency
+- MAF (=Minor Allele Frequency) = P(geno=1, Aa)x0.5 + P(geno=2, aa)
 ```
 $ plink --bfile mydata --allow-no-sex --freq
 $ less plink.frq
