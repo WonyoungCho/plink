@@ -199,7 +199,7 @@ $ plink --bfile mydata --allow-no-sex --assoc --ci 0.95
 # basic allelic test chi-square (1df), an asymptotic p-value, estimated OR for A1,
 # SE (=Standard error),
 # L95 (=Lower bound of Confidential Interval of 95%),
-# L95 (=Upper bound of Confidential Interval of 95%).
+# U95 (=Upper bound of Confidential Interval of 95%).
 $ less plink.assoc
 
  CHR  SNP         BP   A1      F_A      F_U   A2        CHISQ            P           OR           SE          L95          U95
