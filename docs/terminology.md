@@ -11,7 +11,6 @@
 
 
 **Reference**
-
 - <http://www.incodom.kr/SNP>
 
 - <http://www.incodom.kr/Haplotype>
