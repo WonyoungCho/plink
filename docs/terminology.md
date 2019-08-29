@@ -8,7 +8,10 @@
 - 반수체 (haploid) : 생식세포같이 하나만 있는 것.
 - 유전자 연관 (genetic linkage) : 유전학상 유전자가 항상 연관을 가지고 행동을 같이 하는 현상.
 - 감수분열 (meiosis) : 생식세포를 만들기 위한 진핵생물의 세포 분열 형태 중 하나.
+- D' : Normalized LD coefficient.
+- Epistasis : a marking effect whereby a variant or allele at one locus prevents the variant at another locus from manifesting its effect.
 
+> - Linkage disequilibrium is a population-level characteristic.
 
 **Reference**
 
