@@ -11,6 +11,9 @@
 
 
 **Reference**
+
 - <http://www.incodom.kr/SNP>
+
 - <http://www.incodom.kr/Haplotype>
+
 - <http://www.incodom.kr/Linkage_Disequilibrium>
