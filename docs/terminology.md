@@ -10,7 +10,7 @@
 - 감수분열 (meiosis) : 생식세포를 만들기 위한 진핵생물의 세포 분열 형태 중 하나.
 
 
-*Reference*
+**Reference**
 - <http://www.incodom.kr/SNP>
 - <http://www.incodom.kr/Haplotype>
 - <http://www.incodom.kr/Linkage_Disequilibrium>
