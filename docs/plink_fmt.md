@@ -32,6 +32,10 @@ A text file with a header line, and then one line per variant with the following
 1. NP	Number of permutations performed for this variant
 
 ```
+FID IID PAT MAT SEX PHENOTYPE snp1_2 snp1_HET snp2_G snp2_HET
+```
+
+```
 plink.bed      ( binary file, genotype information )
 plink.fam      ( first six columns of mydata.ped ) 
 plink.bim      ( extended MAP file: two extra cols = allele names)
