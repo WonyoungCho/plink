@@ -1,4 +1,4 @@
-This analysis is based on HapMap 1000 genome data, downloaded from below link.
+This analysis is based on HapMap 1000 genome data which is downloaded from below link.
 
 <http://hgdownload.cse.ucsc.edu/gbdb/hg19/1000Genomes/phase3/>.
 
