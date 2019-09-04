@@ -15,10 +15,9 @@ bfile='out1.ped'
 
 a=pd.read_csv(bfile,header = None,sep='\s+|\t+', index_col=0,engine='python')
 
-add=np.array(range(1,a.shape[0]+1))#.reshape(1,-1)
-print(add)
-
+add=np.array(range(1,a.shape[0]+1))
 a[1]=add
+
 print(a.head())
 
 outFile='out_re.ped'
