@@ -1,8 +1,6 @@
 # Data
 
-- Data file : [test_set2.csv](test_set2.csv)
-
-(<https://github.com/EpistasisLab/scikit-mdr/tree/master/data>)
+- Data file : [test_set2.csv](test_set2.csv) (<https://github.com/EpistasisLab/scikit-mdr/tree/master/data>)
 
 # Statistics
 <http://zzz.bwh.harvard.edu/plink/summary.shtml>
