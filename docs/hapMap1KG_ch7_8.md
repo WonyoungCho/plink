@@ -15,22 +15,15 @@ bfile='out1.ped'
 
 a=pd.read_csv(bfile,header = None,sep='\s+|\t+', index_col=0,engine='python')
 
-#for n in range(a.shape[0]):
-#print(a.columns)
 add=np.array(range(1,a.shape[0]+1))#.reshape(1,-1)
 print(add)
-
 
 a[1]=add
 print(a.head())
 
-#for n in range(a.shape[0]):
-#    a.iloc[n,0]=n
-
-#print(a)
-
 outFile='out_re.ped'
 a.to_csv(outFile,sep='\t', header=False)
+
 a=pd.read_csv(outFile,header = None,sep='\s+|\t+',engine='python')
 print(a.head())
 ```
