@@ -1,3 +1,7 @@
+# Data
+
+[data](test_set2.csv)
+
 # Statistics
 <http://zzz.bwh.harvard.edu/plink/summary.shtml>
 
