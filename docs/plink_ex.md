@@ -1,6 +1,7 @@
 # Data
 
 - Data file : [test_set2.csv](test_set2.csv)
+<a href="test_set2.csv">This is a link</a>
 
 # Statistics
 <http://zzz.bwh.harvard.edu/plink/summary.shtml>
