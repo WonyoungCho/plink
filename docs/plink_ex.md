@@ -1,6 +1,6 @@
 # Data
 
-- Data file : [test_set2](test_set2.csv)
+- Data file : [test_set2.csv](test_set2.csv)
 
 # Statistics
 <http://zzz.bwh.harvard.edu/plink/summary.shtml>
