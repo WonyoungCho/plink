@@ -106,7 +106,7 @@ sample : 2000 , variant : 1751
 0  DSL1   rs10956767  3238  0.18875  0.31125  0.0  0.0
 0  DSL1   rs10956767  3239  0.41725  0.08275  0.0  0.0
 ```
-- PLink analysis
+- plink analysis
 ```
 import os
 
