@@ -27,6 +27,8 @@ a=pd.read_csv(outFile,header = None,sep='\s+|\t+',engine='python')
 print(a.head())
 ```
 
+# Data analysis
+
 - Penetrance
 ```
 import numpy as np
@@ -52,6 +54,7 @@ print('Probability =',prob)
 print('x =',x)
 print('y =',y)
 ```
+
 ![Penetrance](image/penetrance.png)
 
 ```
