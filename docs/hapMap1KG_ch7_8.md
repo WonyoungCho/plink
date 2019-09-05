@@ -27,3 +27,37 @@ a=pd.read_csv(outFile,header = None,sep='\s+|\t+',engine='python')
 print(a.head())
 ```
 
+- Penetrance
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+beta1,beta2 = 0,0
+beta0,beta3 = -5,0.75
+
+g2=1
+g1 = np.array([3,2,1])
+
+logit = beta0 + beta1*g1 + beta2*g2 + beta3*g1*g2
+prob = 1/(1+np.exp(-logit))
+
+x=np.array(range(-10,1))
+y=1/(1+np.exp(-x))
+
+plt.plot(x,y)
+plt.plot(logit,prob,'ro')
+plt.show()
+
+print('Probability =',prob)
+print('x =',x)
+print('y =',y)
+```
+![Penetrance](image/penetrance.png)
+
+```
+Probability = [0.06008665 0.02931223 0.01406363]
+x = [-10  -9  -8  -7  -6  -5  -4  -3  -2  -1   0]
+y = [4.53978687e-05 1.23394576e-04 3.35350130e-04 9.11051194e-04
+ 2.47262316e-03 6.69285092e-03 1.79862100e-02 4.74258732e-02
+ 1.19202922e-01 2.68941421e-01 5.00000000e-01]
+```
