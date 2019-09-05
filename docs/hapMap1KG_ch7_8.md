@@ -71,7 +71,7 @@ def countSample(n,data,name,rs,loc):
     b=[]
     for i in range(n):
         b.append(data[i][loc+5])
- c=pd.DataFrame(np.array([name,rs,loc,b.count(1)/(2*n),b.count(2)/(2*n),b.count(3)/(2*n),b.count(4)/(2*n)]).reshape((1,7)),columns=['name','rsID','loc','A','C','G','T'])
+    c=pd.DataFrame(np.array([name,rs,loc,b.count(1)/(2*n),b.count(2)/(2*n),b.count(3)/(2*n),b.count(4)/(2*n)]).reshape((1,7)),columns=['name','rsID','loc','A','C','G','T'])
     return c
 
 def main(bfile):
