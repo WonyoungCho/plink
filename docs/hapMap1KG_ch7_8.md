@@ -61,3 +61,39 @@ y = [4.53978687e-05 1.23394576e-04 3.35350130e-04 9.11051194e-04
  2.47262316e-03 6.69285092e-03 1.79862100e-02 4.74258732e-02
  1.19202922e-01 2.68941421e-01 5.00000000e-01]
 ```
+
+- Frequency
+```
+import pandas as pd
+import numpy as np
+
+def countSample(n,data,name,rs,loc):
+    b=[]
+    for i in range(n):
+        b.append(data[i][loc+5])
+                        c=pd.DataFrame(np.array([name,rs,loc,b.count(1)/(2*n),b.count(2)/(2*n),b.count(3)/(2*n),b.count(4)/(2*n)]).reshape((1,7)),columns=['name','rsID','loc','A','C','G','T'])
+    return c
+
+def main(bfile):
+    a=pd.read_csv(bfile+'.ped',header = None,sep='\s+|\t+', index_col=0,engine='python')
+    b=pd.read_csv(bfile+'.map',header = None,sep='\s+|\t+', index_col=0,engine='python')
+    a_case=a[a[5]==2]
+    a_control=a[a[5]==1]
+
+    a=np.array(a)
+    n=a.shape[0]
+    p=(a.shape[1]-5)/2
+    print('sample :',n,', variant :',p)
+    '''
+    for j in range(5):
+        print(j, np.count_nonzero(a[0][5:] == j))
+    '''
+
+    loc=1619
+    c=countSample(n,a,'DSL1 ',b.iloc[loc,0],loc*2)
+    c=c.append(countSample(n,a,'DSL1 ',b.iloc[loc,0],loc*2+1))
+    print(c)
+    
+if __name__=='__main__':
+    main('out_1234')
+```
