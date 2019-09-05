@@ -133,9 +133,9 @@ colors = [(random(), random(), random()) for _i in range(len(set(df['CHR'])))]
 
 G=nx.Graph()
 sil=[]
-for chrsm in set(df['CHR']):
-    si=df[df['CHR']==chrsm]['SNP']
-    bs=df[df['CHR']==chrsm]['BEST_SNP']
+for chr in set(df['CHR']):
+    si=df[df['CHR']==chr]['SNP']
+    bs=df[df['CHR']==chr]['BEST_SNP']
     ld=list(zip(si,bs))
     G.add_nodes_from(si)
     G.add_edges_from(ld)
