@@ -150,5 +150,5 @@ for n1 in enumerate(sil):
 plt.savefig(bfile+".png",dpi=200)
 plt.show()
 ```
-- BestSNPs in dataset.
+- Best SNPs in dataset.
 ![networkx](image/net_ch78.png)
