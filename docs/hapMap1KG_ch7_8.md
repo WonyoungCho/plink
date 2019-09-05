@@ -82,7 +82,7 @@ def main(bfile):
 
     a=np.array(a)
     n=a.shape[0]
-    p=(a.shape[1]-5)/2
+    p=int((a.shape[1]-5)/2)
     print('sample :',n,', variant :',p)
     '''
     for j in range(5):
