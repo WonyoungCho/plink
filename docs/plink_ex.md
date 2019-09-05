@@ -2,6 +2,18 @@
 
 - Data file : [test_set2.csv](data/test_set2.csv) (<https://github.com/EpistasisLab/scikit-mdr/tree/master/data>)
 
+# Recode allele type
+<http://zzz.bwh.harvard.edu/plink/dataman.shtml>
+```
+$ plink --bfile mydata --recode --alleleACGT # 1234 to AGCT
+
+$ plink --bfile mydata --recode --allele1234 # AGCT to 1234
+
+$ plink --bfile mydata --recodeAD # Additive and dominance components, plink.raw
+
+$ plink --bfile mydata --recode-rlist # Listing by minor allele count, plink.rlist
+```
+
 # Statistics
 <http://zzz.bwh.harvard.edu/plink/summary.shtml>
 
