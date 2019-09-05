@@ -97,3 +97,9 @@ def main(bfile):
 if __name__=='__main__':
     main('out_1234')
 ```
+```
+sample : 2000 , variant : 1751
+    name        rsID   loc        A        C    G    T
+0  DSL1   rs10956767  3238  0.18875  0.31125  0.0  0.0
+0  DSL1   rs10956767  3239  0.41725  0.08275  0.0  0.0
+```
