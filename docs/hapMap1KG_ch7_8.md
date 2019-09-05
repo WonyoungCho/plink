@@ -103,3 +103,14 @@ sample : 2000 , variant : 1751
 0  DSL1   rs10956767  3238  0.18875  0.31125  0.0  0.0
 0  DSL1   rs10956767  3239  0.41725  0.08275  0.0  0.0
 ```
+- PLink analysis
+```
+import os
+
+os.system("cp ch78work.map out.map")
+os.system("plink --file out --alleleACGT --out out_ACGT")
+os.system("plink --file out_ACGT --freq")
+os.system("plink --file out_ACGT --assoc --ci 0.95")
+os.system("plink --file out_ACGT --r2 dprime inter-chr with-freqs --ld-window-r2 0")
+os.system("plink --file out_ACGT --epistasis")
+```
