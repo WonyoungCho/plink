@@ -108,9 +108,43 @@ sample : 2000 , variant : 1751
 import os
 
 os.system("cp ch78work.map out.map")
-os.system("plink --file out --alleleACGT --out out_ACGT")
-os.system("plink --file out_ACGT --freq")
-os.system("plink --file out_ACGT --assoc --ci 0.95")
-os.system("plink --file out_ACGT --r2 dprime inter-chr with-freqs --ld-window-r2 0")
-os.system("plink --file out_ACGT --epistasis")
+os.system("plink --file out --recode --alleleACGT --out outACGT")
+os.system("plink --file outACGT --freq")
+os.system("plink --file outACGT --assoc --ci 0.95")
+os.system("plink --file outACGT --r2 dprime inter-chr with-freqs --ld-window-r2 0")
+os.system("plink --file outACGT --epistasis")
 ```
+
+- Newwork relation
+```
+import pandas as pd
+import networkx as nx
+import matplotlib.plot as plt
+from random import random
+
+
+epi='plink.epi.cc.summary'
+df=pd.read_csv(epi,sep='\s+|\t+',engine='python')
+
+colors = [(random(), random(), random()) for _i in range(len(set(df['CHR'])))]
+
+G=nx.Graph()
+sil=[]
+for chrsm in set(df['CHR']):
+    si=df[df['CHR']==chrsm]['SNP']
+    bs=df[df['CHR']==chrsm]['BEST_SNP']
+    ld=list(zip(si,bs))
+    G.add_nodes_from(si)
+    G.add_edges_from(ld)
+    sil.append(si)
+
+pos=nx.spring_layout(G)
+d = nx.degree(G)
+
+for n1 in enumerate(sil):
+    nx.draw(G,pos=pos,with_labels=False,font_size=5, node_size=[v[1] * 20 for v in d],node_shape='o',nodelist=list(n1[1]), node_color=colors[n1[0]],alpha=0.8)
+
+plt.savefig(bfile+".png",dpi=200)
+plt.show()
+```
+![networkx](image/net_ch78.png)
