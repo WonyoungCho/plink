@@ -118,7 +118,7 @@ os.system("plink --file outACGT --r2 dprime inter-chr with-freqs --ld-window-r2 
 os.system("plink --file outACGT --epistasis")
 ```
 
-- Newwork relation
+- SNP networks
 ```
 import pandas as pd
 import networkx as nx
