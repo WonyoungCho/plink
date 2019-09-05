@@ -90,6 +90,7 @@ cleaned.fam # generated
 ```
 $ plink --bfile mydata --allow-no-sex --freq
 $ less plink.frq
+# A1 (=Minor allele code), A2 (=Major allele code).
 
  CHR  SNP   A1   A2          MAF  NCHROBS
    1   N0    a    A      0.01031     3200
