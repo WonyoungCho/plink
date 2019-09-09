@@ -14,3 +14,8 @@ def major_minor(df):
     
     return df
 ```
+
+# all, any
+
+- all : 0이 없으면 True
+- any : 전부 0이면 False
