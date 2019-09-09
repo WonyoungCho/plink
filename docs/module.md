@@ -19,3 +19,22 @@ def major_minor(df):
 
 - all : 0이 없으면 True
 - any : 전부 0이면 False
+
+# Genotype table
+```
+def build_table(gt, cnt, noCombo,model):
+    zgt=set(np.argwhere(gt == 0).T[0])
+    ncnt=list(set(list(range(len(cnt))))-zgt)
+    gt=gt[ncnt]
+    cnt=cnt[ncnt]
+
+    if model ==4: noGeno=3
+    else: noGeno=2
+
+    idx_weight = np.power(noGeno, np.arange(noCombo-1, -1, -1))
+    idx = np.dot(gt-1, idx_weight)
+    tb = np.zeros(noGeno**noCombo)
+    tb[idx] = cnt
+    tb = tb.astype(int)
+    return tb
+```
