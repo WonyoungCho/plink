@@ -1,7 +1,7 @@
 # Model dependency
 ```
 def major_minor(df):
-    for i in range(df.head().shape[0]):
+    for i in range(df.shape[0]):
         cnt=df.iloc[i].value_counts()
         if cnt[1] < cnt[3]:
             df.iloc[i]=df.iloc[i].replace(1,4)
