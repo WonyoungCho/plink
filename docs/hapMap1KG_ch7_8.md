@@ -187,3 +187,18 @@ def color_table(bfile):
     plt.grid()
     plt.show()
 ```
+
+# Major or Minor
+```
+def major_minor(df):
+    for i in range(df.head().shape[0]):
+        cnt=df.iloc[i].value_counts()
+        print(cnt)
+
+        if cnt[1] > cnt[3]:
+            df.iloc[i]=df.iloc[i].replace(1,4)
+            df.iloc[i]=df.iloc[i].replace(3,1)
+            df.iloc[i]=df.iloc[i].replace(4,3)
+
+        print(df.iloc[i].value_counts())
+```
