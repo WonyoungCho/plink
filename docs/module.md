@@ -16,6 +16,10 @@ def major_minor(df):
 ```
 
 # Mask for models
+- Dominant : 0이 있으면 wild.
+- Heterozygous : 1이 있으면 wild.
+- Recessive : 0이 있으면 wild.
+
 ```
 def mask_array(gt,noCombo,model):
     a={1:2,2:2,3:2,4:3,5:0,6:1,7:0}
