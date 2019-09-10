@@ -15,6 +15,21 @@ def major_minor(df):
     return df
 ```
 
+# Mask for models
+```
+def mask_array(gt,noCombo,model):
+    a={1:2,2:2,3:2,4:3,5:0,6:1,7:0}
+    print(gt)
+    maskResult = np.full(a[model]**noCombo,True)
+    if model!=4:
+        zgt=list(set(np.argwhere(gt == a[model+4]).T[0]))
+        maskResult[zgt]=False
+        if model==2: maskResult=~maskResult
+
+    return maskResult
+```
+
+
 # all, any
 
 - all : 0이 없으면 True
