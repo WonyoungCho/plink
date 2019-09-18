@@ -16,7 +16,8 @@ pages:
     - Terminology: 'terminology.md'
     - Python:
         - 'Combination' : 'python_combo.md'
-        - 'Module' : 'module.md'
+        - 'Module' : 'python_module.md'
+        - 'Plot' : 'python_plot.md'
     - Hapmap: 'hapMap1KG_ch7_8.md'
 
 theme: readthedocs
