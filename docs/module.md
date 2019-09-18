@@ -58,3 +58,20 @@ def build_table(gt, cnt, noCombo,model):
     tb = tb.astype(int)
     return tb
 ```
+
+# Merge files
+```
+import pandas as pd
+noCombo=3
+mfile='myfile'
+a= pd.read_csv(mfile+'_1.csv')
+b= pd.read_csv(mfile+'_2.csv')
+c= pd.read_csv(mfile+'_31.csv')
+d= pd.read_csv(mfile+'_32.csv')
+
+e=pd.merge(a,b.iloc[:,noCombo:],left_index=True, right_index=True,how='left')
+f=pd.merge(c,d.iloc[:,noCombo:],left_index=True, right_index=True,how='left')
+g=pd.merge(e,f,left_index=True, right_index=True,how='left')
+
+g.to_csv(mfile+'.csv',index=False)
+```
