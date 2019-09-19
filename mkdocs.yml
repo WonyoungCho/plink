@@ -18,6 +18,7 @@ pages:
         - 'Combination' : 'python_combo.md'
         - 'Module' : 'python_module.md'
         - 'Plot' : 'python_plot.md'
+        - 'Useful' : 'python_useful.md'
     - Hapmap: 'hapMap1KG_ch7_8.md'
 
 theme: readthedocs
