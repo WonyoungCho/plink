@@ -16,7 +16,8 @@ def major_minor(df):
 ```
 
 # Mask for models
-ex) for 2 variants genotype, [[0 0] [0 1] [1 0] [1 1]], 
+ex) for 2 variants genotype, [[0 0] [0 1] [1 0] [1 1]],
+
 1. Dominant : 0이 있으면 wild. [False False False  True]
 1. Heterozygous : 1이 있으면 wild. [False  True  True  True]
 1. Recessive : 0이 있으면 wild. [False False False  True]
