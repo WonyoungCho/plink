@@ -15,7 +15,7 @@ def hierarchy_heatmap(pfile):
     plt.clf()
 ```
 
-# Color table
+# Image map
 ```
 def color_table(df_given,group,title,test):
     df=df_given
