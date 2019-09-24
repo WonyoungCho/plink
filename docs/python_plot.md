@@ -15,6 +15,42 @@ def hierarchy_heatmap(pfile):
     plt.clf()
 ```
 
+# Color table
+```
+def color_table(df_given,group,title,test):
+    df=df_given
+
+    a=df.loc[group]
+    x=a.values.astype(int)
+
+    ye=a.shape[0]
+    xe=a.shape[1]
+
+    #levels = [0, 1, 2]
+    #colors = ['white','orangered', 'mediumspringgreen','dodgerblue']
+    levels = [0, 1, 2, 3, 4]
+    colors = ['red','dodgerblue','orange','mediumspringgreen',]
+
+    cmap, norm = matplotlib.colors.from_levels_and_colors(levels, colors)
+
+    fig, ax = plt.subplots()
+
+    ax.imshow(x, interpolation='none', cmap=cmap, norm=norm)
+    ax.set_title(title+' ( '+str(ye)+' / '+str(xe)+' )')
+    ax.set_xlabel('Variants')
+    ax.set_ylabel('Samples')
+
+    plt.xticks(np.arange(-0.5, xe+0.5, step=10),labels=range(0,xe+1,10),fontsize=6)
+    plt.yticks(np.arange(-0.5, ye+0.5, step=5),labels=range(0,ye+1,5),fontsize=6)
+    plt.grid()
+    #plt.subplots_adjust(left = 0, bottom = 0, right = 1, top = 1, hspace = 0, wspace = 0)
+    #plt.show()
+    plt.tight_layout(pad=0.4, w_pad=0.5, h_pad=0.5)
+    plt.savefig('fig_table'+str(test)+'_'+title, bbox_inces='tight', pad_inches=0, dpi=300)
+    plt.clf()
+```
+
+
 # Distribution
 ```
 def dist_plot(all_geno,all_group,df_gene,title):
@@ -55,3 +91,80 @@ pringgreen'),label=i[1])
 
     plt.show()
 ```
+
+# Filtering
+```
+def filter_123(group,subgroup,title):
+    df_group = df123.loc[group].T
+    nonsubgroup=np.setdiff1d(group,subgroup)
+
+    df_gene=df0['gene']
+    all_group=[]
+    all_geno=[]
+    all_geno2=[]
+    all_geno3=[]
+    all_geno4=[]
+
+    for i in df_group.index:
+        vc0=df_group.loc[i].value_counts()
+        vg00=0; vg01=0; vg02=0
+
+        if len(vc0.index.values) >= 2:
+            if len(subgroup)*0.05 < 2:
+                thres=2
+            else: thres=len(subgroup)*0.05
+
+            if 1 in vc0: vg00=vc0[1]
+            if 2 in vc0: vg01=vc0[2]
+            if 3 in vc0: vg02=vc0[3]
+            #if vg00>=thres and vg01>=thres and vg02>=thres:
+            #################
+            if vg01>=thres and (vg00>=thres or vg02>=thres):
+
+                if vg00 < vg02:
+                    df_group.loc[i]=df_group.loc[i].replace(1,4)
+                    df_group.loc[i]=df_group.loc[i].replace(3,1)
+                    df_group.loc[i]=df_group.loc[i].replace(4,3)
+                ############
+
+                vc1=df_group.loc[i].value_counts()
+                vc2=df_group.loc[i,subgroup].value_counts()
+                vc3=df_group.loc[i,nonsubgroup].value_counts()
+
+                vg10=0; vg11=0; vg12=0
+                vg20=0; vg21=0; vg22=0
+                vg30=0; vg31=0; vg32=0
+
+                if 1 in vc1: vg10=vc1[1]
+                if 2 in vc1: vg11=vc1[2]
+                if 3 in vc1: vg12=vc1[3]
+                if 1 in vc2: vg20=vc2[1]
+                if 2 in vc2: vg21=vc2[2]
+                if 3 in vc2: vg22=vc2[3]
+                if 1 in vc3: vg30=vc3[1]
+                if 2 in vc3: vg31=vc3[2]
+                if 3 in vc3: vg32=vc3[3]
+
+                all_geno2.append([vg20,vg21,vg22])
+                all_geno3.append([vg30,vg31,vg32])
+                all_geno4.append([vg20,vg21,vg22,vg30,vg31,vg32])
+
+                all_geno.append([vg10,vg11,vg12])
+
+                all_group.append(vc0.name)
+
+    df_fgeno=df_group.loc[all_group].T
+
+    new_col=[]
+    for i in df_fgeno.columns:
+        new_col.append(df_gene.loc[i]+'/'+i)
+
+    df_fgeno.columns=new_col
+
+    color_table(df_fgeno,group,title,5)
+    dist_plot(all_geno,all_group,df_gene,title+'_all')
+    dist_plot(all_geno4,all_group,df_gene,title)
+    
+    return df_fgeno
+```
+
