@@ -2,6 +2,16 @@
 
 plink is a whole genome association analysis toolset.
 
+This site contains genome analysis related things.
+
+---
+
+**Wonyoung Cho**.
+
+<bourbaki10@gmail.com>
+
+---
+
 # Installation
 
 - plink 파일을 다운 : <a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
