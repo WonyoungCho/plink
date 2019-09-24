@@ -2,7 +2,7 @@
 
 plink is a whole genome association analysis toolset.
 
-This site contains genome analysis related things.
+This site contains the way to genome analysis and related things.
 
 ---
 
