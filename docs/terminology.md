@@ -20,3 +20,8 @@
 - <http://www.incodom.kr/Haplotype>
 
 - <http://www.incodom.kr/Linkage_Disequilibrium>
+
+# Model
+- Dominant : 0 이 있으면 wild type
+- Heterozygous : 0 만 있으면 wild type
+- Recessive : 0 이 있으면 wild type
