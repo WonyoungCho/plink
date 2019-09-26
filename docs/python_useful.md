@@ -46,3 +46,8 @@ Name: 0, dtype: object
 3  fgh  678
 (4, 2)
 ```
+
+# Merge two dataframes
+```
+df_final=pd.merge(df_left,df_right,left_index=True, right_index=True,how='left')
+```
