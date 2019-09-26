@@ -731,7 +731,7 @@ $ plink --bfile mydata --r2 --ld-window 10 --ld-window-kb 1000 --ld-window-r2 0.
 -|AA|Aa|aa|O|AA|Aa|aa|O|AA|Aa|aa
 -|-|-|-|-|-|-|-|-|-|-|-
 **BB**|4AB | 2AB, 2aB | 4aB|**BB**|726	|256	|43|**BB**|0.45375	|0.16	|0.026875
-**Bb**|2AB | Ab, Ab, aB, ab| 2aB, ab|**Bb**|238	|245	|17|**Bb**|0.14875	|0.153125	|0.010625
+**Bb**|2AB | AB, Ab, aB, ab| 2aB, ab|**Bb**|238	|245	|17|**Bb**|0.14875	|0.153125	|0.010625
 **bb**|4Ab | 2Ab, ab| 4ab|**bb**|49	|26	|0|**bb**|0.030625	|0.01625	|0
 
 
