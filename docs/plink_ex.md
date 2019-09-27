@@ -728,8 +728,6 @@ $ plink --bfile mydata --ld rs2840528 rs7545940  # LD between rs2840528 and rx75
 $ plink --bfile mydata --r2 --ld-window 10 --ld-window-kb 1000 --ld-window-r2 0.2 # these are default values
 ```
 
-435 236  31 456 242  32  98  63   7
-
 -|AA|Aa|aa|O|AA|Aa|aa|O|AA|Aa|aa
 -|-|-|-|-|-|-|-|-|-|-|-
 **BB**|4AB | 2AB, 2aB | 4aB|**BB**|435	|236	|31|**BB**|0.271875	|0.1475	|0.019375
