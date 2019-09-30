@@ -76,3 +76,44 @@ g=pd.merge(e,f,left_index=True, right_index=True,how='left')
 
 g.to_csv(mfile+'.csv',index=False)
 ```
+
+# Linkage disequilibrium
+```
+import numpy as np
+
+
+def haplo_freq(n,PAB, PaB, PAb, Pab):
+    x=n[4]*PAB*Pab/(PAB*Pab+PAb*PaB)
+    y=n[4]-x
+
+    PfAB=(n[0] + n[1]/2 + n[3]/2 + x/2)/sum(n)
+    PfaB=(n[2] + n[1]/2 + n[5]/2 + y/2)/sum(n)
+    PfAb=(n[6] + n[3]/2 + n[7]/2 + y/2)/sum(n)
+    Pfab=(n[8] + n[5]/2 + n[7]/2 + x/2)/sum(n)
+
+    return PfAB, PfaB, PfAb, Pfab
+
+
+def haplo_loop(n):
+    PiAB=0.25; PiaB=0.25; PiAb=0.25; Piab=0.25
+    a=1
+    while True:
+        PfAB, PfaB, PfAb, Pfab = haplo_freq(n,PiAB, PiaB, PiAb, Piab)
+
+        a+=1
+        if PfAB-PiAB < 10**(-7): break
+
+        PiAB, PiaB, PiAb, Piab = PfAB, PfaB, PfAb, Pfab
+
+    D=PfAB*Pfab - PfaB*PfAb
+    if D > 0: Dp= D/(min(PfaB, PfAb)+D)
+    elif D < 0: Dp= D/(min(PfAB, Pfab)-D)
+
+    R2=D**2/((PfAB-D)*(Pfab-D))
+
+    print(a,np.round([PfAB, PfaB, PfAb, Pfab, D, Dp, R2],6))
+
+
+if __name__=='__main__':
+    n=[726, 256, 43, 238, 245, 17, 49, 26, 0]
+```
