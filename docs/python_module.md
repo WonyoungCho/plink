@@ -81,7 +81,6 @@ g.to_csv(mfile+'.csv',index=False)
 ```
 import numpy as np
 
-
 def haplo_freq(n,PAB, PaB, PAb, Pab):
     x=n[4]*PAB*Pab/(PAB*Pab+PAb*PaB)
     y=n[4]-x
@@ -97,23 +96,33 @@ def haplo_freq(n,PAB, PaB, PAb, Pab):
 def haplo_loop(n):
     PiAB=0.25; PiaB=0.25; PiAb=0.25; Piab=0.25
     a=1
+
     while True:
         PfAB, PfaB, PfAb, Pfab = haplo_freq(n,PiAB, PiaB, PiAb, Piab)
 
+        D=PfAB*Pfab - PfaB*PfAb
+
+        if D < 0:
+            if PfAb-PiAb < 10**(-8): break
+        elif D >=0 :
+            if PfAB-PiAB < 10**(-8): break
+
         a+=1
-        if PfAB-PiAB < 10**(-7): break
 
         PiAB, PiaB, PiAb, Piab = PfAB, PfaB, PfAb, Pfab
 
-    D=PfAB*Pfab - PfaB*PfAb
-    if D > 0: Dp= D/(min(PfaB, PfAb)+D)
-    elif D < 0: Dp= D/(min(PfAB, Pfab)-D)
+    if D < 0: Dp= abs(D)/(min(PfAB, Pfab)-D)
+    elif D >= 0: Dp= D/(min(PfaB, PfAb)+D)
 
     R2=D**2/((PfAB-D)*(Pfab-D))
 
-    print(a,np.round([PfAB, PfaB, PfAb, Pfab, D, Dp, R2],6))
+    print(a,np.round([PfAB, PfaB, PfAb, Pfab, D, Dp, R2],8))
 
 
 if __name__=='__main__':
     n=[726, 256, 43, 238, 245, 17, 49, 26, 0]
+
+    n=[374, 212, 26, 471, 235, 24, 168, 80, 10]
+
+    haplo_loop(n)
 ```
