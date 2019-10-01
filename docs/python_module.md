@@ -93,7 +93,7 @@ def haplo_freq(n,PAB, PaB, PAb, Pab):
     return PfAB, PfaB, PfAb, Pfab
 
 
-def haplo_loop(n):
+def haplo_iterative(n):
     PiAB=0.25; PiaB=0.25; PiAb=0.25; Piab=0.25
     a=1
 
@@ -124,5 +124,5 @@ if __name__=='__main__':
 
     n=[374, 212, 26, 471, 235, 24, 168, 80, 10]
 
-    haplo_loop(n)
+    haplo_iterative(n)
 ```
