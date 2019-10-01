@@ -154,41 +154,7 @@ plt.show()
 ![networkx](image/net_ch78.png)
 
 
-## Color table
-```
-def color_table(bfile):
-    a=pd.read_csv(bfile+'.ped',sep='\s+|\t+|,',header=None, index_col=0,engine='python')
-    print(a.head().iloc[:,5:45])
-
-    rg=list(range(0,50))
-    tSize=128
-    a=a.iloc[0:tSize,5:tSize+5]
-    x=a.values
-
-    ye=a.shape[0]
-    xe=a.shape[1]
-
-    #levels = [0, 1, 2]
-    #colors = ['white','orangered', 'mediumspringgreen','dodgerblue']
-    levels = [0, 1, 2, 3, 4]
-    colors = ['black','orangered','mediumspringgreen','dodgerblue']
-
-    cmap, norm = matplotlib.colors.from_levels_and_colors(levels, colors)
-
-    fig, ax = plt.subplots()
-
-    ax.imshow(x, interpolation='none', cmap=cmap, norm=norm)
-    ax.set_title('ACGT')
-    ax.set_xlabel('Locus')
-    ax.set_ylabel('Sample')
-
-    plt.xticks(np.arange(-0.5, xe+0.5, step=1),labels=range(0,xe+1))
-    plt.yticks(np.arange(-0.5, ye+0.5, step=1),labels=range(0,ye+1))
-    plt.grid()
-    plt.show()
-```
-
-# Major or Minor
+## Major or Minor
 ```
 def major_minor(df):
     for i in range(df.head().shape[0]):
