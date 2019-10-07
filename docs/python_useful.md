@@ -51,3 +51,16 @@ Name: 0, dtype: object
 ```
 df_final=pd.merge(df_left,df_right,left_index=True, right_index=True,how='left')
 ```
+
+# Contains value
+```
+import pandas as pd
+
+df=pd.read_csv('mydata.csv',sep='\t+|\s+',header=None)
+
+col=df[1]
+
+s1=col[col.str.contains('.1', regex=False)]
+
+print(len(s1))
+```
