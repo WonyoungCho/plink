@@ -408,6 +408,14 @@ $ less plink.assoc.adjusted
    1   P2     0.8949     0.8949      0.925          1          1          1          1     0.9421          1
    1  N16     0.9655     0.9655      0.975          1          1          1          1     0.9655          1
 ```
+## QQ-plot in R
+```
+> data<-read.table(file="plink.assoc.adjusted", header=T)
+> plot(-log(data$QQ, 10), -log(data$UNADJ,10), xlab ="expected –logP values", ylab = "observed –logP values")
+> abline(a=0, b=1)
+
+```
+
 ```
 $ plink --bfile mydata --allow-no-sex -logistic beta 
 # with NMISS (=Number of non-missing individuals included in analysis),
