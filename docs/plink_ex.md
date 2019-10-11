@@ -126,6 +126,7 @@ $ plink --bfile mydata --allow-no-sex --hardy
 # GENO (=Genotype counts: 11/12/22),
 # A1 (=Minor allele code),
 # A2 (=Major allele code),
+# GENO (Genotype counts 11/12/22),
 # O(HET) (=Observed heterozygosity),
 # E(HET) (=Expected heterozygosity),
 # P (=H-W p-value).
