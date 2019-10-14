@@ -134,7 +134,7 @@ import numpy as np
 from scipy import stats
 
 
-def minor_allele_frequency(df,group):
+def minor_allele_frequency(df,group,mafLower):
     df=df[df['pheno']==group].drop(columns='pheno')
     #print(len(df.index))
     total_af=[]
@@ -149,7 +149,19 @@ def minor_allele_frequency(df,group):
 
     df_maf=pd.DataFrame(total_af,columns=['SNP','0_Count','1_Count','2_Count'])
     df_maf['maf']=(df_maf['1_Count']*0.5+df_maf['2_Count'])/(df_maf['0_Count']+df_maf['1_Count']+df_maf['2_Count'])
+    
+    # if it is required to distinguish major and minor allel frequency,
+    idx = (df_maf['MAF'] > 0.5)
 
+    df_maf.loc[idx,['MAF']] = 1-df_maf.loc[idx,['MAF']].values
+
+    print(len(df_maf['SNP'][idx==True].values),'/',len(df_maf['SNP'].values),'(',round(len(df_maf['SNP'][idx==True].values)/len(df_maf['SNP'].values)*100,2),'% )')
+    
+    #print(df_maf['SNP'][idx==True].values)
+
+    # 
+    df_maf=df_maf[df_maf['MAF']>mafLower]
+    
     return df_maf['maf'].mean()
 
 
@@ -172,8 +184,9 @@ def sample_size(df,sample,alpha,beta):
 
     print('---------------------------------------')
     print('Samples :',int(round(n,0)), 'for',beta,'% power')
-    print('Power   :',round((stats.norm.cdf(p_beta1))*100,1),'% for', sample, 'samples')
-    print('S-level :',round((1-(stats.norm.cdf(p_alpha)))*200,1),'% for', sample, 'samples')
+    print('Power   :',round(int(stats.norm.cdf(p_beta1)*1000)*0.1,1),'% for', sample, 'samples')
+    print('S-level :',round(int((1-(stats.norm.cdf(p_alpha)))*2000)*0.1,1),'% for', sample, 'samples')
+
     
 if __name__=='__main__':
     df1=pd.read_csv('test_set7.txt',sep='\t').drop(columns='CHR').set_index('id')
