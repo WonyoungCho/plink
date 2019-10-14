@@ -126,3 +126,62 @@ if __name__=='__main__':
 
     haplo_iterative(n)
 ```
+
+# Sample size
+```
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+
+def minor_allele_frequency(df,group):
+    df=df[df['pheno']==group].drop(columns='pheno')
+    #print(len(df.index))
+    total_af=[]
+    for i in df.columns.values:
+        af=[i,0,0,0]
+        a=0
+        for j in df[i].value_counts().index.values:
+            if j==0: continue
+            af[j]=df[i].value_counts().values[a]
+            a+=1
+        total_af.append(af)
+
+    df_maf=pd.DataFrame(total_af,columns=['SNP','0_Count','1_Count','2_Count'])
+    df_maf['maf']=(df_maf['1_Count']*0.5+df_maf['2_Count'])/(df_maf['0_Count']+df_maf['1_Count']+df_maf['2_Count'])
+
+    return df_maf['maf'].mean()
+
+
+def sample_size(df,sample,alpha,beta):
+    pAa=minor_allele_frequency(df,1)
+    pAu=minor_allele_frequency(df,0)
+
+    print('- MAF in cases    :', pAa)
+    print('- MAF in controls :', pAu)
+
+    pbar=0.5*(pAa+pAu)
+
+    p_alpha=stats.norm.ppf(1-(alpha*0.01)/2)
+    p_beta=stats.norm.ppf(beta*0.01)
+
+    n=2*((p_alpha*np.sqrt(2*pbar*(1-pbar))+p_beta*np.sqrt(pAa*(1-pAa)+pAu*(1-pAu)))**2)/((pAa-pAu)**2)
+
+    p_beta1=(np.sqrt((sample*(pAa-pAu)**2)/2)-p_alpha*np.sqrt(2*pbar*(1-pbar)))/np.sqrt(pAa*(1-pAa)+pAu*(1-pAu))
+    p_alpha=(np.sqrt((sample*(pAa-pAu)**2)/2)-p_beta*np.sqrt(pAa*(1-pAa)+pAu*(1-pAu)))/np.sqrt(2*pbar*(1-pbar))
+
+    print('---------------------------------------')
+    print('Samples :',int(round(n,0)), 'for',beta,'% power')
+    print('Power   :',round((stats.norm.cdf(p_beta1))*100,1),'% for', sample, 'samples')
+    print('S-level :',round((1-(stats.norm.cdf(p_alpha)))*200,1),'% for', sample, 'samples')
+    
+if __name__=='__main__':
+    df1=pd.read_csv('test_set7.txt',sep='\t').drop(columns='CHR').set_index('id')
+    df2=pd.read_csv('test_set8.txt',sep='\t').drop(columns='CHR').set_index('id')
+
+    print('=======================================')
+    sample_size(df1,len(df1.index),alpha=5,beta=80)
+    print('=======================================')
+    sample_size(df2,len(df2.index),alpha=5,beta=80)
+    print('=======================================')
+```
