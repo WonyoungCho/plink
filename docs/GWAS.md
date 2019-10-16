@@ -25,17 +25,6 @@ $ plink --bfile variant --maf 0.01 –make-bed --out maf5
 $ plink --file raw_data --mind 0.05 --make-bed --out sample5
   : sample5.bed + sample5.bim + sample5.fam
 ```
-- LD : R2 > 0.2
-```
-# --indep-pairwise <window size>['kb'] <step size (variant ct)> <r^2 threshold>
-$ plink --bfile sample5 --indep-pairwise 50 1 0.2 --out ld
-  : ld.prun.out + ld.prun.in
-  : 'ld.prun.out' is a variants list of pruning.
-$ plink --bfile sample5 --extract ld.prun.out --recode --out ld_prun
-  : ld_prun.ped + ld_prun.map
-$ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0
-  : plink.ld
-```
 - Heterozygosity : |F| = (1-O/E) < 0.1
 ```
 $ plink --bfile sample5 --hardy
@@ -83,6 +72,11 @@ plt.yticks([])
 plt.xticks([0,0.125,0.25,0.5,1],['0','0~0.125','0.125~0.25','0.25~0.5','0.5~1'],fontsize=6)
 plt.grid(ls='--',alpha=0.6)    
 plt.show()
+```
+- LD : R2 > 0.2
+```
+$ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0.2
+  : plink.ld
 ```
 - PCA (take clustered data)
 ```
