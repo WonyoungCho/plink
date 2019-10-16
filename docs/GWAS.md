@@ -5,7 +5,7 @@ As a prior to analyze data, quality control (QC) is needed.
 
 Under the guidance of the first reference, I used 'plink' and 'python' for QC.
 
-There are few steps:
+There are few steps :
 
 # Step 1.
 - SNP call rate > 95%
