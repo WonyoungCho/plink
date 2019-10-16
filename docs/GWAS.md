@@ -41,7 +41,7 @@ $ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0
 $ plink --bfile sample5 --hardy
   : plink.hwe
 ```
-In 'plink.hwe', there are observed and expected frequencies of heterozygosity of each variants.
+In 'plink.hwe', there are observed and expected frequencies of heterozygosity for each variants.
 ```
 import pandas as pd
 
@@ -51,12 +51,24 @@ df['F']=1-df['O(HET)']/df['E(HET)']
 df['abs(F)']=abs(df['F'])
 df=df[df['abs(F)'] < 0.1]
 df_snp=df['SNP'].values
-df_snp.to_csv('hetero_prun.txt',index=False)
+df_snp.to_csv('hetero_prun.out',index=False)
+```
+```
+$ plink --bfile ld_prun --extract hetero_prun.out --recode --out hetero_prun
+  : hetero_prun.ped + hetero_prun.map
 ```
 - kinship coefficients (IBD) < 0.1, PCA (take clustered data)
+
+> Identical twins, and duplicates, are 100%identical by descent (Pihat 1.0)
+> First-degree relatives are 50% IBD (Pihat 0.5)
+> Second-degree relatives are 25% IBD (Pihat 0.25)
+> Third-degree relatives are 12.5% equal IBD (Pihat 0.125).
+```
+$ plink --file hetero_prun --genome --genome-full min 0.5
+  : plink.genome
 ```
 
-```
+
 
 # Reference
 - A guide to genome-wide association analysis and post-analytic interrogation, <https://dx.doi.org/10.1002/sim.6605>
