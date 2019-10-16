@@ -63,8 +63,26 @@ $ plink --bfile ld_prun --extract hetero_prun.out --recode --out hetero_prun
 > - Second-degree relatives are 25% IBD (Pihat 0.25)
 > - Third-degree relatives are 12.5% equal IBD (Pihat 0.125)
 ```
-$ plink --file hetero_prun --genome --genome-full min 0.5
+$ plink --file hetero_prun --genome --genome-full min 0.25 max 0.5
   : plink.genome
+```
+```
+import pandas as pd
+
+df=pd.read_csv('plink.genome',sep='\s+')
+
+ys, xs, patches=plt.hist(df['PI_HAT'].values,bins=5,rwidth=0.8)
+for i in range(0, len(ys)):
+    plt.text(x=xs[i], y=ys[i],
+             s=int(ys[i]),#s='{:0>4.1f}%'.format(ys[i]),
+             fontsize=8,
+             color='red')
+y_min, y_max = plt.ylim()
+plt.ylim(y_min, y_max+0.05)
+plt.yticks([])
+plt.xticks([0,0.125,0.25,0.5,1],['0','0~0.125','0.125~0.25','0.25~0.5','0.5~1'],fontsize=6)
+plt.grid(ls='--',alpha=0.6)    
+plt.show()
 ```
 - PCA (take clustered data)
 ```
