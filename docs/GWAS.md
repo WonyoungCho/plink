@@ -58,7 +58,6 @@ $ plink --bfile ld_prun --extract hetero_prun.out --recode --out hetero_prun
   : hetero_prun.ped + hetero_prun.map
 ```
 - kinship coefficients (IBD) < 0.1, PCA (take clustered data)
-
 > - Identical twins, and duplicates, are 100%identical by descent (Pihat 1.0)
 > - First-degree relatives are 50% IBD (Pihat 0.5)
 > - Second-degree relatives are 25% IBD (Pihat 0.25)
