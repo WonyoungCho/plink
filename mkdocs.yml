@@ -13,6 +13,7 @@ pages:
         - 'File format' : 'plink_fmt.md'
         - 'Example' : 'plink_ex.md'
     - Epistasis: 'epistasis.md'
+    - GWAS: 'GWAS.md'
     - Terminology: 'terminology.md'
     - Python:
         - 'Combination' : 'python_combo.md'
