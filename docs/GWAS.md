@@ -1,6 +1,6 @@
-Genome-wise association study (GWAS) is the way to find any variants are associated with a trait.
+GWAS (Genome-wise association study) is the way to find any variants are associated with a trait.
 
-As a prior to analyze data, quality control (QC) is needed.
+As a prior to analyze data, QC (quality control) is needed.
 
 Under the guidance of the first reference, I used 'plink' and 'python' for QC.
 
