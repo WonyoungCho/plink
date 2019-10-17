@@ -73,12 +73,11 @@ plt.xticks([0,0.125,0.25,0.5,1],fontsize=6)
 plt.grid(ls='--',alpha=0.6)    
 plt.show()
 ```
-Ex) Z(IBD) = (0.4106, 0.0444, 0.5450), PI_HAT = 0.5672, IBS_DIST = 0.943380, IBS = (6, 53, 515)
+**Ex)** Z(IBD) = (0.4106, 0.0444, 0.5450), PI_HAT = 0.5672, IBS_DIST = 0.943380, IBS = (6, 53, 515)
 
 - IBS (Identity by State) vs IBD (Identity by Descent)
-
 ![IBS_IBD](./image/IBS_IBD.PNG)
-Chapter 8 in <https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654>.
+> : Chapter 8 in <https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654>.
 
 # LD : R2 > 0.2
 ```
