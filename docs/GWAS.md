@@ -73,7 +73,7 @@ plt.xticks([0,0.125,0.25,0.5,1],fontsize=6)
 plt.grid(ls='--',alpha=0.6)    
 plt.show()
 ```
-Ex) Z = (0.4106  0.0444  0.5450), PI_HAT = 0.5672, IBS =  (6  53  515)
+Ex) Z(IBD) = (0.4106, 0.0444, 0.5450), PI_HAT = 0.5672, IBS =  (6, 53, 515)
 
 - IBS (Identity by State) vs IBD (Identity by Descent)
 
