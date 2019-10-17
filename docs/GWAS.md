@@ -1,4 +1,3 @@
-# GWAS QC
 Genome-wise association study (GWAS) is the way to find any variants are associated with a trait.
 
 As a prior to analyze data, quality control (QC) is needed.
