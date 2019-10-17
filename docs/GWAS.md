@@ -7,25 +7,24 @@ Under the guidance of the first reference, I used 'plink' and 'python' for QC.
 
 There are few steps :
 
-# Step 1.
-- SNP call rate > 95%
+# SNP call rate > 95%
 ```
 $ plink --file raw_data --geno 0.05 --make-bed --out variant5
   : variant5.bed + variant5.bim + variant5.fam
 ```
-- MAF > 1%
+# MAF > 1%
 ```
 $ plink --bfile variant --maf 0.01 –make-bed --out maf5
   : maf5.bed + maf5.bim + maf5.fam
 ```
 
-# Step 2.
-- Sample call rate > 95%
+
+# Sample call rate > 95%
 ```
 $ plink --file raw_data --mind 0.05 --make-bed --out sample5
   : sample5.bed + sample5.bim + sample5.fam
 ```
-- Heterozygosity : |F| = (1-O/E) < 0.1
+# Heterozygosity : |F| = (1-O/E) < 0.1
 ```
 $ plink --bfile sample5 --hardy
   : plink.hwe
@@ -46,7 +45,7 @@ df_snp.to_csv('hetero_prun.out',index=False)
 $ plink --bfile ld_prun --extract hetero_prun.out --recode --out hetero_prun
   : hetero_prun.ped + hetero_prun.map
 ```
-- Kinship coefficients (IBD) : PI-HAT > 0.2
+# IBD : PI-HAT > 0.2
 > - Identical twins, and duplicates, are 100%identical by descent (Pihat 1.0)
 > - First-degree relatives are 50% IBD (Pihat 0.5)
 > - Second-degree relatives are 25% IBD (Pihat 0.25)
@@ -73,12 +72,12 @@ plt.xticks([0,0.125,0.25,0.5,1],fontsize=6)
 plt.grid(ls='--',alpha=0.6)    
 plt.show()
 ```
-- LD : R2 > 0.2
+# LD : R2 > 0.2
 ```
 $ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0.2
   : plink.ld
 ```
-- PCA (take clustered data)
+# PCA (take clustered data)
 ```
 
 ```
