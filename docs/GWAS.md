@@ -30,7 +30,7 @@ $ plink --file raw_data --mind 0.05 --make-bed --out sample5
 $ plink --bfile sample5 --hardy
   : plink.hwe
 ```
-In 'plink.hwe', there are observed and expected frequencies of heterozygosity for each variants.
+In 'plink.hwe',  there are observed and expected frequencies of heterozygosity for each variants.
 ```
 import pandas as pd
 
