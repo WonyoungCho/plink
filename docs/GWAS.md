@@ -77,7 +77,7 @@ plt.show()
 - IBS (Identity by State) vs IBD (Identity by Descent)
 
 ![IBS_IBD](./image/IBS_IBD.PNG)
-Chapter8 in <https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654>.
+Chapter 8 in <https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654>.
 
 # LD : R2 > 0.2
 ```
