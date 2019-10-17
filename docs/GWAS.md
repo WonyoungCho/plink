@@ -46,13 +46,13 @@ df_snp.to_csv('hetero_prun.out',index=False)
 $ plink --bfile ld_prun --extract hetero_prun.out --recode --out hetero_prun
   : hetero_prun.ped + hetero_prun.map
 ```
-- Kinship coefficients (IBD) < 0.1
+- Kinship coefficients (IBD) : PI-HAT > 0.2
 > - Identical twins, and duplicates, are 100%identical by descent (Pihat 1.0)
 > - First-degree relatives are 50% IBD (Pihat 0.5)
 > - Second-degree relatives are 25% IBD (Pihat 0.25)
 > - Third-degree relatives are 12.5% equal IBD (Pihat 0.125)
 ```
-$ plink --file hetero_prun --genome --genome-full --min 0.25 --max 0.5
+$ plink --file hetero_prun --genome --genome-full --min 0.2 # --max 0.5
   : plink.genome
 ```
 ```
