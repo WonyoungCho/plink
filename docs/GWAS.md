@@ -83,6 +83,10 @@ plt.show()
 - P(IBD=1)=[N(IBS=1)-P(IBD=0)N(IBS=1|IBD=0)]/N(IBS=1|IBD=1)
 - P(IBD=2)=[N(IBS=2)-P(IBD=1)N(IBS=2|IBD=1)-P(IBD=0)N(IBS=2|IBD=0)]/N(IBS=2|IBD=2)
 
+$$
+\frac 2 3
+$$
+
 # LD : R2 > 0.2
 ```
 $ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0.2
