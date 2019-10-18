@@ -84,7 +84,7 @@ plt.show()
 - P(IBD=2)=[N(IBS=2)-P(IBD=1)N(IBS=2|IBD=1)-P(IBD=0)N(IBS=2|IBD=0)]/N(IBS=2|IBD=2)
 
 ![probIBD](./image/probIBD.PNG)
-> : p12 in <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950838/>
+> : p12 in [PLINK: A Tool Set for Whole-Genome Association and Population-Based Linkage Analyses](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950838/)
 
 # LD : R2 > 0.2
 ```
