@@ -77,14 +77,14 @@ plt.show()
 
 - IBS (Identity by State) vs IBD (Identity by Descent)
 ![IBS_IBD](./image/IBS_IBD.PNG)
-> : Chapter 8 in <https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654>.
+> : Chapter 8 in [A Statistical Approach to Genetic Epidemiology: With Access to E‐Learning Platform by Friedrich Pahlke, 2nd ed](https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654).
 
 - P(IBD=0)=N(IBS=0)/N(IBS=0|IBD=0)
 - P(IBD=1)=[N(IBS=1)-P(IBD=0)N(IBS=1|IBD=0)]/N(IBS=1|IBD=1)
 - P(IBD=2)=[N(IBS=2)-P(IBD=1)N(IBS=2|IBD=1)-P(IBD=0)N(IBS=2|IBD=0)]/N(IBS=2|IBD=2)
 
 ![probIBD](./image/probIBD.PNG)
-> : p12 in [PLINK: A Tool Set for Whole-Genome Association and Population-Based Linkage Analyses](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950838/)
+> : p12 in [PLINK: A Tool Set for Whole-Genome Association and Population-Based Linkage Analyses](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950838/).
 
 # LD : R2 > 0.2
 ```
