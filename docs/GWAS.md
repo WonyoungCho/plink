@@ -79,6 +79,10 @@ plt.show()
 ![IBS_IBD](./image/IBS_IBD.PNG)
 > : Chapter 8 in <https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654>.
 
+- P(IBD=0)=N(IBS=0)/N(IBS=0|IBD=0)
+- P(IBD=1)=[N(IBS=1)-P(IBD=0)N(IBS=1|IBD=0)]/N(IBS=1|IBD=1)
+- P(IBD=2)=[N(IBS=2)-P(IBD=1)N(IBS=2|IBD=1)-P(IBD=0)N(IBS=2|IBD=0)]/N(IBS=2|IBD=2)
+
 # LD : R2 > 0.2
 ```
 $ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0.2
