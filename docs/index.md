@@ -13,6 +13,10 @@ This site contains the way to analyze genomic data and related things.
 ---
 
 # Installation
+```
+sudo apt install plink1.9
+```
+or
 
 - plink 파일을 다운 : <a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
 
