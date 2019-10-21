@@ -100,7 +100,8 @@ $ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0.2
 
 # HWE : p < 1E-6
 in controls.
-- To find genotyping errors
+
+- One way to find genotyping errors.
 
 # After imputation
 ## Linear regression : R2 > 0.7
