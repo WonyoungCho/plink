@@ -47,6 +47,8 @@ $ plink --bfile ld_prun --extract hetero_prun.out --recode --out hetero_prun
 ```
 
 # IBD : PI-HAT > 0.2
+: It requires at least 1000 independent SNPs.
+
 - Identical twins, and duplicates, are 100%identical by descent (Pihat 1.0)
 - First-degree relatives are 50% IBD (Pihat 0.5)
 - Second-degree relatives are 25% IBD (Pihat 0.25)
