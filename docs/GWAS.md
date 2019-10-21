@@ -33,16 +33,16 @@ In 'plink.hwe',  there are observed and expected frequencies of heterozygosity f
 ```
 import pandas as pd
 
-df=pd.read_csv('plink.hwe', sep=\s+)
+df=pd.read_csv('plink.hwe', sep='\s+')
 
 df['F']=1-df['O(HET)']/df['E(HET)']
 df['abs(F)']=abs(df['F'])
 df=df[df['abs(F)'] < 0.1]
-df_snp=df['SNP'].values
+df_snp=df['SNP']
 df_snp.to_csv('hetero_prun.out',index=False)
 ```
 ```
-$ plink --bfile ld_prun --extract hetero_prun.out --recode --out hetero_prun
+$ plink --bfile sample5 --extract hetero_prun.out --recode --out hetero_prun
   : hetero_prun.ped + hetero_prun.map
 ```
 
