@@ -98,6 +98,22 @@ $ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0.2
 
 ```
 
+# HWE : p < 1E-6
+in controls.
+- To find genotyping errors
+
+# After imputation
+## Linear regression : R2 > 0.7
+- The linear model regressing each imputed SNP on regional typed SNPs.
+
+## MAF > 0.01
+
+# Bonferonni-correction : p < 5E-8
+
+# Q-Q plot
+- To compare Observed vs Expected quantities
+
+#  LD Block
 
 # Reference
 - A guide to genome-wide association analysis and post-analytic interrogation, <https://dx.doi.org/10.1002/sim.6605>
