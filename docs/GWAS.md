@@ -13,14 +13,14 @@ $ plink --file raw_data --geno 0.05 --make-bed --out variant5
 ```
 # MAF > 1%
 ```
-$ plink --bfile variant --maf 0.01 –make-bed --out maf5
+$ plink --bfile variant5 --maf 0.01 --make-bed --out maf1
   : maf5.bed + maf5.bim + maf5.fam
 ```
 
 
 # Sample call rate > 95%
 ```
-$ plink --file raw_data --mind 0.05 --make-bed --out sample5
+$ plink --file maf1 --mind 0.05 --make-bed --out sample5
   : sample5.bed + sample5.bim + sample5.fam
 ```
 
