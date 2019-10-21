@@ -111,7 +111,7 @@ in controls.
 # Bonferonni-correction : p < 5E-8
 
 # Q-Q plot
-- To compare Observed vs Expected quantities
+- To compare observed and expected quantities
 
 #  LD Block
 
