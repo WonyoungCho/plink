@@ -90,7 +90,7 @@ plt.show()
 
 # LD : R2 > 0.2
 ```
-$ plink --file ld_prun --r2 d inter-chr with-freqs --ld-window-r2 0.2
+$ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
   : plink.ld
 ```
 # PCA (take clustered data)
