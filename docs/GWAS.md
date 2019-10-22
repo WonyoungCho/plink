@@ -24,6 +24,12 @@ $ plink --file maf1 --mind 0.05 --make-bed --out sample5
   : sample5.bed + sample5.bim + sample5.fam
 ```
 
+# Inbreeding : 
+```
+$ plink --bfile sample5 -het
+```
+<https://www.cog-genomics.org/plink/1.9/formats#het>
+
 # Heterozygosity : |F| = (1-O/E) < 0.1
 ```
 $ plink --bfile sample5 --hardy
@@ -93,6 +99,15 @@ plt.show()
 $ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
   : plink.ld
 ```
+
+# LD prunning
+```
+$ plink --file data --indep-pairwise 50 5 0.5
+# (window size, step, 1/(1-R^2))
+$ plink --file data --extract plink.prune.in --make-bed --out pruneddata
+```
+<http://zzz.bwh.harvard.edu/plink/summary.shtml#prune>
+
 # PCA (take clustered data)
 ```
 
