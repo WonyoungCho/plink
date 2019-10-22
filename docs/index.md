@@ -2,7 +2,7 @@
 
 [**PLINK**](http://zzz.bwh.harvard.edu/plink/tutorial.shtml) is a whole genome association analysis toolset.
 
-This site introduces several ways to analyze genomic data and related things using Plink and Python.
+This site introduces several ways to analyze genomic data and related things using `Plink` and `Python`.
 
 ---
 
