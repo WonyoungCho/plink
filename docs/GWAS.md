@@ -29,6 +29,8 @@ $ plink --file maf1 --mind 0.05 --make-bed --out sample5
 $ plink --bfile sample5 -het
   : plink.het
 ```
+* F=(<observed hom. count> - <expected count>) / (<total observations> - <expected count>)
+  
 <https://www.cog-genomics.org/plink/1.9/formats#het>
 
 # Heterozygosity : |f| = (1-O/E) < 0.1
