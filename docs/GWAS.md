@@ -24,14 +24,14 @@ $ plink --file maf1 --mind 0.05 --make-bed --out sample5
   : sample5.bed + sample5.bim + sample5.fam
 ```
 
-# Inbreeding : 
+# Inbreeding : F
 ```
 $ plink --bfile sample5 -het
   : plink.het
 ```
 <https://www.cog-genomics.org/plink/1.9/formats#het>
 
-# Heterozygosity : |F| = (1-O/E) < 0.1
+# Heterozygosity : |f| = (1-O/E) < 0.1
 ```
 $ plink --bfile sample5 --hardy
   : plink.hwe
