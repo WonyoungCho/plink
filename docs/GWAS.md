@@ -103,7 +103,7 @@ $ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
 # LD prunning
 ```
 $ plink --file data --indep-pairwise 50 5 0.5
-# (window size, step, 1/(1-R^2))
+# (window size, step, the VIF threshold: 1/(1-R^2))
 $ plink --file data --extract plink.prune.in --make-bed --out pruneddata
 ```
 <http://zzz.bwh.harvard.edu/plink/summary.shtml#prune>
