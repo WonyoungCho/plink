@@ -33,7 +33,7 @@ $ sudo chmod u+x plink
 $ sudo chown user:user plink
 ```
 
-Conda를 이용한 다른 방법 : <a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
+- Conda를 이용한 다른 방법 : <a href="https://anaconda.org/search?q=plink" target="_blank"> https://anaconda.org/search?q=plink </a>
 ```
 $ conda install -c bioconda plink
 ```
