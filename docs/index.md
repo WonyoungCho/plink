@@ -37,3 +37,26 @@ Conda를 이용한 다른 방법 : <a href="https://anaconda.org/search?q=plink"
 ```
 $ conda install -c bioconda plink
 ```
+
+# Miniconda
+```
+$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+$ sh Miniconda3-latest-Linux-x86_64.sh
+$ vi ~/.bashrc
+export PATH="/home/username/miniconda3/bin:$PATH"
+```
+```
+$ conda config --add channels defaults
+$ conda config --add channels bioconda
+$ conda config --add channels conda-forge
+$ conda update conda
+$ conda search --full-name python
+$ conda create --name environment_name python=3
+$ conda info --envs
+$ source activate environment_name
+```
+# Remove
+```
+$ conda remove --name environment_name --all
+$ rm -rf ~/miniconda3
+```
