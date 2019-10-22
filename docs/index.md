@@ -51,9 +51,12 @@ $ conda config --add channels bioconda
 $ conda config --add channels conda-forge
 $ conda update conda
 $ conda search --full-name python
-$ conda create --name environment_name python=3
+$ conda create --name environment_name python=3.6.1
 $ conda info --envs
 $ source activate environment_name
+```
+```
+$ source deactivate 
 ```
 # Remove
 ```
