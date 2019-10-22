@@ -1,10 +1,10 @@
 # PLINK
 
-**PLINK** is a whole genome association analysis toolset.
+[**PLINK**](http://zzz.bwh.harvard.edu/plink/tutorial.shtml) is a whole genome association analysis toolset.
 
 This site contains the way to analyze genomic data and related things.
 
-[PLINK tutorial](http://zzz.bwh.harvard.edu/plink/tutorial.shtml)
+
 
 ---
 
