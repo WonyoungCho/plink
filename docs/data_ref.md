@@ -10,3 +10,5 @@
 - [Genotyping	and	quality	control	of	UK	
 Biobank,	a	large-scale,	extensively	
 phenotyped	prospective	resource](https://biobank.ctsu.ox.ac.uk/crystal/crystal/docs/genotyping_qc.pdf)
+- [A Statistical Approach to Genetic Epidemiology](https://onlinelibrary.wiley.com/doi/book/10.1002/9783527633654)
+- [Analysis of Genetic Association Studies](https://link.springer.com/book/10.1007/978-1-4614-2245-7)
