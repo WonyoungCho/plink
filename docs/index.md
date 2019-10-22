@@ -4,7 +4,7 @@ plink is a whole genome association analysis toolset.
 
 This site contains the way to analyze genomic data and related things.
 
-Download : [PLINK 1.9](https://www.cog-genomics.org/plink2)
+
 ---
 
 **Wonyoung Cho**.
