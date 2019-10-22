@@ -4,7 +4,7 @@
 
 This site contains the way to analyze genomic data and related things.
 
-
+[PLINK tutorial](http://zzz.bwh.harvard.edu/plink/tutorial.shtml)
 ---
 
 **Wonyoung Cho**.
