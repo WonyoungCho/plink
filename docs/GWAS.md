@@ -27,6 +27,7 @@ $ plink --file maf1 --mind 0.05 --make-bed --out sample5
 # Inbreeding : 
 ```
 $ plink --bfile sample5 -het
+  : plink.het
 ```
 <https://www.cog-genomics.org/plink/1.9/formats#het>
 
