@@ -120,7 +120,7 @@ $ plink --file data --extract plink.prune.in --make-bed --out pruneddata
 - Step : next 5th SNP
 - VIF = 1 : completely independent
 - VIF = 2~10 : usual cut-off
-- R2 : to remove SNP if R2 is not less than 0.5
+- R2 : to remove SNPs if R2 is not less than 0.5
 > - plink.prune.in : R2 < 0.5
 > - plink.prune.out : R2 >= 0.5
 
