@@ -116,6 +116,15 @@ $ plink --file data --extract plink.prune.in --make-bed --out pruneddata
 ```
 <http://zzz.bwh.harvard.edu/plink/summary.shtml#prune>
 
+- Size : to compute R2 with nearest 50 SNPs, 50C2
+- Step : next 5th SNP
+- VIF = 1 : completely independent
+- VIF = 2~10 : usual cut-off
+- R2 : to remove SNP if R2 is not less than 0.5
+> - plink.prune.in : R2 < 0.5
+> - plink.prune.out : R2 >= 0.5
+
+
 # PCA (take clustered data)
 ```
 
