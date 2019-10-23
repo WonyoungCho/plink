@@ -24,6 +24,11 @@ $ plink --file maf1 --mind 0.05 --make-bed --out sample5
   : sample5.bed + sample5.bim + sample5.fam
 ```
 
+To combine above qc, we can write
+```
+$ plink --file raw_data --geno 0.05 --maf 0.01 --mind 0.05 --make-bed --out sample5
+```
+
 # Inbreeding : F
 ```
 $ plink --bfile sample5 -het
