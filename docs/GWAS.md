@@ -108,7 +108,7 @@ $ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
   : plink.ld
 ```
 
-# Prunning
+# LD pruning
 ```
 $ plink --file data --indep 50 5 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
 $ plink --file data --indep-pairwise 50 5 0.5  # window size, step, R2 threshold
