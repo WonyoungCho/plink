@@ -1,3 +1,43 @@
+# CSV to PLINK
+```
+#!/usr/bin/env python
+
+import sys
+
+infile_name = sys.argv[1]
+
+pedDict = {
+    "0" : "0 0",
+    "1" : "A A",
+    "2" : "A a",
+    "3" : "a a"
+}
+
+def convertToPlink(infile_name):
+    with open(infile_name, 'r') as infile:
+        header = infile.readline().rstrip().split()
+        chromosome = infile.readline().split()[0]
+        with open('test' + chromosome + '.map', 'w') as mapfile:
+            a=1
+            for POS in header[3:]:
+                mapfile.write("\t".join([chromosome,POS, "0", str(a)])+"\n")
+                a+=1
+    with open(infile_name, 'r') as infile:
+        with open('test' + chromosome + '.ped', 'w') as pedfile:
+            id_index = 0
+            for line in infile:
+                if not line.startswith("CHR"):
+                    id_index += 1
+                    ID = "i_" + str(id_index)
+                    line = line.rstrip().split()
+                    IID= line[1]
+                    pheno = str(int(line[2])+1)
+
+                    pedfile.write(" ".join([ID, IID, "0", "0", "0",pheno]+[pedDict[genotype] for genotype in line[3:]])+ "\n")
+
+convertToPlink(infile_name)
+```
+
 # Include charactors or words
 
 ```
