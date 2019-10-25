@@ -1,5 +1,5 @@
 # CSV to PLINK
-- CSV format : Columns=[CHR, id, pheno, variant1, variant2,...]
+- CSV format : columns=[CHR, id, pheno, variant1, variant2,...]
 > - CHR : chromosome
 > - pheno : case 1 / control 0
 
