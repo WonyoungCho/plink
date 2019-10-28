@@ -168,3 +168,23 @@ def filter_123(group,subgroup,title):
     return df_fgeno
 ```
 
+# Bar plot
+```
+def box_plot(df_plot,fnm):
+    plt.figure(num=None, figsize=(10, 6), dpi=300, facecolor='w', edgecolor='k')
+
+    flierprops=dict(marker='o', markersize=2)
+    ymax=math.ceil(df_plot.max().max()/10)*10
+
+    ax=sns.boxplot(data=df_plot, flierprops=flierprops, medianprops={'color': 'red'}, color='k', fliersize=2, notch=False, linewidth=0.8)
+    plt.setp(ax.artists, edgecolor = 'k', facecolor='w')
+    sns.stripplot(data=df_plot, jitter=0.2, size=2, alpha=0.5, color='orange')
+
+    plt.ylim([0,ymax])
+    plt.yticks(np.arange(0,ymax+1,2.5).tolist())
+    plt.title(kind+fnm)
+    plt.grid(ls='--',alpha=0.6)
+    plt.tight_layout()
+    plt.savefig('./image/'+kind+'_chr'+fnm)
+    plt.clf()
+```
