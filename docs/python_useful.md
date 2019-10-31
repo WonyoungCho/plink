@@ -110,3 +110,8 @@ s1=col[col.str.contains('.1', regex=False)]
 
 print(len(s1))
 ```
+
+# String to number in DF
+```
+df=df.apply(pd.to_numeric, errors='ignore')
+```
