@@ -120,3 +120,9 @@ df=df.apply(pd.to_numeric, errors='ignore')
 ```
 df2=pd.merge(df,df1, how='outer', left_index=True, right_index=True)
 ```
+
+# Display all
+```
+with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+    print(df)
+```
