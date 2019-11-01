@@ -115,3 +115,8 @@ print(len(s1))
 ```
 df=df.apply(pd.to_numeric, errors='ignore')
 ```
+
+# Merge dataframes
+```
+df2=pd.merge(df,df1, how='outer', left_index=True, right_index=True)
+```
