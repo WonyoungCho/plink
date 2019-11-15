@@ -22,4 +22,5 @@ pages:
         - 'Useful' : 'python_useful.md'
     - Hapmap: 'hapMap1KG_ch7_8.md'
     - Reference: 'data_ref.md'
+    - Samtools: 'samtools_int.md'
 theme: readthedocs
