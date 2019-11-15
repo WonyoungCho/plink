@@ -10,7 +10,7 @@ make install
 ```
 <http://www.htslib.org/download/>
 
-## Requied libraries
+# Requied libraries
 ```
 sudo yum install zlib-devel
 sudo yum install ncurses-devel ncurses
