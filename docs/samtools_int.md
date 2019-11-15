@@ -12,10 +12,10 @@ make install
 
 # Required libraries
 ```
-sudo yum install zlib-devel
-sudo yum install ncurses-devel ncurses
-sudo yum install bzip2-devel-1.0.6-13.el7.i686
+sudo yum install -y zlib-devel
+sudo yum install -y ncurses-devel ncurses
+sudo yum install -y bzip2-devel-1.0.6-13.el7.i686
 sudo yum install -y xz-devel
-sudo yum install bzip2-devel
+sudo yum install -y bzip2-devel
 ```
 
