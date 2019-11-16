@@ -18,4 +18,4 @@
 - [Informatics on High-throughput Sequencing Data](https://bioinformatics.ca/workshops/2016-informatics-high-throughput-sequencing-data/)
 - [Introduction to Variant Calling](https://www.bioconductor.org/help/course-materials/2014/CSAMA2014/3_Wednesday/lectures/VariantCallingLecture.pdf)
 - [Assembly](http://www.incodom.kr/Assembly)
-- [유전체_크기_예측](http://www.incodom.kr/%EC%9C%A0%EC%A0%84%EC%B2%B4/%EC%9C%A0%EC%A0%84%EC%B2%B4_%ED%81%AC%EA%B8%B0_%EC%98%88%EC%B8%A1)
+- [유전체 크기 예측](http://www.incodom.kr/%EC%9C%A0%EC%A0%84%EC%B2%B4/%EC%9C%A0%EC%A0%84%EC%B2%B4_%ED%81%AC%EA%B8%B0_%EC%98%88%EC%B8%A1)
