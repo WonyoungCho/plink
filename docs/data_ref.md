@@ -15,3 +15,5 @@
 - [Resequencing](https://tgc.net.technion.ac.il/services/bioinformatics/resequencing/)
 - [NGS 분석의 기초 개념](https://3months.tistory.com/172?category=752997)
 - [Introduction to NGS data analysis](https://genestack-user-tutorials.readthedocs.io/guide/intro-to-ngs.html)
+- [Informatics on High-throughput Sequencing Data](https://bioinformatics.ca/workshops/2016-informatics-high-throughput-sequencing-data/)
+- [Introduction to Variant Calling](https://www.bioconductor.org/help/course-materials/2014/CSAMA2014/3_Wednesday/lectures/VariantCallingLecture.pdf)
