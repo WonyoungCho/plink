@@ -20,3 +20,10 @@
 - [Assembly](http://www.incodom.kr/Assembly)
 - [유전체 크기 예측](http://www.incodom.kr/%EC%9C%A0%EC%A0%84%EC%B2%B4/%EC%9C%A0%EC%A0%84%EC%B2%B4_%ED%81%AC%EA%B8%B0_%EC%98%88%EC%B8%A1)
 - [Repeat Masker](http://www.incodom.kr/RepeatMasker)
+
+# Ref. Sequence
+
+- [NCBI 1000genomes : GRCh38](ftp://ftp.ncbi.nlm.nih.gov/1000genomes/ftp/technical/reference/GRCh38_reference_genome/)
+- [BWA](https://github.com/lh3/bwa/blob/master/bwakit/run-gen-ref)
+- [Which human reference genome to use?](http://lh3.github.io/2017/11/13/which-human-reference-genome-to-use)
+- [How to Download hg38/GRCh38 FASTA Human Reference Genome](https://www.gungorbudak.com/blog/2018/05/16/how-to-download-hg38-grch38-fasta-human-reference-genome/)
