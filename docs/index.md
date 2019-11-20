@@ -20,7 +20,7 @@ or
 
 - plink 파일을 다운 : <a href="https://www.cog-genomics.org/plink2" target="_blank"> https://www.cog-genomics.org/plink2 </a>
 ```
-$ wget http://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20190617.zip
+$ wget http://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20191028.zip
 ```
 - 만약 파일이 실행되지 않으면, plink 파일을 실행 가능한 파일로 만들어준다.
 ```
