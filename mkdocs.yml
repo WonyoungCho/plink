@@ -23,4 +23,5 @@ pages:
     - Hapmap: 'hapMap1KG_ch7_8.md'
     - Reference: 'data_ref.md'
     - Samtools: 'samtools_int.md'
+    - BEDOPS: 'bedops_int.md'
 theme: readthedocs
