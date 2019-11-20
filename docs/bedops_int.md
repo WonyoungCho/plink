@@ -12,5 +12,6 @@ $ sudo cp bin/* /usr/local/bin # optional
 <https://bedops.readthedocs.io/>
 
 
-[!Repeat regions](./image/repeat_region.png)
+[Repeat regions](./image/repeat_region.png)
+
 <http://www.incodom.kr/RepeatMasker>
