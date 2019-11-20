@@ -20,7 +20,7 @@ pages:
         - 'Module' : 'python_module.md'
         - 'Plot' : 'python_plot.md'
         - 'Useful' : 'python_useful.md'
-    - Hapmap: 'hapMap1KG_ch7_8.md'
+    - HapMap: 'hapMap1KG_ch7_8.md'
     - Reference: 'data_ref.md'
     - Samtools: 'samtools_int.md'
     - BEDOPS: 'bedops_int.md'
