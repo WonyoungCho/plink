@@ -126,3 +126,34 @@ df2=pd.merge(df,df1, how='outer', left_index=True, right_index=True)
 with pd.option_context('display.max_rows', None, 'display.max_columns', None):
     print(df)
 ```
+
+# Separate ID
+```
+import pandas as pd
+
+df =pd.read_csv('list',sep='/',header=None)
+df0=df[5].str.split('.',expand=True)[0]
+step=100
+
+for j in range(0,df.shape[0],step):
+    if j== df.shape[0]//step*step:
+        step=df.shape[0]%step
+    ini=j
+    fin=ini+step
+
+    df1=pd.DataFrame(['hs38DH_re.txt'])
+    df1=df1.append([step], ignore_index=True)
+
+    for i in enumerate(df[5].tolist()):
+        if (i[0]>=ini) and (i[0]<fin):
+            df1=df1.append([i[1]], ignore_index=True)
+
+    for i in enumerate(df0.tolist()):
+        if (i[0]>=ini) and (i[0]<fin):
+            df1=df1.append([i[1]], ignore_index=True)
+
+    print(df1)
+
+    #print(df1[0].to_string(index=False))
+    df1.to_csv('In_File_'+str(ini)+'.txt',index=None,header=None)
+```
