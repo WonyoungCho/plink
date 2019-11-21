@@ -24,4 +24,5 @@ pages:
     - Reference: 'data_ref.md'
     - Samtools: 'samtools_int.md'
     - BEDOPS: 'bedops_int.md'
+    - Gviz: 'Gviz_int.md'
 theme: readthedocs
