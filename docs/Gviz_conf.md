@@ -13,4 +13,5 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("Gviz")
 ```
 
-
+# User Guide
+<https://www.bioconductor.org/packages/devel/bioc/vignettes/Gviz/inst/doc/Gviz.html>
