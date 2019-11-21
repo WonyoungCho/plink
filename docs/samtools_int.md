@@ -1,4 +1,4 @@
-**Samtools** is a suite of programs for interacting with high-throughput sequencing data.
+[Samtools](http://www.htslib.org/) is a suite of programs for interacting with high-throughput sequencing data.
 
 <http://www.htslib.org/>
 
