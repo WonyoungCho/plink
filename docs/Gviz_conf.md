@@ -1,5 +1,10 @@
 **Gviz** is a viasualizing genomic data tool in R.
 
+# Required library
+```
+$ sudo yum install -y libcurl-devel openssl-devel libxml2-devel
+```
+
 # Installation
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -8,10 +13,4 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("Gviz")
 ```
 
-# Required library
-```
-$ sudo yum install libcurl-devel
-$ sudo yum install openssl-devel
-$ sudo yum install libxml2-devel
-```
 
