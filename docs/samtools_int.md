@@ -1,7 +1,5 @@
 [Samtools](http://www.htslib.org/) is a suite of programs for interacting with high-throughput sequencing data.
 
-<http://www.htslib.org/>
-
 # Required library
 ```
 sudo yum install -y zlib-devel ncurses-devel ncurses bzip2-devel-1.0.6-13.el7.i686 xz-devel bzip2-devel
