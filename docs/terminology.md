@@ -25,3 +25,20 @@
 - Dominant : 0 이 있으면 wild type
 - Heterozygous : 0 만 있으면 wild type
 - Recessive : 0 이 있으면 wild type
+
+# Special
+- [Reference Genome Components](https://software.broadinstitute.org/gatk/documentation/article?id=7857)
+
+- HLA (Human Leukocyte Antigen)
+> - <http://www.cdc.go.kr/CDC/cms/content/mobile/72/14772_view.html>
+> - <http://www.incodom.kr/HLAtyping>
+> - <https://m.blog.naver.com/discoveryngs/221031785260>
+> - <https://en.wikipedia.org/wiki/Human_leukocyte_antigen>
+- EBV (Epstein–Barr virus)
+> - <https://labtestsonline.kr/tests/ebv>
+> - <https://www.xlpresearchtrust.org/ko/learn/literature/epstein-barr-virus>
+> - <https://en.wikipedia.org/wiki/Epstein%E2%80%93Barr_virus>
+- Alt contig : large variations with very long flanking sequences nearly identical to the primary human assembly.
+> - <https://genome.ucsc.edu/FAQ/FAQdownloads.html#downloadAlt>
+- ChrUn : ChrUn contains clone contigs that cannot be confidently placed on a specific chromosome. 
+> - <https://genome.ucsc.edu/FAQ/FAQdownloads.html#download11>
