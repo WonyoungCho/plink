@@ -157,3 +157,61 @@ for j in range(0,df.shape[0],step):
     #print(df1[0].to_string(index=False))
     df1.to_csv('In_File_'+str(ini)+'.txt',index=None,header=None)
 ```
+
+
+# Select data
+```
+import sys
+import time
+
+def help():
+    print("Usage: python {} [ chrn ] \n".format(sys.argv[0]))
+    exit()
+
+# decorator
+def runTime(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        print('# module : {0} / time(sec) : {1}'.format(func.__name__, end - start))
+        return result
+    return wrapper
+
+@runTime
+def readFiles():
+    inFile=open(inf,'r')
+    outFile=open(out,'w')
+
+    bedFile=open(inbed,'r')
+    a0='1 0'
+    while 1:
+        a=bedFile.readline()
+        b='1 0'
+        if not a :break
+        if a.split()[1]==a0.split()[1]:continue
+        a0=a
+        while a0.split()[1]!=b.split()[1]:
+            b=inFile.readline()
+
+        outFile.write(b)
+        
+if __name__ == "__main__":
+    if not(len(sys.argv) == 2):
+        help()
+    chrn = sys.argv[1]
+
+    # 
+    inf="Out_chr{}.txt".format(chrn)
+    out="Out_chr{}.sel".format(chrn)
+    
+    # selection range
+    inbed = "selected_range_chr{}.sel".format(chrn)  
+    
+    fadata = [0]
+    bedData = []
+
+    readFiles()
+    
+    sys.exit(0)
+```
