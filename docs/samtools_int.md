@@ -5,6 +5,62 @@ $ samtools view -b myfile.bam chr1:10000-20000 > chr1.myfile.bam
 $ ls
 myfile.bam  chr1.myfile.bam
 ```
+```
+Usage: samtools view [options] <in.bam>|<in.sam>|<in.cram> [region ...]
+
+Options:
+  -b       output BAM
+  -C       output CRAM (requires -T)
+  -1       use fast BAM compression (implies -b)
+  -u       uncompressed BAM output (implies -b)
+  -h       include header in SAM output
+  -H       print SAM header only (no alignments)
+  -c       print only the count of matching records
+  -o FILE  output file name [stdout]
+  -U FILE  output reads not selected by filters to FILE [null]
+  -t FILE  FILE listing reference names and lengths (see long help) [null]
+  -X       include customized index file
+  -L FILE  only include reads overlapping this BED FILE [null]
+  -r STR   only include reads in read group STR [null]
+  -R FILE  only include reads with read group listed in FILE [null]
+  -d STR:STR
+           only include reads with tag STR and associated value STR [null]
+  -D STR:FILE
+           only include reads with tag STR and associated values listed in
+           FILE [null]
+  -q INT   only include reads with mapping quality >= INT [0]
+  -l STR   only include reads in library STR [null]
+  -m INT   only include reads with number of CIGAR operations consuming
+           query sequence >= INT [0]
+  -f INT   only include reads with all  of the FLAGs in INT present [0]
+  -F INT   only include reads with none of the FLAGS in INT present [0]
+  -G INT   only EXCLUDE reads with all  of the FLAGs in INT present [0]
+  -s FLOAT subsample reads (given INT.FRAC option value, 0.FRAC is the
+           fraction of templates/read pairs to keep; INT part sets seed)
+  -M       use the multi-region iterator (increases the speed, removes
+           duplicates and outputs the reads as they are ordered in the file)
+  -x STR   read tag to strip (repeatable) [null]
+  -B       collapse the backward CIGAR operation
+  -?       print long help, including note about region specification
+  -S       ignored (input format is auto-detected)
+  --no-PG  do not add a PG line
+      --input-fmt-option OPT[=VAL]
+               Specify a single input file format option in the form
+               of OPTION or OPTION=VALUE
+  -O, --output-fmt FORMAT[,OPT[=VAL]]...
+               Specify output format (SAM, BAM, CRAM)
+      --output-fmt-option OPT[=VAL]
+               Specify a single output file format option in the form
+               of OPTION or OPTION=VALUE
+  -T, --reference FILE
+               Reference sequence FASTA FILE [null]
+  -@, --threads INT
+               Number of additional threads to use [0]
+      --write-index
+               Automatically index the output files [off]
+      --verbosity INT
+               Set level of verbosity
+```
 
 # Indexing
 - It generates index files with *bai*  filename extension.
@@ -19,6 +75,9 @@ $ parallel samtools index ::: *.bam
 ```
 
 # Sorting
+```
+$ samtools sort myfile.bam -o myfile.sorted.bam
+```
 ```
 Usage: samtools sort [options...] [in.bam]
 Options:
@@ -44,6 +103,4 @@ Options:
       --verbosity INT
                Set level of verbosity
 ```
-```
-$ samtools sort myfile.bam -o myfile.sorted.bam
-```
+
