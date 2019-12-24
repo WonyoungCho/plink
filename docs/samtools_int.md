@@ -7,7 +7,7 @@ myfile.bam  chr1.myfile.bam
 ```
 
 # Indexing
-- It generates index files with *bai* filename extension.
+- It generates index files with *bai*  filename extension.
 ```
 $ for i in *.bam;do samtools index $i;done
 $ ls
