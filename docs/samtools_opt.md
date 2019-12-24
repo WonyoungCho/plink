@@ -152,3 +152,38 @@ Options:
   -m INT   Set minimum interval size for CSI indices to 2^INT [14]
   -@ INT   Sets the number of threads [none]
 ```
+
+# Depth
+```
+$ samtools depth
+```
+```
+Usage: samtools depth [options] in1.bam [in2.bam [...]]
+Options:
+   -a                  output all positions (including zero depth)
+   -a -a (or -aa)      output absolutely all positions, including unused ref. sequences
+   -b <bed>            list of positions or regions
+   -X                  use customized index files
+   -f <list>           list of input BAM filenames, one per line [null]
+   -H                  print a file header
+   -l <int>            read length threshold (ignore reads shorter than <int>) [0]
+   -d/-m <int>         maximum coverage depth [8000]. If 0, depth is set to the maximum
+                       integer value, effectively removing any depth limit.
+   -o FILE             where to write output to [stdout]
+   -q <int>            base quality threshold [0]
+   -Q <int>            mapping quality threshold [0]
+   -r <chr:from-to>    region
+   -g <flags>          include reads that have any of the specified flags set [0]
+   -G <flags>          filter out reads that have any of the specified flags set                       [UNMAP,SECONDARY,QCFAIL,DUP]
+      --input-fmt-option OPT[=VAL]
+               Specify a single input file format option in the form
+               of OPTION or OPTION=VALUE
+      --reference FILE
+               Reference sequence FASTA FILE [null]
+      --verbosity INT
+               Set level of verbosity
+
+The output is a simple tab-separated table with three columns: reference name,
+position, and coverage depth.  Note that positions with zero coverage may be
+omitted by default; see the -a option.
+```
