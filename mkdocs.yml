@@ -25,6 +25,7 @@ pages:
     - Samtools:
         - 'Installation' : 'samtools_ins.md'
         - 'Introduction' : 'samtools_int.md'
+        - 'Option' : 'samtools_opt.md'
     - BEDOPS: 'bedops_int.md'
     - Gviz: 'Gviz_int.md'
 theme: readthedocs
