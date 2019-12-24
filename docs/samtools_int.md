@@ -15,5 +15,5 @@ myfile.bam  myfile.bam.bai
 ```
 
 ```
-$ parallel  samtools index ::: *.bam
+$ parallel samtools index ::: *.bam
 ```
