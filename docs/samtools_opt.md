@@ -1,8 +1,8 @@
 # View
-
 ```
 $ samtools view
-
+```
+```
 Usage: samtools view [options] <in.bam>|<in.sam>|<in.cram> [region ...]
 
 Options:
@@ -62,7 +62,8 @@ Options:
 # Sort
 ```
 $ samtools sort
-
+```
+```
 Usage: samtools sort [options...] [in.bam]
 Options:
   -l INT     Set compression level, from 0 (uncompressed) to 9 (best)
