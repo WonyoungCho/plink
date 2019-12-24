@@ -139,3 +139,16 @@ Options:
       --verbosity INT
                Set level of verbosity
 ```
+
+# Index
+```
+$ samtools index
+```
+```
+Usage: samtools index [-bc] [-m INT] <in.bam> [out.index]
+Options:
+  -b       Generate BAI-format index for BAM files [default]
+  -c       Generate CSI-format index for BAM files
+  -m INT   Set minimum interval size for CSI indices to 2^INT [14]
+  -@ INT   Sets the number of threads [none]
+```
