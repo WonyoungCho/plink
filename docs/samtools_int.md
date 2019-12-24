@@ -13,3 +13,7 @@ $ for i in *.bam;do samtools index $i;done
 $ ls
 myfile.bam  myfile.bam.bai
 ```
+
+```
+$ parallel  samtools index ::: *.bam
+```
