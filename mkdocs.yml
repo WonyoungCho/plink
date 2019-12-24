@@ -23,7 +23,7 @@ pages:
     - HapMap: 'hapMap1KG_ch7_8.md'
     - Reference: 'data_ref.md'
     - Samtools:
-        - 'Installation' : 'samtools_inst.md'
+        - 'Installation' : 'samtools_ins.md'
         - 'Introduction' : 'samtools_int.md'
     - BEDOPS: 'bedops_int.md'
     - Gviz: 'Gviz_int.md'
