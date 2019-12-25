@@ -21,6 +21,7 @@ myfile.bam  myfile.bam.bai
 $ parallel samtools index ::: *.bam
 ```
 
+## Split & indexing
 ```
 for i in {1..22} X Y; do mkdir chr$i; parallel samtools view -b {} chr$i ">" ./chr$i/chr$i.{/} ::: ../*.bam; parallel samtools index ./chr$i/{}::: ./chr$i/*.bam; done
 ```
