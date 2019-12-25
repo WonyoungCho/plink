@@ -1,5 +1,5 @@
-# Split Bam
-
+# Selecting 1
+- Select the specific region in a Bam file.
 ```
 $ samtools view -b myfile.bam chr1:10000-20000 > chr1.myfile.bam
 $ ls
@@ -9,6 +9,11 @@ myfile.bam  chr1.myfile.bam
 parallel samtools view -b {} chr1 ">" chr1.{/} ::: *.bam
 ```
 
+# Selecting 2
+- Select the specific region from bed file.
+```
+$ samtools view -b myfile.bam -L exome.bed
+```
 
 # Indexing
 - It generates index files with *bai* suffix.
@@ -21,10 +26,11 @@ myfile.bam  myfile.bam.bai
 $ parallel samtools index ::: *.bam
 ```
 
-## Spliting & indexing
+## Selecting & indexing
 ```
 for i in {1..22} X Y; do mkdir chr$i; parallel samtools view -b {} chr$i ">" ./chr$i/chr$i.{/} ::: ../*.bam; parallel samtools index ::: ./chr$i/*.bam; done
 ```
+
 
 # Sorting
 ```
