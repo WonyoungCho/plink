@@ -31,4 +31,9 @@ for i in {1..22} X Y; do mkdir chr$i; parallel samtools view -b {} chr$i ">" ./c
 $ samtools sort myfile.bam -o myfile.sorted.bam
 ```
 
+# Tview
+```
+$ samtools tview -p chr22 myfile.bam hg38.fa
 
+22758816
+```
