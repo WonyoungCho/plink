@@ -5,6 +5,9 @@ $ samtools view -b myfile.bam chr1:10000-20000 > chr1.myfile.bam
 $ ls
 myfile.bam  chr1.myfile.bam
 ```
+```
+parallel samtools view -b {} chr1 ">" chr1.{} ::: *.bam
+```
 
 # Indexing
 - It generates index files with *bai* suffix.
