@@ -8,9 +8,7 @@ myfile.bam  chr1.myfile.bam
 ```
 parallel samtools view -b {} chr1 ">" chr1.{/} ::: *.bam
 ```
-```
-for i in {1..22} X Y; do mkdir chr$i; parallel samtools view -b {} chr$i ">" chr$i.{/} ::: ../*.bam; done
-```
+
 
 # Indexing
 - It generates index files with *bai* suffix.
@@ -19,9 +17,12 @@ $ for i in *.bam;do samtools index $i;done
 $ ls
 myfile.bam  myfile.bam.bai
 ```
-
 ```
 $ parallel samtools index ::: *.bam
+```
+
+```
+for i in {1..22} X Y; do mkdir chr$i; parallel samtools view -b {} chr$i ">" ./chr$i/chr$i.{/} ::: ../*.bam; parallel samtools index ./chr$i/{}::: ./chr$i/*.bam; done
 ```
 
 # Sorting
