@@ -6,7 +6,7 @@ $ ls
 myfile.bam  chr1.myfile.bam
 ```
 ```
-parallel samtools view -b {} chr1 ">" chr1.{} ::: *.bam
+parallel samtools view -b {} chr1 ">" chr1.{/} ::: *.bam
 ```
 
 # Indexing
