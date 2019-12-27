@@ -6,13 +6,14 @@ plink.model
 ```
      CHR           Chromosome number
      SNP           SNP identifier
-     TEST          Type of test
+     TEST          Type of test : GENO, TREND, ALLELIC, DOM, REC
      AFF           Genotypes/alleles in cases
      UNAFF         Genotypes/alleles in controls
      CHISQ         Chi-squated statistic
      DF            Degrees of freedom for test
      P             Asymptotic p-value
 ```
+
 
 # Confidence interval
 ```
