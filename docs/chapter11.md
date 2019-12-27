@@ -1,7 +1,13 @@
 # Chi-square
 ```
-$ plink --bfile mydata --allow-no-sex --assoc
-plink.frq
+$ plink --bfile mydata --allow-no-sex --model
+plink.model
+```
+
+# Confidence interval
+```
+$ plink --bfile mydata --allow-no-sex --assoc --ci 0.95
+plink.assoc
 ```
 ```
      CHR     Chromosome
@@ -14,4 +20,7 @@ plink.frq
      CHISQ   Basic allelic test chi-square (1df)
      P       Asymptotic p-value for this test
      OR      Estimated odds ratio (for A1, i.e. A2 is reference)
+     L95     Lower bound of 95% confidence interval for odds ratio
+     U95     Upper bound of 95% confidence interval for odds ratio 
 ```
+
