@@ -3,6 +3,16 @@
 $ plink --bfile mydata --allow-no-sex --model
 plink.model
 ```
+```
+     CHR           Chromosome number
+     SNP           SNP identifier
+     TEST          Type of test
+     AFF           Genotypes/alleles in cases
+     UNAFF         Genotypes/alleles in controls
+     CHISQ         Chi-squated statistic
+     DF            Degrees of freedom for test
+     P             Asymptotic p-value
+```
 
 # Confidence interval
 ```
