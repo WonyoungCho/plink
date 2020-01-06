@@ -130,10 +130,11 @@ $ plink --file data --extract plink.prune.in --make-bed --out pruneddata
 
 ```
 
-# HWE : p < 1E-6
+# HWE : p < 1E-5
 in controls.
 
 - One way to find genotyping errors.
+- Deviation from HWE may also be due to precesses related to disease, and in genenral it is best not to discard SNPs that are only mildly discordant with HWE, but only to flag them for extra checking if they do who association with phenotype.
 
 # After imputation
 ## Linear regression : R2 > 0.7
