@@ -139,6 +139,7 @@ plt.show()
 - The IBS method works best when only independent SNPs are included in the analysis.
 - Independent SNP set for IBS calcuation is generally prepared by removing regions of extended LD and pruning the remaining regions so that no pair of SNPs within a given window (say, 50kb) is correlated.
 - Related individuals will share more alleles IBS than expected by chance, with the degree of additional sharing proportional to the degree of relatedness.
+<http://www.bioinf.wits.ac.za/courses/gwas/OLD/Qc_combined_final.pdf> P.18
 
 
 # PCA (take clustered data)
@@ -164,6 +165,12 @@ in controls.
 - To compare observed and expected quantities
 
 #  LD Block
+
+# Low quality SNP
+- Genotype clusters of many SNPs demonstrate low quality genotyping due to:
+> - Low DNA concentration
+> - Poor binding and competitive binding by other sequences
+> - Structural and copy number variants
 
 # Reference
 - A guide to genome-wide association analysis and post-analytic interrogation, <https://dx.doi.org/10.1002/sim.6605>
