@@ -112,6 +112,11 @@ plt.show()
 ![probIBD](./image/probIBD.PNG)
 > : p12 in [PLINK: A Tool Set for Whole-Genome Association and Population-Based Linkage Analyses](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1950838/).
 
+
+- The IBS method works best when only independent SNPs are included in the analysis.
+- Independent SNP set for IBS calcuation is generally prepared by removing regions of extended LD and pruning the remaining regions so that no pair of SNPs within a given window (say, 50kb) is correlated.
+- Related individuals will share more alleles IBS than expected by chance, with the degree of additional sharing proportional to the degree of relatedness.
+
 # LD : R2 > 0.2
 ```
 $ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
