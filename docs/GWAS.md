@@ -70,6 +70,29 @@ $ plink --bfile sample5 --extract hetero_prun.out --recode --out hetero_prun
   : hetero_prun.ped + hetero_prun.map
 ```
 
+# LD : R2 > 0.2
+```
+$ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
+  : plink.ld
+```
+
+# LD pruning
+```
+$ plink --file data --indep 50 5 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
+$ plink --file data --indep-pairwise 50 5 0.5  # window size, step, R2 threshold
+$ plink --file data --extract plink.prune.in --make-bed --out pruneddata
+```
+<http://zzz.bwh.harvard.edu/plink/summary.shtml#prune>
+
+- Size : to compute R2 with nearest 50 SNPs, 50C2
+- Step : next 5th SNP
+- VIF = 1 : completely independent
+- VIF = 2~10 : usual cut-off
+- R2 : to remove SNPs if R2 is not less than 0.5
+> - plink.prune.in : R2 < 0.5
+> - plink.prune.out : R2 >= 0.5
+
+
 # IBD : PI-HAT > 0.2
 : It requires at least 1000 independent SNPs.
 
@@ -116,28 +139,6 @@ plt.show()
 - The IBS method works best when only independent SNPs are included in the analysis.
 - Independent SNP set for IBS calcuation is generally prepared by removing regions of extended LD and pruning the remaining regions so that no pair of SNPs within a given window (say, 50kb) is correlated.
 - Related individuals will share more alleles IBS than expected by chance, with the degree of additional sharing proportional to the degree of relatedness.
-
-# LD : R2 > 0.2
-```
-$ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
-  : plink.ld
-```
-
-# LD pruning
-```
-$ plink --file data --indep 50 5 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
-$ plink --file data --indep-pairwise 50 5 0.5  # window size, step, R2 threshold
-$ plink --file data --extract plink.prune.in --make-bed --out pruneddata
-```
-<http://zzz.bwh.harvard.edu/plink/summary.shtml#prune>
-
-- Size : to compute R2 with nearest 50 SNPs, 50C2
-- Step : next 5th SNP
-- VIF = 1 : completely independent
-- VIF = 2~10 : usual cut-off
-- R2 : to remove SNPs if R2 is not less than 0.5
-> - plink.prune.in : R2 < 0.5
-> - plink.prune.out : R2 >= 0.5
 
 
 # PCA (take clustered data)
