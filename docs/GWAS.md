@@ -174,3 +174,4 @@ in controls.
 
 # Reference
 - A guide to genome-wide association analysis and post-analytic interrogation, <https://dx.doi.org/10.1002/sim.6605>
+- GWAS QC-theory and steps, <http://www.bioinf.wits.ac.za/courses/gwas/OLD/Qc_combined_final.pdf>
