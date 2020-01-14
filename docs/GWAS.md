@@ -6,6 +6,7 @@ Under the guidance of the first reference, I used 'plink' and 'python' for QC.
 
 There are few steps :
 
+
 # SNP call rate > 95%
 ```
 $ plink --file raw_data --geno 0.05 --make-bed --out variant5
@@ -28,6 +29,15 @@ To combine above qc, we can write
 ```
 $ plink --file raw_data --geno 0.05 --maf 0.01 --mind 0.05 --make-bed --out sample5
 ```
+
+# Sex info
+```
+$ plink --file sample5 --check-sex
+```
+- Male (1) : XHE > 0.80
+- Female (2) : XHE < 0.20
+- No sex (0) : 0.20 < XHE < 0.80
+
 
 # Inbreeding : F
 ```
