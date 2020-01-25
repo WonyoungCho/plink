@@ -872,7 +872,7 @@ Controls
 
 # Max cases
 
-- No_of_SNPs	SNPs	Genotype	No_of_Sample	Sample_ID
+- No_of_SNPs	(SNPs)	[Genotype]	No_of_Sample	[Sample_ID]
 - 1	('N13',)	[2]	2	['ncs359' 'ncs725']
 - 2	('N1', 'N5')	[2 0]	8	['ncs30' 'ncs316' 'ncs360' 'ncs426' 'ncs487' 'ncs545' 'ncs593' 'ncs725']
 - 3	('N7', 'P1', 'P2')	[1 1 0]	111	"['ncs5' 'ncs6' 'ncs10' 'ncs13' 'ncs22' 'ncs34' 'ncs39' 'ncs44' 'ncs50'
