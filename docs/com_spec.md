@@ -1,4 +1,5 @@
 # Server 1
+<https://ark.intel.com/content/www/kr/ko/ark/products/81705/intel-xeon-processor-e5-2650-v3-25m-cache-2-30-ghz.html>
 ```
 CentOS Linux release 7.7.1908 (Core)
 
@@ -32,6 +33,7 @@ MemTotal:       263848080 kB
 ```
 
 # Server 50
+<https://ark.intel.com/content/www/kr/ko/ark/products/40201/intel-xeon-processor-l5520-8m-cache-2-26-ghz-5-86-gt-s-intel-qpi.html>
 ```
 CentOS Linux release 7.6.1810 (Core)
 
@@ -65,6 +67,7 @@ MemTotal:       65797532 kB
 ```
 
 # Server 1
+<https://ark.intel.com/content/www/kr/ko/ark/products/80810/intel-core-i5-4690-processor-6m-cache-up-to-3-90-ghz.html>
 ```
 CentOS Linux release 7.7.1908 (Core)
 
@@ -97,6 +100,7 @@ MemTotal:       32666140 kB
 ```
 
 # Server 2 
+<https://ark.intel.com/content/www/kr/ko/ark/products/129939/intel-core-i5-8500-processor-9m-cache-up-to-4-10-ghz.html>
 ```
 CentOS Linux release 7.7.1908 (Core)
 
