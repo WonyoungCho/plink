@@ -64,7 +64,7 @@ NUMA node1 CPU(s):     1,3,5,7,9,11,13,15
 MemTotal:       65797532 kB
 ```
 
-# Serve 1
+# Server 1
 ```
 CentOS Linux release 7.7.1908 (Core)
 
