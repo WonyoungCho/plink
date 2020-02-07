@@ -29,5 +29,5 @@ pages:
         - 'Option' : 'samtools_opt.md'
     - BEDOPS: 'bedops_int.md'
     - Gviz: 'Gviz_int.md'
-    - Spec: 'com_spec.md'
+    - Specification: 'com_spec.md'
 theme: readthedocs
