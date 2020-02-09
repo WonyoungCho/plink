@@ -62,3 +62,7 @@ $ source deactivate
 $ conda remove --name environment_name --all
 $ rm -rf ~/miniconda3
 ```
+
+# Source code
+- plink 1.9 <https://www.cog-genomics.org/static/bin/plink/plink_src.zip>
+- plink 1.07 <http://s3.amazonaws.com/plink1-assets/1.07/plink1_src.zip>
