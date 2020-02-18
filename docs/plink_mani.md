@@ -15,7 +15,7 @@ $ plink --bfile mydata --recode-rlist # Listing by minor allele count, plink.rli
 ```
 $ plink --bfile mydata --keep sampleList.txt --make-bed --out mydata_binned
 ```
-- In phenotype.txt, it should include **FamilyID** and **IndividualID**.
+- In sampleList.txt, it should include **FamilyID** and **IndividualID**.
 ```
 $ less sampleList.txt
 HG00096	HG00096
