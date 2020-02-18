@@ -11,7 +11,7 @@ pages:
     - Plink:
         - 'Introduction' : 'plink_int.md'
         - 'File format' : 'plink_fmt.md'
-        - 'Data manipulation' : plink_mani.md
+        - 'Data manipulation' : 'plink_mani.md'
         - 'Example' : 'plink_ex.md'
     - Epistasis: 'epistasis.md'
     - Chapter11: 'chapter11.md'
