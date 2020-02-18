@@ -153,6 +153,13 @@ in controls.
 - One way to find genotyping errors.
 - Deviation from HWE may also be due to precesses related to disease, and in genenral it is best not to discard SNPs that are only mildly discordant with HWE, but only to flag them for extra checking if they do who association with phenotype.
 
+- HWE holds only under the following assumption,
+> - Random mating.
+> - No selection or migration.
+> - No mutation.
+> - No population stratification.
+> - Infinite population size.
+
 # After imputation
 ## Linear regression : R2 > 0.7
 - The linear model regressing each imputed SNP on regional typed SNPs.
