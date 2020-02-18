@@ -85,3 +85,12 @@ plink --bfile filename --recode --tab --out out_file
 ```
 plink --file filename --make-bed --out out_file
 ```
+
+# Use other phenotype
+- case/control data
+```
+$ plink -bfile filename --pheno filename.phe --make-bed --out outfile
+```
+```
+$ 
+```
