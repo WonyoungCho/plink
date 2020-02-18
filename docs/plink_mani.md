@@ -12,6 +12,7 @@ $ plink --bfile mydata --recode-rlist # Listing by minor allele count, plink.rli
 ```
 
 ## Binning samples
+<https://www.cog-genomics.org/plink/1.9/filter>
 ```
 $ plink --bfile mydata --keep sampleList.txt --make-bed --out mydata_binned
 ```
