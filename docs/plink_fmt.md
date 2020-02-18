@@ -85,20 +85,3 @@ plink --bfile filename --recode --tab --out out_file
 ```
 plink --file filename --make-bed --out out_file
 ```
-
-# Use other phenotype
-- case/control data
-```
-$ plink -bfile filename --pheno phenotype.txt --make-bed --out outfile
-```
-- In phenotype.txt, it should include **FamilyID**, **IndividualID** and **case/control_Phenotype**.
-```
-$ less phenotype.txt
-HG00096	HG00096	1
-HG00097	HG00097	2
-HG00099	HG00099	2
-HG00100	HG00100	2
-HG00101	HG00101	1
-HG00102	HG00102	2
-HG00103	HG00103	1
-```
