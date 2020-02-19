@@ -165,6 +165,7 @@ in controls.
 - [Eighty Years Ago: The Beginnings of Population Genetics, James F. Crow and William F. Dove, Genetics 119:473–476, 1988.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1203431/)
 
 Evidence for departure from HWE has been userd in many applications of discrete P-values in HWE testing.
+
 - Inferring the existence of natural selection :
 > - [Wallace, B., 1958 The comparison of observed and calculated zygotic distributions. Evolution 12: 113–115.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1958.tb02935.x)
 > - [Lewontin, R. C., and C. C. Cockerham, 1959 The goodness-of-fit test for detecting natural selection in random mating populations. Evolution 13: 561–564.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1959.tb03043.x)
