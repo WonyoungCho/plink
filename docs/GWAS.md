@@ -160,6 +160,9 @@ in controls.
 > - No population stratification.
 > - Infinite population size.
 
+- [Eighty Years Ago: The Beginnings of Population Genetics]{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1203431/}
+
+
 # After imputation
 ## Linear regression : R2 > 0.7
 - The linear model regressing each imputed SNP on regional typed SNPs.
