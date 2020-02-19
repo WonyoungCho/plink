@@ -165,15 +165,15 @@ in controls.
 
 - Evidence for departure from HWE has been userd in many applications of discrete P-values in HWE testing.
 > - Inferring the existence of natural selection
-> [Wallace, B., 1958 The comparison of observed and calculated zygotic distributions. Evolution 12: 113–115.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1958.tb02935.x)
-> [Lewontin, R. C., and C. C. Cockerham, 1959 The goodness-of-fit test for detecting natural selection in random mating populations. Evolution 13: 561–564.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1959.tb03043.x)
+> - [Wallace, B., 1958 The comparison of observed and calculated zygotic distributions. Evolution 12: 113–115.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1958.tb02935.x)
+> - [Lewontin, R. C., and C. C. Cockerham, 1959 The goodness-of-fit test for detecting natural selection in random mating populations. Evolution 13: 561–564.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1959.tb03043.x)
 > - Chanllenging the statistical analysis of forensic DNA profile
-> [Cohen, J. E., M. Lynch and C. E. Taylor, 1991 Forensic DNA tests and Hardy-Weinberg equilibrium. Science 253: 1037–1038.](https://science.sciencemag.org/content/253/5023/1037.long)
-> [Weir, B. S., 1992 Population genetics in the forensic DNA debate. Proc. Natl. Acad. Sci. USA 89: 11654–11659.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC50614/)
+> - [Cohen, J. E., M. Lynch and C. E. Taylor, 1991 Forensic DNA tests and Hardy-Weinberg equilibrium. Science 253: 1037–1038.](https://science.sciencemag.org/content/253/5023/1037.long)
+> - [Weir, B. S., 1992 Population genetics in the forensic DNA debate. Proc. Natl. Acad. Sci. USA 89: 11654–11659.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC50614/)
 > - Detecting genotyping errors
-> [Gomes, I., A. Collins, C. Lonjou, N. S. Thomas, J. Wilkinson et al., 1999 Hardy-Weinberg quality control. Ann. Hum. Genet. 63:
+> - [Gomes, I., A. Collins, C. Lonjou, N. S. Thomas, J. Wilkinson et al., 1999 Hardy-Weinberg quality control. Ann. Hum. Genet. 63:
 535–538.](https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1469-1809.1999.6360535.x)
-> [Zou, G. Y., and A. Donner, 2006 The merits of testing Hardy-Weinberg equilibrium in the analysis of unmatched case-control data:
+> - [Zou, G. Y., and A. Donner, 2006 The merits of testing Hardy-Weinberg equilibrium in the analysis of unmatched case-control data:
 a cautionary note. Ann. Hum. Genet. 70: 921–933.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.2006.00267.x)
 
 
