@@ -160,7 +160,8 @@ in controls.
 > - No population stratification.
 > - Infinite population size.
 
-- [Eighty Years Ago: The Beginnings of Population Genetics]{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1203431/}
+- [A Note on Exact Tests of Hardy-Weinberg Equilibrium](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1199378/)
+- [Eighty Years Ago: The Beginnings of Population Genetics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1203431/)
 
 
 # After imputation
