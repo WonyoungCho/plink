@@ -1,5 +1,5 @@
 # Remove missings
-- **Remove variants and samples which have missing genotypes with 0.90 to 0.95 frequencies.**
+- **Remove variants and samples which have missing genotypes with 0.10 to 0.01 frequencies.**
 
 > - Single processing
 ```
@@ -12,7 +12,7 @@ file1='project'
 file2='.option1'
 file3='.op1'
 
-# Remove variants and samples which have missing genotypes with 0.90 to 0.95 frequencies.
+# Remove variants and samples which have missing genotypes with 0.10 to 0.01 frequencies.
 for i in {1..22} X Y;do plink --bfile ${file1}chr${i}${file2} --geno 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.snp90;done
 for i in {1..22} X Y;do plink --bfile ${file1}chr${i}${file2} --mind 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.smp90;done
 
@@ -59,7 +59,7 @@ file1='project'
 file2='.option1'
 file3='.op1'
 
-# Remove missing variants and samples from 0.90 to 0.95 frequencies.
+# Remove variants and samples which have missing genotypes with 0.10 to 0.01 frequencies.
 for i in {1..22} X Y;do echo "plink --bfile ${file1}chr${i}${file2} --geno 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.snp90";done
 for i in {1..22} X Y;do echo "plink --bfile ${file1}chr${i}${file2} --mind 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.smp90";done
 
