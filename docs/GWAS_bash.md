@@ -2,7 +2,7 @@
 - **Remove missing genotype variants and samples from 0.90 to 0.95 frequencies.**
 > - Single processing
 ```
-$ genomind.sh
+$ emacs genomind.sh
 #!/bin/bash
 
 path1='./test/'
@@ -49,7 +49,7 @@ paste ${path2}${file1}${file3}.idx ${path2}${file1}${file3}.smp.inf $a > ${path2
 
 > - Multi-processing
 ```
-$ cmd.sh
+$ emacs cmd.sh
 #!/bin/bash
 
 path1='./test/'
@@ -70,7 +70,7 @@ do
 done
 ```
 ```
-$ count.sh
+$ emacs count.sh
 #!/bin/bash
 
 path1='./test/'
