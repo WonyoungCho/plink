@@ -53,7 +53,7 @@ $ cmd.sh
 
 path1='./test/'
 path2='./inform/'
-file1='ADNI'
+file1='project'
 file2='.option1'
 file3='.op1'
 
@@ -70,6 +70,14 @@ done
 ```
 ```
 $ count.sh
+#!/bin/bash
+
+path1='./test/'
+path2='./inform/'
+file1='project'
+file2='.option1'
+file3='.op1'
+
 ./cmd.sh > cmd.lst
 
 parallel {} < cmd.lst
