@@ -16,6 +16,7 @@ pages:
     - Epistasis: 'epistasis.md'
     - Chapter11: 'chapter11.md'
     - GWAS QC: 'GWAS.md'
+    - GWAS comm: 'GWAS_bash.md'
     - Terminology: 'terminology.md'
     - Python:
         - 'Combination' : 'python_combo.md'
