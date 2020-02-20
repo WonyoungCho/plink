@@ -1,6 +1,6 @@
 # Remove missings
 - **Remove missing genotype variants and samples from 0.90 to 0.95 frequencies.**
-- Single process
+> - Single process
 ```
 $ genomind.sh
 #!/bin/bash
@@ -47,7 +47,7 @@ a=$(for j in {90..99} X Y;do printf ${path2}${file1}${file3}.smp${j}.inf" ";done
 paste ${path2}${file1}${file3}.idx ${path2}${file1}${file3}.smp.inf $a > ${path2}${file1}${file3}.smp_90_99.inf
 ```
 
-- Multi-process
+> - Multi-process
 ```
 $ cmd.sh
 #!/bin/bash
