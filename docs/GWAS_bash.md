@@ -1,5 +1,6 @@
 # Remove missings
 - **Remove missing genotype variants and samples from 0.90 to 0.95 frequencies.**
+
 > - Single processing
 ```
 $ emacs genomind.sh
