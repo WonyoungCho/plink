@@ -1,5 +1,5 @@
 # Remove missings
-- **Remove missing genotype variants and samples from 0.90 to 0.95 frequencies.**
+- **Remove variants and samples which have missing genotypes with 0.90 to 0.95 frequencies.**
 
 > - Single processing
 ```
@@ -12,7 +12,7 @@ file1='project'
 file2='.option1'
 file3='.op1'
 
-# Remove missing genotype variants and samples from 0.90 to 0.95 frequencies.
+# Remove variants and samples which have missing genotypes with 0.90 to 0.95 frequencies.
 for i in {1..22} X Y;do plink --bfile ${file1}chr${i}${file2} --geno 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.snp90;done
 for i in {1..22} X Y;do plink --bfile ${file1}chr${i}${file2} --mind 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.smp90;done
 
@@ -23,7 +23,7 @@ do
     for i in {1..22} X Y;do plink --bfile ${path1}${file1}chr${i}${file3}.snp$b --mind ${a} --make-bed --out ${path1}${file1}chr${i}${file3}.smp${c};done
 done
 
-# Check number of variants and samples from 0.90 to 0.95 frequencies.
+# Check the number of variants and samples.
 for j in {90..99}
 do
     for i in {1..22} X Y;do wc -l ${path1}${file1}chr${i}${file3}.snp${j}.bim;done > ${path2}${file1}${file3}.snp${j}.inf0
