@@ -53,12 +53,12 @@ paste ${path2}${file1}${file3}.idx ${path2}${file1}${file3}.smp.inf $a > ${path2
 $ emacs cmd.sh
 #!/bin/bash
 
-file1='ADNI'
+file1='GROUP'
 file2='.option1'
 file3='.op1'
 file4='.cmd'
 
-path0=/maha3/WYC/${file1}/data/
+path0=/${file1}/data/
 path1=${path0}test/
 path2=${path0}inform/
 path3=${path0}cmd_list/
@@ -72,7 +72,7 @@ for j in {9..1}
 do
     a=$(echo "scale = 2; $j / 100" | bc);b=$(echo "scale = 2; 99 - $j" | bc);c=$(echo "scale = 2; 100 - $j" | bc)
     for i in {1..22} X Y;do echo "plink --bfile ${path1}${file1}_chr${i}${file3}.smp$b --geno ${a} --make-bed --out ${path1}${file1}_chr${i}${file3}.snp${c}";done > ${path3}${file1}${file3}.snp${c}.cmd
-    for i in {1..22} X Y;do echo "plink --bfile ${path1}${file1}_chr${i}${file3}.snp$b --mind ${a} --make-bed --out ${path1}${file1}_chr${i}${file3}.smp${c}";done > ${path3}${file1}${file3}.snp${c}.cmd
+    for i in {1..22} X Y;do echo "plink --bfile ${path1}${file1}_chr${i}${file3}.snp$b --mind ${a} --make-bed --out ${path1}${file1}_chr${i}${file3}.smp${c}";done > ${path3}${file1}${file3}.smp${c}.cmd
 done
 
 for j in {90..99}
