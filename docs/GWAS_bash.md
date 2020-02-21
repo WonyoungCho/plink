@@ -6,15 +6,20 @@
 $ emacs genomind.sh
 #!/bin/bash
 
-path1='./test/'
-path2='./inform/'
-file1='project'
+file1='GROUP'
 file2='.option1'
 file3='.op1'
+file4='.cmd'
+
+path0=/${file1}/data/
+path1=${path0}test/
+path2=${path0}inform/
+path3=${path0}cmd_list/
+
 
 # Remove variants and samples which have missing genotypes with 0.10 to 0.01 frequencies.
-for i in {1..22} X Y;do plink --bfile ${file1}chr${i}${file2} --geno 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.snp90;done
-for i in {1..22} X Y;do plink --bfile ${file1}chr${i}${file2} --mind 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.smp90;done
+for i in {1..22} X Y;do plink --bfile ${path0}${file1}chr${i}${file2} --geno 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.snp90;done
+for i in {1..22} X Y;do plink --bfile ${path1}${file1}chr${i}${file3}.snp90 --mind 0.1 --make-bed --out ${path1}${file1}chr${i}${file3}.smp90;done
 
 for j in {9..1}
 do
