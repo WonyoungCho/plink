@@ -11,7 +11,7 @@ $ plink --bfile mydata --recodeAD # Additive and dominance components, plink.raw
 $ plink --bfile mydata --recode-rlist # Listing by minor allele count, plink.rlist
 ```
 
-## Bin samples
+## Extract from samples
 <https://www.cog-genomics.org/plink/1.9/filter>
 ```
 $ plink --bfile mydata --keep sampleList.txt --make-bed --out mydata_sample
@@ -28,7 +28,7 @@ HG00102	HG00102
 HG00103	HG00103
 ```
 
-## Use other phenotype
+## Adjust other phenotype
 - case/control data
 ```
 $ plink -bfile mydata --pheno phenotype.txt --make-bed --out mydata_gene
@@ -45,7 +45,7 @@ HG00102	HG00102	2
 HG00103	HG00103	1
 ```
 
-## Bin genes
+## Extract from genes
 <https://www.cog-genomics.org/plink/1.9/filter#gene>
 ```
 $ plink --bfile mydata --gene geneList.txt --make-bed --out mydata_gene
@@ -62,3 +62,22 @@ END
 GENE2 rs66222 rs929292
 rs288222 END
 ```
+
+## Extract SNPs from ranges
+```
+$ plink --bfile mydata --extract rangeList.txt --range --make-bed --out mydata_range
+```
+```
+The format of myrange.txt should be, one range per line, whitespace-separated:
+
+CHR Chromosome code (1-22, X, Y, XY, MT, 0)
+BP1 Start of range, physical position in base units
+BP2 End of range, as above
+LABEL Name of range/gene
+
+For example,
+2 30000000 35000000 R1
+2 60000000 62000000 R2
+X 10000000 20000000 R3
+```
+<https://www.cog-genomics.org/plink/1.9/filter#snp>
