@@ -63,7 +63,7 @@ GENE2 rs66222 rs929292
 rs288222 END
 ```
 
-## Extract SNPs from ranges
+## Extract from ranges
 ```
 $ plink --bfile mydata --extract rangeList.txt --range --make-bed --out mydata_range
 ```
