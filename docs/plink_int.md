@@ -2,6 +2,9 @@
 
 <http://zzz.bwh.harvard.edu/plink/index.shtml>
 
+- Plink1.x : <https://www.cog-genomics.org/plink/1.9/>
+- Plink2 : <https://www.cog-genomics.org/plink/2.0/>
+
 # Generate a simulation file
 - 어떤 dataset을 생성할 것인지 정해준다.
 ```
