@@ -2,7 +2,7 @@
 
 <http://zzz.bwh.harvard.edu/plink/index.shtml>
 
-- Plink1.x : <https://www.cog-genomics.org/plink/1.9/>
+- Plink1.9 : <https://www.cog-genomics.org/plink/1.9/>
 - Plink2 : <https://www.cog-genomics.org/plink/2.0/>
 
 # Generate a simulation file
