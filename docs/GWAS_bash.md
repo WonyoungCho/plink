@@ -4,14 +4,45 @@ path0='./'
 path1=${path0}'op1_range/'
 path2=${path0}'inform/'
 path3=${path0}'cmd_list/'
+path4=${path0}'temp/'
+
 file1='GROUP'
 file2='.option1'
 file3='.op1'
 file4='.cmd'
+gene_list=${file1}'_sel_gene.list'
 
 file0='.gene.snp0.99.maf0.05'
 file00='.gene.snp.maf'
 ```
+
+# Preparation
+```
+mkdir ${path4}
+
+while IFS='' read -r line
+do
+    echo "cat ${path0}Exome.bed |grep -w ${line} > ${path4}Exome_gene_${line}"
+    echo "cat ${path0}${file1}.ann |grep -w ${line} > ${path4}${file1}_gene_${line}"
+done < ${path0}${gene_list} > ${path0}'cmd_sel_gene'
+
+parallel {} < ${path0}'cmd_sel_gene'
+
+rm ${path0}'cmd_sel_gene'
+
+
+cat ${path4}Exome_gene_* > ${path4}Exome_sel_gene.bed
+cat ${path4}${file1}_gene_* > ${path4}${file1}_sel_gene.ann
+
+sort -V -k 1 ${path4}Exome_sel_gene.bed > ${path4}Exome_sel_gene.tmp
+awk -F"chr" '{print $2}' ${path4}Exome_sel_gene.tmp > ${path0}Exome_sel_genes.bed
+sort -V -k 1 ${path4}${file1}_sel_gene.ann > ${path0}${file1}_sel_genes.ann
+
+rm -r ${path4}
+
+awk -F"chr" '{print $2" "$3}' ${path0}${file1}_sel_genes.ann|awk '{print $3"_"$5"\t"$2}' > ${path0}${file1}_sel_genes_short.ann
+```
+
 
 # Replace variant name
 ```
