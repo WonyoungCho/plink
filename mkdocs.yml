@@ -17,6 +17,7 @@ pages:
     - Chapter11: 'chapter11.md'
     - GWAS QC: 'GWAS.md'
     - GWAS script: 'GWAS_bash.md'
+    - Analysis script: 'analysis_bash.md'
     - Terminology: 'terminology.md'
     - Python:
         - 'Combination' : 'python_combo.md'
