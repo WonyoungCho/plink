@@ -18,6 +18,8 @@ pages:
     - GWAS QC: 'GWAS.md'
     - GWAS script: 'GWAS_bash.md'
     - Analysis script: 'analysis_bash.md'
+    - Plink2:
+        - 'Example' : 'plink2_ex.md'
     - Terminology: 'terminology.md'
     - Python:
         - 'Combination' : 'python_combo.md'
