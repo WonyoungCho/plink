@@ -5,7 +5,8 @@
 ## vcf to bed
 ```
 $ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz
-$ plink --vcf data.vcf.gz --double-id --make-bed --out data
+$ plink --vcf data.vcf.gz --make-bed --out data --double-id (or --const-fid)
+$ plink --vcf data.vcf.gz --make-bed --out data --pheno data_pheno.txt --update-sex data_sex.txt
 ```
 
 ## Recode allele type
