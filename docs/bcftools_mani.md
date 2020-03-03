@@ -1,6 +1,6 @@
 # BCFtools
 ```
-$ bcftools view -I data.vcf.gz > data_remove_indels.vcf.gz
+$ bcftools view -I data.vcf.gz > data_skip_indels.vcf.gz
 
 
 ```
