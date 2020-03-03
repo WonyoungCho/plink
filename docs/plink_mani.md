@@ -2,6 +2,12 @@
 
 - Data file : [test_set2.csv](data/test_set2.csv) (<https://github.com/EpistasisLab/scikit-mdr/tree/master/data>)
 
+## vcf to bed
+```
+$ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz
+$ plink --vcf data.vcf.gz --double-id --make-bed --out data
+```
+
 ## Recode allele type
 <http://zzz.bwh.harvard.edu/plink/dataman.shtml>
 ```
