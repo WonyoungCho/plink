@@ -12,7 +12,7 @@
 - INDEL :  REF  AT
 > - ALT  T     # INDEL, 1 del
 - SV    :  REF  A
-> - ALT <DEL>  # SV
+> - ALT "<DEL>"  # SV
 
 **Complex Biallelic Examples**
 
