@@ -7,17 +7,20 @@
 
    REF  A       
    ALT  G     #SNP, 1 ts  
-   
+```
+```
    MNP
 
    REF  AT     
    ALT  GC    #MNP, 2 ts
-   
+```
+```
    INDEL
 
    REF  AT      
    ALT  A     #INDEL, 1 del
-   
+```
+```
    INDEL
 
    REF  AT      
@@ -25,7 +28,8 @@
               #Note that although the padding base differs - A vs T, this is actually a simple indel because it is simply a deletion of a A base.  
               #If you right align this instead of left aligning, then the padding will be T on both the reference and alternative alleles.
               #Simple Indel classification should be invariant whether it is left or right aligned.
-   
+```
+```
    SV
 
    REF  A    
