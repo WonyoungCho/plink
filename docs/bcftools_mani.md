@@ -1,3 +1,23 @@
+# Variant classification
+<https://genome.sph.umich.edu/wiki/Variant_classification>
+
+**Simple Biallelic Examples**
+
+- SNP   :  REF  A   /  ALT  G     #SNP, 1 ts
+- MNP   :  REF  AT  /  ALT  GC    #MNP, 2 ts
+- INDEL :  REF  AT  /  ALT  A     #INDEL, 1 del
+- INDEL :  REF  AT  /  ALT  T     #INDEL, 1 del
+- SV    :  REF  A   /  ALT <DEL>  #SV
+
+**Complex Biallelic Examples**
+- SNP|INDEL      :  REF  AT         /  ALT  G           #SNP, INDEL, 1 ts
+- MNP|INDEL      :  REF  ATT        /  ALT  GG          #MNP, INDEL, 1 ts, 1 tv, 1 del
+- MNP|CLUMPED    :  REF  ATTTT      /  ALT  GTTTC       #MNP, CLUMPED, 2 ts
+- INDEL|CLUMPED  :  REF  ATTTTTTTT  /  ALT  GTTTC       #INDEL, CLUMPED, 2 ts, 1 del
+
+**Simple Multiallelic Examples**
+
+
 # Preparation
 ```
 $ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz
