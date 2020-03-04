@@ -49,18 +49,21 @@
                     #is a transversion.  In such ambiguous cases, we simply consider the aligned bases after left alignment to get the transition
                     #and transversion contribution.  But please be very clear that this is an ambiguous case.  It is better to consider this simply
                     #as a complex variant.
-   
+```
+```
    MNP|INDEL
 
    REF  ATT          
    ALT  GG          #MNP, INDEL, 1 ts, 1 tv, 1 del
-   
+```
+```
    MNP|CLUMPED
 
    REF  ATTTT        
    ALT  GTTTC       #MNP, CLUMPED, 2 ts
                     #since all the alleles are of the same length, classified as MNP too.
-   
+```
+```
    INDEL|CLUMPED
 
    REF  ATTTTTTTT    
@@ -74,13 +77,15 @@
    REF  A       
    ALT  G           #SNP, 1 ts
    ALT  C           #SNP, 1 tv
-   
+```
+```
    MNP
 
    REF  AG      
    ALT  GC          #MNP, 1 ts, 1 tv
    ALT  CT          #MNP, 2 tv 
-   
+```
+```
    INDEL
 
    REF  ATTT    
@@ -96,21 +101,24 @@
    ALT  GT          #SNP, 1 ts
    ALT  AC          #SNP, 1 ts
                     #since all the alleles are of the sample length, classified as MNP too.
-   
+```
+```
    SNP|MNP|CLUMPED
 
    REF  ATTTG    
    ALT  GTTTC       #CLUMPED, 1 ts, 1 tv
    ALT  ATTTC       #SNP, 1 tv, note that we get the SNP after truncating the bases ATTT to reveal a G/C transversion SNP
                     #since all the alleles are of the sample length, classified as MNP too.
-   
+```
+```
    SNP|MNP|INDEL
 
    REF  GT    
    ALT  CT          #SNP, 1 tv
    ALT  AG          #MNP, 2 tv
    ALT  GTT         #INDEL, 1 ins
-   
+```
+```
    SNP|MNP|INDEL|CLUMPED
 
    REF  GTTT    
@@ -125,7 +133,8 @@
 
    REF  G    
    ALT <INS:ME:LINE1>    #SV
-   
+```
+```
    SV
 
    REF  G    
