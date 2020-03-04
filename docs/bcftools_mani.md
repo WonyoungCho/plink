@@ -16,6 +16,15 @@
 - INDEL|CLUMPED  :  REF  ATTTTTTTT  /  ALT  GTTTC       #INDEL, CLUMPED, 2 ts, 1 del
 
 **Simple Multiallelic Examples**
+- SNP   :  REF  A
+> - ALT  G           #SNP, 1 ts
+> - ALT  C           #SNP, 1 tv
+- MNP   :  REF  AG
+> - ALT  GC          #MNP, 1 ts, 1 tv
+> - ALT  CT          #MNP, 2 tv 
+- INDEL :  REF  ATTT    
+> - ALT  ATT         #INDEL, 1 del
+> - ALT  ATTTT       #INDEL, 1 ins
 
 
 # Preparation
