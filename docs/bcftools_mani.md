@@ -161,6 +161,7 @@ $ bcftools reheader -h heads.txt data.vcf.gz|bcftools view|less
 ```
 
 # vcf-validator
+<https://github.com/EBIvariation/vcf-validator/releases>
 ```
 Usage: vcf-validator [OPTIONS] file.vcf.gz
 Options:
