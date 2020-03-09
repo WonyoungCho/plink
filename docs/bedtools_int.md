@@ -1,5 +1,5 @@
 # Bedtools
-: a powerful toolset for genome arithmetic
+**bedtools**: a powerful toolset for genome arithmetic
 
 <https://bedtools.readthedocs.io/en/latest/>
 
