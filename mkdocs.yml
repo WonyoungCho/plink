@@ -34,6 +34,7 @@ pages:
         - 'Introduction' : 'samtools_int.md'
         - 'Option' : 'samtools_opt.md'
     - BEDOPS: 'bedops_int.md'
+    - Bedtools: 'bedtools_int.md'
     - Gviz: 'Gviz_int.md'
     - Specification: 'com_spec.md'
 theme: readthedocs
