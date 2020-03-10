@@ -43,4 +43,4 @@ $ samtools tview -p chr22 myfile.bam hg38.fa
 
 22758816
 ```
-- g : `goto`
+- g : `goto` =10000
