@@ -10,9 +10,7 @@
 <https://bedtools.readthedocs.io/en/latest/content/tools/merge.html>
 
 
-- Bed files
-
-<https://github.com/AstraZeneca-NGS/reference_data/tree/master/hg38/bed>
+- Bed files : <https://github.com/AstraZeneca-NGS/reference_data/tree/master/hg38/bed>
 
 ```
 $ less data.bed
