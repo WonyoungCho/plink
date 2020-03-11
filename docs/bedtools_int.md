@@ -23,4 +23,7 @@ chr1    13259210        13259717        PRAMEF5,PRAMEF5,PRAMEF5
 
 $ bedtools merge -i data.bed -c 4 -o distinct
 chr1    13259210        13259717        PRAMEF5
+
+$ bedtools merge -i data.bed -header
+chr1    13259210        13259717   
 ```
