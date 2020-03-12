@@ -33,4 +33,4 @@
 
 # Gene list
 
-- [ADNI](ADNI_genes.txt)
+- [ADNI](./data/ADNI_genes.txt)
