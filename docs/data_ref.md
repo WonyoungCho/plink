@@ -29,3 +29,8 @@
 - [How to Download hg38/GRCh38 FASTA Human Reference Genome](https://www.gungorbudak.com/blog/2018/05/16/how-to-download-hg38-grch38-fasta-human-reference-genome/)
 - [ebi.ac.uk masked fa](http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/working/20160622_genome_mask_GRCh38/)
 - [Reference fa files](http://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/)
+
+
+# Gene list
+
+- [ADNI](ADNI_genes.txt)
