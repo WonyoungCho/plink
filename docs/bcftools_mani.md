@@ -196,10 +196,19 @@ Options:
    -h, -?, --help                      This help message.
 ```
 
-# Add informations
+# Plug fill-tags
 <https://samtools.github.io/bcftools/howtos/plugin.fill-tags.html>
+- AN .. Total number of alleles in called genotypes
+- AC .. Allele count in genotypes
+- NS .. Number of samples with data
+- AC_Hom .. Allele counts in homozygous genotypes
+- AC_Het .. Allele counts in heterozygous genotypes
+- AC_Hemi .. Allele counts in hemizygous genotypes (haploid)
+- AF .. Allele frequency
+- MAF .. Minor Allele frequency
+- HWE .. HWE test (PMID:15789306)
 
 # Add allele frequency
 ```
-$ bcftools +fill-tags data.vcf.gz  -- -t AF -Oz -o data.vcf.gz
+$ bcftools +fill-tags data.vcf.gz -Oz -o data.vcf.gz -- -t AF
 ```
