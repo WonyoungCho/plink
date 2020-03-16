@@ -196,6 +196,9 @@ Options:
    -h, -?, --help                      This help message.
 ```
 
+# Add informations
+<https://samtools.github.io/bcftools/howtos/plugin.fill-tags.html>
+
 # Add allele frequency
 ```
 $ bcftools +fill-tags data.vcf.gz  -- -t AF -Oz -o data.vcf.gz
