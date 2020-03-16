@@ -195,3 +195,8 @@ Options:
                                            records this far apart as matching (be it a SNP or an indel).
    -h, -?, --help                      This help message.
 ```
+
+# Add allele frequency
+```
+$ bcftools +fill-tags data.vcf.gz  -- -t AF -Oz -o data.vcf.gz
+```
