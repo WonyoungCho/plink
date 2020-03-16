@@ -8,6 +8,11 @@ $ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz
 $ plink --vcf data.vcf.gz --make-bed --out data --double-id (or --const-fid)
 $ plink --vcf data.vcf.gz --make-bed --out data --pheno data_pheno.txt --update-sex data_sex.txt
 ```
+- When you convert vcf to bed, there could be a sample ordering problem.
+```
+$ plink --vcf data.vcf --keep-allele-order --indiv-sort file SampleOrder.lst --vcf-idspace-to _ --const-fid --make-bed --out data 
+```
+
 
 ## Recode allele type
 <http://zzz.bwh.harvard.edu/plink/dataman.shtml>
