@@ -198,6 +198,7 @@ Options:
 
 # Plug fill-tags
 <https://samtools.github.io/bcftools/howtos/plugin.fill-tags.html>
+
 - AN .. Total number of alleles in called genotypes
 - AC .. Allele count in genotypes
 - NS .. Number of samples with data
