@@ -44,3 +44,9 @@ $ samtools tview -p chr22 myfile.bam hg38.fa
 22758816
 ```
 - g : `goto` =10000
+
+# Extract
+```
+$ samtools view -b -h myfile.bam "chr22:10000-20000" > out.bam
+```
+
