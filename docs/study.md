@@ -1,7 +1,7 @@
 # Raw data
 - Bentley et al. estimated that 15X mapped read depth of WGS samples would be sufficient to detect almost all homozygous SNPs and 33X for almost all heterozygous SNPs [12]. 50X was estimated by Ajay et al. for all SNPs and small indels [13]. Depending on the capture kit, Clark et al. calculated that exome-seq required 80X mean on-target depth to reach the common threshold of 10X per-site depth in 90% or more of all targeted regions [10].
 
-> - p.2 in [Variant detection sensitivity and biases in whole genome and exome sequencing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4122774/)
+> - p.2 [Variant detection sensitivity and biases in whole genome and exome sequencing](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4122774/)
 
 - In general, we recommend GATK-HC for variant calling and filtering for several reasons. First of all, GATK-HC outperformed SAMtools-mpileup in most of our situation tests resulting a higher precision and recall ratio for SNP and INDEL detection. Second, GATK-HC allows rapid incorporation of multiple samples into a dataset without needing to recall genotypes for all samples, even previously genotyped
 ones, from aligned reads by using the GVCF system. This saves considerable time and computational expense when adding samples to a dataset. The third reason to recommend GATK-HC is that it supports multi-thread processing which is not available in the SAMtools-mpileup. Taking the advantage of high-performance clusters, multi-thread feature can significantly save processing time especially for large studies. Finally, the GATK package supports sophisticated machine learning based variant filtering (VQSR) which
