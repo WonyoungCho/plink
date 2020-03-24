@@ -50,3 +50,7 @@ $ samtools tview -p chr22 myfile.bam hg38.fa
 $ samtools view -b -h myfile.bam "chr22:10000-20000" > out.bam
 ```
 
+# Split fasta
+```
+$ samtools faidx hs38DH.fa chr1 > hs38DH_chr1.fa
+```
