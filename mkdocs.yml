@@ -37,4 +37,5 @@ pages:
     - Bedtools: 'bedtools_int.md'
     - Gviz: 'Gviz_int.md'
     - Specification: 'com_spec.md'
+    - STUDY: 'study.md'
 theme: readthedocs
