@@ -7,19 +7,19 @@ Under the guidance of the first reference, I used 'plink' and 'python' for QC.
 There are few steps :
 
 
-# SNP call rate > 95%
+# SNP call rate >= 95%
 ```
 $ plink --file raw_data --geno 0.05 --make-bed --out variant5
   : variant5.bed + variant5.bim + variant5.fam
 ```
-# MAF > 1%
+# MAF >= 1%
 ```
 $ plink --bfile variant5 --maf 0.01 --make-bed --out maf1
   : maf5.bed + maf5.bim + maf5.fam
 ```
 
 
-# Sample call rate > 95%
+# Sample call rate >= 95%
 ```
 $ plink --file maf1 --mind 0.05 --make-bed --out sample5
   : sample5.bed + sample5.bim + sample5.fam
