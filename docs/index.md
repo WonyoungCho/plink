@@ -5,6 +5,7 @@
 This site introduces several ways to analyze genomic data and related things using `Plink` and `Python`.
 
 ---
+*What Feynman hated worse than anything else was intellectual pretense: phoniness, false sophistication, jagor by Leonard Susskind, old friend of Feynman.*
 
 **Wonyoung Cho**.
 
