@@ -8,6 +8,7 @@ This site introduces several ways to analyze genomic data and related things usi
 *What Feynman hated worse than anything else was intellectual pretense: phoniness, false sophistication, jargon*
 
 by Leonard Susskind, an old friend of Feynman.
+
 ---
 
 **Wonyoung Cho**.
