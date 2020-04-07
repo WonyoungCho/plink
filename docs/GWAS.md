@@ -70,6 +70,7 @@ $ plink --bfile sample5 --extract hetero_prun.out --recode --out hetero_prun
   : hetero_prun.ped + hetero_prun.map
 ```
 
+
 # LD : R2 > 0.2
 ```
 $ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
