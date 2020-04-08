@@ -196,6 +196,7 @@ Options:
    -h, -?, --help                      This help message.
 ```
 
+
 # Plug fill-tags
 <https://samtools.github.io/bcftools/howtos/plugin.fill-tags.html>
 
@@ -208,6 +209,8 @@ Options:
 - AF .. Allele frequency
 - MAF .. Minor Allele frequency
 - HWE .. HWE test (PMID:15789306)
+
+<https://github.com/samtools/bcftools/blob/develop/doc/bcftools.txt>
 
 # Add allele frequency
 ```
