@@ -222,4 +222,8 @@ $ bcftools +fill-tags data.vcf.gz -Ov -o out.vcf -- -t AF
 ```
 $ bcftools view -i 'F_MISSING < 0.1' data.vcf.gz -Ov -o out.vcf
 ```
+- Remove by number of missing values. (n*2)
+```
+$ bcftools view -i 'N_MISSING < 800' data.vcf.gz -Ov -o out.vcf
+```
 
