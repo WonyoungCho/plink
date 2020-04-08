@@ -214,5 +214,12 @@ Options:
 
 # Add allele frequency
 ```
-$ bcftools +fill-tags data.vcf.gz -Oz -o data.vcf.gz -- -t AF
+$ bcftools +fill-tags data.vcf.gz -Ov -o out.vcf -- -t AF
 ```
+
+# Remove by missing rate
+- Remove variants which have missing values less than 10%.
+```
+$ bcftools view -i 'F_MISSING < 0.1' data.vcf.gz -Ov -o out.vcf
+```
+
