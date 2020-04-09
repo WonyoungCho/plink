@@ -104,7 +104,7 @@ $ less plink.frq
 
 Only include SNPs with '0.01 <= MAF <= 0.4' :
 ```
-$ plink --file mydata --make-bed --maf 0.01 --maf-max 0.4 --out mydata_maf
+$ plink --file mydata --make-bed --maf 0.01 --max-maf 0.4 --out mydata_maf
 ```
 
 ## Hardy-Weinberg Equilibrium
