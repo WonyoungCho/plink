@@ -51,11 +51,18 @@ $ plink2 --bfile ft_pedigree --maf 0.01 --make-bed --out ft_maf
 ```
 
 # HWE
-- Remove HWE p-value less than 1e-5.
+- Remove genotyping error.(p-value < 1e-50)
 ```
-$ plink2 --bfile ft_maf --hwe 1e-5 --make-bed --out ft_hwe
+$ plink2 --bfile ft_maf --hwe 1e-50 keep-fewhet --make-bed --out ft_hwe_gt
 ```
 
+- Remove HWE p-value less than 1e-5.
+```
+$ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --make-bed --out ft_hwe
+```
+- `keep-fewhet` : When significant population stratification is present, this test can be expected to fail in the too-few-hets direction on some normal variants. When using --hwe for quality control, you probably want to keep these variants.
+- [Testing for Hardy-Weinberg equilibrium at biallelic genetic markers on the X chromosome.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4868269/)
+- [The mid p-value in exact tests for Hardy-Weinberg equilibrium.](https://www.degruyter.com/view/journals/sagmb/12/4/article-p433.xml)
 
 
 # Sex info
