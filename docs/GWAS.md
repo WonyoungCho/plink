@@ -50,11 +50,13 @@ $ plink2 --bfile ft_pedigree --freq alt1bins=0.01,0.02,0.03,0.04,0.05,0.1,0.2,0.
 $ plink2 --bfile ft_pedigree --maf 0.01 --make-bed --out ft_maf
 ```
 
+# HWE
+- Remove HWE p-value less than 1e-5.
+```
+$ plink2 --bfile ft_maf --hwe 1e-5 --make-bed --out ft_hwe
+```
 
-To combine above qc, we can write
-```
-$ plink --file raw_data --geno 0.05 --maf 0.01 --mind 0.05 --make-bed --out sample5
-```
+
 
 # Sex info
 ```
