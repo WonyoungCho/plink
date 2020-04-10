@@ -17,7 +17,7 @@ $ plink2 --vcf data.vcf.gz --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele
 - `\$a` : alt allele
 
 
-There are few steps :
+After the files are ready, let us follow the regular procedure for GWAS.
 
 # SNP call rate >= 95%
 ```
