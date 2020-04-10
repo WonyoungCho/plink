@@ -1,8 +1,8 @@
-GWAS (Genome-wise association study) is the way to find any variants are associated with a trait.
+GWAS (Genome-wise association study) is the way to find disease-relate-variants.
 
 As a prior to analyze data, QC (quality control) is needed.
 
-Under the guidance of the first reference, I used 'plink' and 'python' for QC.
+I used [**plink**](https://www.cog-genomics.org/plink/2.0/) and **python** for QC.
 
 If you have *vcf* instead of plink format files, then transform the *vcf* to *bed*.
 
