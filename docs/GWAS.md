@@ -70,7 +70,7 @@ $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --keep-if "PHENO1==control" --
 ```
 
 # Linkage disequilibrium
-: In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.
+: In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.[WIKIPEDIA]
 
 
 
