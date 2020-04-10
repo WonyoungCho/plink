@@ -24,7 +24,6 @@ After the files are ready, let us follow the regular procedure for GWAS.
 ```
 $ plink2 --bfile raw_data --geno (0.1~0.01) --make-bed --out ft_missing
 $ plink2 --bfile ft_missing --mind (0.1~0.01) --make-bed --out ft_missing
-  : ft_missing.bed + ft_missing.bim + ft_missing.fam
 ```
 
 # Relatives
@@ -37,19 +36,19 @@ $ plink2 --bfile ft_missing --king-cutoff 0.177 --make-bed --out ft_pedigree
 - Second-degree : [0.0884, 0.177]
 - Third-degree  : [0.0442, 0.0884]
 
+# Variant distribution
+- Check the number of variants at each frequencies.
+```
+$ plink2 --bfile ft_pedigree --freq alt1bins=0.01,0.02,0.03,0.04,0.05,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1
+```
+- The ranges are `[0,0.01)`, `[0.01,0.02)`,...,`[0.4,0.5]`,`(0.5,0.6]`,...,`[0.8,0.9)`,`1`.
 
-# MAF &#8805; 1%
+# MAF
+- Remove low maf variants less than 0.01.
 ```
-$ plink --bfile variant5 --maf 0.01 --make-bed --out maf1
-  : maf5.bed + maf5.bim + maf5.fam
+$ plink2 --bfile ft_pedigree --maf 0.01 --make-bed --out ft_maf
 ```
 
-
-# Sample call rate &#8805; 95%
-```
-$ plink --file maf1 --mind 0.05 --make-bed --out sample5
-  : sample5.bed + sample5.bim + sample5.fam
-```
 
 To combine above qc, we can write
 ```
