@@ -22,10 +22,21 @@ After the files are ready, let us follow the regular procedure for GWAS.
 # Missingness
 - Remove missing variants and samples alternately from 0.1 to 0.01.
 ```
-$ plink2 --file raw_data --geno (0.1~0.01) --make-bed --out out_data
-$ plink2 --file out_data --mind (0.1~0.01) --make-bed --out out_data
-  : out_data.bed + out_data.bim + out_data.fam
+$ plink2 --bfile raw_data --geno (0.1~0.01) --make-bed --out ft_missing
+$ plink2 --bfile ft_missing --mind (0.1~0.01) --make-bed --out ft_missing
+  : ft_missing.bed + ft_missing.bim + ft_missing.fam
 ```
+
+# Relatives
+- Remove all first-degree relations.
+```
+$ plink2 --bfile ft_missing --king-cutoff 0.177 --make-bed --out ft_pedigree 
+```
+- Duplicate/MZ twin : > 0.354
+- First-degree  : [0.177, 0.354]
+- Second-degree : [0.0884, 0.177]
+- Third-degree  : [0.0442, 0.0884]
+
 
 # MAF &#8805; 1%
 ```
