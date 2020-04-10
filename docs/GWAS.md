@@ -59,6 +59,7 @@ $ plink2 --bfile ft_maf --hwe 1e-50 keep-fewhet --make-bed --out ft_hwe_gt
 - Remove HWE p-value less than 1e-5.
 ```
 $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --make-bed --out ft_hwe
+$ plink  --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --make-bed --out ft_hwe  # plink1.9 the '--hwe' works only in controls. '--hwe-all' works to cases and controls.
 ```
 - `keep-fewhet` : When significant population stratification is present, this test can be expected to fail in the too-few-hets direction on some normal variants. When using --hwe for quality control, you probably want to keep these variants.
 
@@ -71,21 +72,54 @@ If you want to see case or control only,
 $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --keep-if "PHENO1==control" --make-bed --out ft_hwe
 ```
 
+- HWE holds only under the following assumption,
+> - Random mating.
+> - No selection or migration.
+> - No mutation.
+> - No population stratification.
+> - Infinite population size.
+
+- [A Note on Exact Tests of Hardy-Weinberg Equilibrium, Janis E. Wigginton, David J. Cutler and Gonc¸alo R. Abecasis, Am. J. Hum. Genet. 76:887–883, 2005.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1199378/)
+> - Source code : <https://csg.sph.umich.edu/abecasis/Exact/index.html>
+- [Eighty Years Ago: The Beginnings of Population Genetics, James F. Crow and William F. Dove, Genetics 119:473–476, 1988.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1203431/)
+
+Evidence for departure from HWE has been userd in many applications of discrete P-values in HWE testing.
+
+- Inferring the existence of natural selection :
+> - [Wallace, B., 1958 The comparison of observed and calculated zygotic distributions. Evolution 12: 113–115.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1958.tb02935.x)
+> - [Lewontin, R. C., and C. C. Cockerham, 1959 The goodness-of-fit test for detecting natural selection in random mating populations. Evolution 13: 561–564.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1959.tb03043.x)
+- Chanllenging the statistical analysis of forensic DNA profile :
+> - [Cohen, J. E., M. Lynch and C. E. Taylor, 1991 Forensic DNA tests and Hardy-Weinberg equilibrium. Science 253: 1037–1038.](https://science.sciencemag.org/content/253/5023/1037.long)
+> - [Weir, B. S., 1992 Population genetics in the forensic DNA debate. Proc. Natl. Acad. Sci. USA 89: 11654–11659.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC50614/)
+- Detecting genotyping errors :
+> - [Gomes, I., A. Collins, C. Lonjou, N. S. Thomas, J. Wilkinson et al., 1999 Hardy-Weinberg quality control. Ann. Hum. Genet. 63:
+535–538.](https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1469-1809.1999.6360535.x)
+> - [Zou, G. Y., and A. Donner, 2006 The merits of testing Hardy-Weinberg equilibrium in the analysis of unmatched case-control data:
+a cautionary note. Ann. Hum. Genet. 70: 921–933.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.2006.00267.x)
+
+
 # Linkage disequilibrium
 : In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.[WIKIPEDIA]
 ```
 $ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.2  # do not care the chromosome [window size = 1000 kb].
 $ plink2 --bfile ft_hwe --indep-chr 1000 100 0.2  # do not care the chromosome [window size = 1000 kb].
+$ plink2 --bfile ft_hwe --indep 1000 100 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
   : plink2.prune.in , plink2.prune.out
   
 $ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
 ```
 - Recombination unit is CM(centi-morgan). It is approximately 1 Mb. So LD should be within the size.
+- R2 : to remove SNPs if R2 is not less than 0.2
+> - plink2.prune.in : R2 < 0.2
+> - plink2.prune.out : R2 >= 0.2
+- VIF = 1 : completely independent
+- VIF = 2~10 : usual cut-off
 
 Check the correlation between SNPs.
 ```
 $ plink --bfile ft_hwe --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1000 --ld-window-r2 0.2 --out ft_ld
 ```
+
 
 # PCA
 ```
@@ -105,6 +139,7 @@ $ plink2 --bfile ft_ld --check-sex
 --------------------------------------------------------
 
 -----------------------------------------------------------
+
 
 # Inbreeding : F
 ```
@@ -130,35 +165,12 @@ df['F']=1-df['O(HET)']/df['E(HET)']
 df['abs(F)']=abs(df['F'])
 df=df[df['abs(F)'] < 0.1]
 df_snp=df['SNP']
-df_snp.to_csv('hetero_prun.out',index=False)
+df_snp.to_csv('hetero_prune.out',index=False)
 ```
 ```
-$ plink --bfile sample5 --extract hetero_prun.out --recode --out hetero_prun
+$ plink --bfile sample5 --extract hetero_prune.out --recode --out hetero_prun
   : hetero_prun.ped + hetero_prun.map
 ```
-
-# LD : R2 > 0.2
-```
-$ plink --file hetero_prun --r2 dprime inter-chr with-freqs --ld-window-r2 0.2
-  : plink.ld
-```
-- Association is the relation between an allele and a phenotype, whereas LD refers to the relation between two alleles or to the relation between two genotypes.
-
-# LD pruning
-```
-$ plink --file data --indep 50 5 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
-$ plink --file data --indep-pairwise 50 5 0.5  # window size, step, R2 threshold
-$ plink --file data --extract plink.prune.in --make-bed --out pruneddata
-```
-<http://zzz.bwh.harvard.edu/plink/summary.shtml#prune>
-
-- Size : to compute R2 with nearest 50 SNPs, 50C2
-- Step : next 5th SNP
-- VIF = 1 : completely independent
-- VIF = 2~10 : usual cut-off
-- R2 : to remove SNPs if R2 is not less than 0.5
-> - plink.prune.in : R2 < 0.5
-> - plink.prune.out : R2 >= 0.5
 
 
 # IBD : PI-HAT > 0.2
@@ -210,41 +222,7 @@ plt.show()
 <http://www.bioinf.wits.ac.za/courses/gwas/OLD/Qc_combined_final.pdf> P.18
 
 
-# PCA (take clustered data)
-```
 
-```
-
-# HWE : p < 1E-5
-in controls.
-
-- One way to find genotyping errors.
-- Deviation from HWE may also be due to precesses related to disease, and in genenral it is best not to discard SNPs that are only mildly discordant with HWE, but only to flag them for extra checking if they do who association with phenotype.
-
-- HWE holds only under the following assumption,
-> - Random mating.
-> - No selection or migration.
-> - No mutation.
-> - No population stratification.
-> - Infinite population size.
-
-- [A Note on Exact Tests of Hardy-Weinberg Equilibrium, Janis E. Wigginton, David J. Cutler and Gonc¸alo R. Abecasis, Am. J. Hum. Genet. 76:887–883, 2005.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1199378/)
-> - Source code : <https://csg.sph.umich.edu/abecasis/Exact/index.html>
-- [Eighty Years Ago: The Beginnings of Population Genetics, James F. Crow and William F. Dove, Genetics 119:473–476, 1988.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1203431/)
-
-Evidence for departure from HWE has been userd in many applications of discrete P-values in HWE testing.
-
-- Inferring the existence of natural selection :
-> - [Wallace, B., 1958 The comparison of observed and calculated zygotic distributions. Evolution 12: 113–115.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1958.tb02935.x)
-> - [Lewontin, R. C., and C. C. Cockerham, 1959 The goodness-of-fit test for detecting natural selection in random mating populations. Evolution 13: 561–564.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1558-5646.1959.tb03043.x)
-- Chanllenging the statistical analysis of forensic DNA profile :
-> - [Cohen, J. E., M. Lynch and C. E. Taylor, 1991 Forensic DNA tests and Hardy-Weinberg equilibrium. Science 253: 1037–1038.](https://science.sciencemag.org/content/253/5023/1037.long)
-> - [Weir, B. S., 1992 Population genetics in the forensic DNA debate. Proc. Natl. Acad. Sci. USA 89: 11654–11659.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC50614/)
-- Detecting genotyping errors :
-> - [Gomes, I., A. Collins, C. Lonjou, N. S. Thomas, J. Wilkinson et al., 1999 Hardy-Weinberg quality control. Ann. Hum. Genet. 63:
-535–538.](https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1469-1809.1999.6360535.x)
-> - [Zou, G. Y., and A. Donner, 2006 The merits of testing Hardy-Weinberg equilibrium in the analysis of unmatched case-control data:
-a cautionary note. Ann. Hum. Genet. 70: 921–933.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.2006.00267.x)
 
 
 # After imputation
