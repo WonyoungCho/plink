@@ -4,7 +4,7 @@ As a prior to analyze data, QC (quality control) is needed.
 
 I have been using [**plink**](https://www.cog-genomics.org/plink/2.0/) and **python** for QC.
 
-If you have *vcf* instead of plink format files, then transform the *vcf* to *bed*.
+If you have *vcf* files instead of plink formated files, then convert the *vcf* to *bed*.
 
 ```
 $ plink2 --vcf data.vcf --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele-len 100 --make-bed --out data
