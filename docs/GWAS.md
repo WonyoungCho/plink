@@ -19,7 +19,8 @@ $ plink2 --vcf data.vcf.gz --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele
 
 After the files are ready, let us follow the regular procedure for GWAS.
 
-# SNP remove missing variants and samples alternately from 0.1 to 0.01.
+# Missingness
+- Remove missing variants and samples alternately from 0.1 to 0.01.
 ```
 $ plink2 --file raw_data --geno (0.1~0.01) --make-bed --out out_data
 $ plink2 --file out_data --mind (0.1~0.01) --make-bed --out out_data
