@@ -4,8 +4,16 @@ As a prior to analyze data, QC (quality control) is needed.
 
 Under the guidance of the first reference, I used 'plink' and 'python' for QC.
 
-There are few steps :
+If you have vcf instead plink format files, then transform the vcf to bed.
 
+```
+$ plink2 --vcf data.vcf --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele-len 100 --make-bed --out data
+or
+$ plink2 --vcf data.vcf.gz --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele-len 100 --make-bed --out data
+```
+
+
+There are few steps :
 
 # SNP call rate >= 95%
 ```
