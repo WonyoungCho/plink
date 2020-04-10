@@ -75,6 +75,8 @@ $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --keep-if "PHENO1==control" --
 $ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.2  # do not care the chromosome.
 $ plink2 --bfile ft_hwe --indep-chr 1000 100 0.2  # do not care the chromosome.
   : plink2.prune.in , plink2.prune.out
+  
+$ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
 ```
 - Recombination unit is CM(centi-morgan). It is approximately 1 Mb. So LD should be within the size.
 
