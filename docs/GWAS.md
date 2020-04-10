@@ -19,7 +19,7 @@ $ plink2 --vcf data.vcf.gz --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele
 
 After the files are ready, let us follow the regular procedure for GWAS.
 
-# SNP call rate >= 95%
+# SNP call rate &#8805; 95%
 ```
 $ plink --file raw_data --geno 0.05 --make-bed --out variant5
   : variant5.bed + variant5.bim + variant5.fam
