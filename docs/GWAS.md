@@ -11,10 +11,10 @@ $ plink2 --vcf data.vcf --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele-le
 or
 $ plink2 --vcf data.vcf.gz --set-missing-var-ids @_#_\$r_\$a --new-id-max-allele-len 100 --make-bed --out data
 ```
-- @ : chromosome
-- # : position
-- \$r : reference allele
-- \$a : alt allele
+- `@` : chromosome
+- `#` : position
+- `\$r` : reference allele
+- `\$a` : alt allele
 
 
 There are few steps :
