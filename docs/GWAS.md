@@ -64,6 +64,10 @@ $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --make-bed --out ft_hwe
 - [Testing for Hardy-Weinberg equilibrium at biallelic genetic markers on the X chromosome.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4868269/)
 - [The mid p-value in exact tests for Hardy-Weinberg equilibrium.](https://www.degruyter.com/view/journals/sagmb/12/4/article-p433.xml)
 
+- If you only want to care case or control,
+```
+$ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --keep-if "PHENO1==control" --make-bed --out ft_hwe
+```
 
 # Sex info
 ```
