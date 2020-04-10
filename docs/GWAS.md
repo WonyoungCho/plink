@@ -74,29 +74,37 @@ $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --keep-if "PHENO1==control" --
 # Linkage disequilibrium
 : In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.[WIKIPEDIA]
 ```
-$ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.2  # do not care the chromosome.
-$ plink2 --bfile ft_hwe --indep-chr 1000 100 0.2  # do not care the chromosome.
+$ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.2  # do not care the chromosome [window size = 1000 kb].
+$ plink2 --bfile ft_hwe --indep-chr 1000 100 0.2  # do not care the chromosome [window size = 1000 kb].
   : plink2.prune.in , plink2.prune.out
   
 $ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
 ```
 - Recombination unit is CM(centi-morgan). It is approximately 1 Mb. So LD should be within the size.
 
-
+Check the correlation between SNPs.
 ```
 $ plink --bfile ft_hwe --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1000 --ld-window-r2 0.2 --out ft_ld
 ```
 
-- Check the correlation between SNPs.
+# PCA
+```
+$ plink2 --bfile ft_ld --pca
+  : plink2.eigenvec , plink2.eigenval
+```
 
 # Sex info
 ```
-$ plink --file sample5 --check-sex
+$ plink2 --bfile ft_ld --check-sex
 ```
 - Male (1) : XHE > 0.80
 - Female (2) : XHE < 0.20
 - No sex (0) : 0.20 < XHE < 0.80
 
+
+--------------------------------------------------------
+
+-----------------------------------------------------------
 
 # Inbreeding : F
 ```
