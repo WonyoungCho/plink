@@ -1,4 +1,4 @@
-GWAS (Genome-wise association study) is the way to find disease-relate-variants.
+**GWAS (Genome-wise association study)** is the one way to find disease-relate-variants.
 
 As a prior to analyze data, QC (quality control) is needed.
 
