@@ -49,6 +49,15 @@ $ plink2 --bfile ft_pedigree --freq alt1bins=0.01,0.02,0.03,0.04,0.05,0.1,0.2,0.
 ```
 $ plink2 --bfile ft_pedigree --maf 0.01 --make-bed --out ft_maf
 ```
+- Before removing variatns, you can check the minor allele frequency and counts.
+```
+$ plink2 --bfile ft_pedigree --freq   # alt frequency
+  : plink2.afreq
+$ plink2 --bfile ft_pedigree --freq counts   # alt counts
+  : plink2.acount
+```
+
+
 
 # HWE
 - Remove genotyping error.(p-value < 1e-50)
