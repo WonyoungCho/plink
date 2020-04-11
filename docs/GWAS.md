@@ -110,16 +110,16 @@ a cautionary note. Ann. Hum. Genet. 70: 921–933.](https://onlinelibrary.wiley.
 # Linkage disequilibrium
 : In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.[WIKIPEDIA]
 ```
-$ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.2  # window size = 1000 kb
+$ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.7  # window size = 1000 kb
 $ plink2 --bfile ft_hwe --indep 1000 100 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
   : plink2.prune.in , plink2.prune.out
   
 $ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
 ```
 - Recombination unit is CM(centi-morgan). It is approximately 1 Mb. So LD should be within the size.
-- R2 : to remove SNPs if R2 is not less than 0.2
-> - plink2.prune.in : R2 < 0.2
-> - plink2.prune.out : R2 >= 0.2
+- R2 : to remove SNPs if R2 is not less than 0.7.
+> - plink2.prune.in : R2 < 0.7
+> - plink2.prune.out : R2 >= 0.7
 - VIF = 1 : completely independent
 - VIF = 2~10 : usual cut-off
 
