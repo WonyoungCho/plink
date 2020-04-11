@@ -125,7 +125,7 @@ $ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
 
 Check the correlation between SNPs.
 ```
-$ plink --bfile ft_hwe --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1000 --ld-window-r2 0.2 --out ft_ld
+$ plink --bfile ft_hwe --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1000 --ld-window-r2 0.7 --out ft_ld
 ```
 
 
