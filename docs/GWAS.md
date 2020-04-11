@@ -110,8 +110,7 @@ a cautionary note. Ann. Hum. Genet. 70: 921–933.](https://onlinelibrary.wiley.
 # Linkage disequilibrium
 : In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.[WIKIPEDIA]
 ```
-$ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.2  # do not care the chromosome [window size = 1000 kb].
-$ plink2 --bfile ft_hwe --indep-chr 1000 100 0.2  # do not care the chromosome [window size = 1000 kb].
+$ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.2  # window size = 1000 kb
 $ plink2 --bfile ft_hwe --indep 1000 100 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
   : plink2.prune.in , plink2.prune.out
   
