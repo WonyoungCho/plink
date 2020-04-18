@@ -141,6 +141,8 @@ $ plink --bfile ft_ld --keep-allele-order --logistic --ci 0.95 --adjust
 ```
 <https://www.cog-genomics.org/plink/2.0/assoc#glm>
 
+- `--adjust qq-plot` : checks the overall distribution on test statistics. (only works in plink1.x not plink2. In the plink2 manual, `--adjust cols=+qq` is the same function, but it does not works.)
+- `--pfilter 1e-3` : only report statistics with p-values less than 1e-3.
 # Sex info
 ```
 $ plink2 --bfile ft_ld --check-sex
