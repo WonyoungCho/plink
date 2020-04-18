@@ -26,16 +26,6 @@ $ plink2 --bfile raw_data --geno (0.1~0.01) --make-bed --out ft_missing
 $ plink2 --bfile ft_missing --mind (0.1~0.01) --make-bed --out ft_missing
 ```
 
-# Relatives
-- Remove all first-degree relations.
-```
-$ plink2 --bfile ft_missing --king-cutoff 0.177 --make-bed --out ft_pedigree 
-```
-- Duplicate/MZ twin : > 0.354
-- First-degree  : [0.177, 0.354]
-- Second-degree : [0.0884, 0.177]
-- Third-degree  : [0.0442, 0.0884]
-
 # Variant distribution
 - Check the number of variants at each frequencies.
 ```
@@ -47,17 +37,15 @@ $ plink2 --bfile ft_pedigree --freq alt1bins=0.01,0.02,0.03,0.04,0.05,0.1,0.2,0.
 # MAF
 - Remove low maf variants less than 0.01.
 ```
-$ plink2 --bfile ft_pedigree --maf 0.01 --make-bed --out ft_maf
+$ plink2 --bfile ft_missing --maf 0.01 --make-bed --out ft_maf
 ```
 - Before removing variatns, you can check the minor allele frequency and counts.
 ```
-$ plink2 --bfile ft_pedigree --freq   # alt frequency
+$ plink2 --bfile ft_missing --freq   # alt frequency
   : plink2.afreq
-$ plink2 --bfile ft_pedigree --freq counts   # alt counts
+$ plink2 --bfile ft_missing --freq counts   # alt counts
   : plink2.acount
 ```
-
-
 
 # HWE
 - Remove genotyping error.(p-value < 1e-50)
@@ -68,7 +56,7 @@ $ plink2 --bfile ft_maf --hwe 1e-50 keep-fewhet --make-bed --out ft_hwe_gt
 - Remove HWE p-value less than 1e-5.
 ```
 $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --make-bed --out ft_hwe
-$ plink  --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --make-bed --out ft_hwe  # plink1.9 the '--hwe' works only in controls. '--hwe-all' works to cases and controls.
+$ plink  --bfile ft_hwe_gt --hwe 1e-5 --keep-allele-order --make-bed --out ft_hwe  # plink1.9 the '--hwe' works only in controls. '--hwe-all' works to cases and controls.
 ```
 - `keep-fewhet` : When significant population stratification is present, this test can be expected to fail in the too-few-hets direction on some normal variants. When using --hwe for quality control, you probably want to keep these variants.
 
@@ -76,7 +64,7 @@ Reference
 - [Testing for Hardy-Weinberg equilibrium at biallelic genetic markers on the X chromosome.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4868269/)
 - [The mid p-value in exact tests for Hardy-Weinberg equilibrium.](https://www.degruyter.com/view/journals/sagmb/12/4/article-p433.xml)
 
-If you want to see case or control only,
+If you want to see the case or control only,
 ```
 $ plink2 --bfile ft_hwe_gt --hwe 1e-5 keep-fewhet --keep-if "PHENO1==control" --make-bed --out ft_hwe
 ```
@@ -106,6 +94,15 @@ Evidence for departure from HWE has been userd in many applications of discrete 
 > - [Zou, G. Y., and A. Donner, 2006 The merits of testing Hardy-Weinberg equilibrium in the analysis of unmatched case-control data:
 a cautionary note. Ann. Hum. Genet. 70: 921–933.](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.2006.00267.x)
 
+# Relatives
+- Remove all first-degree relations.
+```
+$ plink2 --bfile ft_hwe --king-cutoff 0.177 --make-bed --out ft_ped
+```
+- Duplicate/MZ twin : > 0.354
+- First-degree  : [0.177, 0.354]
+- Second-degree : [0.0884, 0.177]
+- Third-degree  : [0.0442, 0.0884]
 
 # Linkage disequilibrium
 : In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.[WIKIPEDIA]
@@ -125,7 +122,7 @@ $ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
 
 Check the correlation between SNPs.
 ```
-$ plink --bfile ft_hwe --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1000 --ld-window-r2 0.7 --out ft_ld
+$ plink --bfile ft_ped --keep-allele-order --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1000 --ld-window-r2 0.7 --out ft_ld
 ```
 
 
@@ -134,6 +131,14 @@ $ plink --bfile ft_hwe --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 
 $ plink2 --bfile ft_ld --pca
   : plink2.eigenvec , plink2.eigenval
 ```
+
+# Association
+```
+$ plink2 --bfile ft_ld --glm allow-no-covars --ci 0.95 --adjust 
+equivalently,
+$ plink --bfile ft_ld --keep-allele-order --logistic --ci 0.95 --adjust
+```
+<https://www.cog-genomics.org/plink/2.0/assoc#glm>
 
 # Sex info
 ```
