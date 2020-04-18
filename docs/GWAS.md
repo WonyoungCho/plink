@@ -107,11 +107,12 @@ $ plink2 --bfile ft_hwe --king-cutoff 0.177 --make-bed --out ft_ped
 # Linkage disequilibrium
 : In population genetics, linkage disequilibrium is the non-random association of alleles at different loci in a given population.[WIKIPEDIA]
 ```
-$ plink2 --bfile ft_hwe --indep-pairwise 1000 100 0.7  # window size = 1000 kb
-$ plink2 --bfile ft_hwe --indep 1000 100 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
+$ plink2 --bfile ft_ped --indep-pairwise 1500 150 0.7  # window size = 1500 bp
+$ plink2 --bfile ft_ped --indep-pairwise 1500kb 1 0.7  # if the window size unit is kb, the step is set to be 1.
+$ plink2 --bfile ft_ped --indep 1000 100 2  # window size, step, the VIF(variance inflation factor) threshold: 1/(1-R^2)
   : plink2.prune.in , plink2.prune.out
   
-$ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
+$ plink2 --bfile ft_ped --extract plink2.prune.in --make-bed --out ft_ld
 ```
 - Recombination unit is CM(centi-morgan). It is approximately 1 Mb. So LD should be within the size.
 - R2 : to remove SNPs if R2 is not less than 0.7.
@@ -122,7 +123,7 @@ $ plink2 --bfile ft_hwe --extract plink2.prune.in --make-bed --out ft_ld
 
 Check the correlation between SNPs.
 ```
-$ plink --bfile ft_ped --keep-allele-order --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1000 --ld-window-r2 0.7 --out ft_ld
+$ plink --bfile ft_ped --keep-allele-order --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1.5 --ld-window-r2 0.7 --out ft_ld
 ```
 
 
