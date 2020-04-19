@@ -60,7 +60,8 @@ $ plink  --bfile ft_hwe_gt --hwe 1e-5 --keep-allele-order --make-bed --out ft_hw
 ```
 - `keep-fewhet` : When significant population stratification is present, this test can be expected to fail in the too-few-hets direction on some normal variants. When using --hwe for quality control, you probably want to keep these variants.
 
-Reference
+**Reference**
+
 - [Testing for Hardy-Weinberg equilibrium at biallelic genetic markers on the X chromosome.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4868269/)
 - [The mid p-value in exact tests for Hardy-Weinberg equilibrium.](https://www.degruyter.com/view/journals/sagmb/12/4/article-p433.xml)
 
