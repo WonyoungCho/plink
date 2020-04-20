@@ -127,6 +127,12 @@ Check the correlation between SNPs.
 $ plink --bfile ft_ped --keep-allele-order --r2 dprime with-freqs --ld-window 999999 --ld-window-kb 1.5 --ld-window-r2 0.7 --out ft_ld
 ```
 
+- pruning: it uses the first SNP (in genome order) and computes the correlation with the following ones (e.g. 50). When it finds a large correlation, it removes one SNP from the correlated pair, keeping the one with the largest minor allele frequency (MAF), thus possibly removing the first SNP. Then it goes on with the next SNP (not yet removed). So, in some worst case scenario, this algorithm may in fact remove all SNPs of the genome (expect one).
+
+- clumping; it uses some statistic (usually p-value in the case of GWAS/PRS) to sort the SNPs by importance (e.g. keeping the most significant ones). It takes the first one (e.g. most significant SNP) and removes SNPs that are too correlated with this one in a window around it. As opposed to pruning, this procedure makes sure that this SNP is never removed, keeping at least one representative SNP by region of the genome. Then it goes on with the next most significant SNP that has not been removed yet. In the case of computing principal components, there is no p-value available, so I propose to use the MAF instead as the statistic to rank SNPs (in decreasing order). Using MAFs makes clumping very similar to pruning, but without any worst-case scenario.
+
+By <https://www.biostars.org/p/343818/>.
+
 
 # PCA
 ```
