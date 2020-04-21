@@ -160,7 +160,7 @@ $ plink --bfile ft_ld --keep-allele-order --fisher --ci 0.95 --adjust
 <https://www.cog-genomics.org/plink/2.0/assoc#glm>
 <http://zzz.bwh.harvard.edu/plink/anal.shtml>
 
-- `--adjust qq-plot` : checks the overall distribution on test statistics. (only works in plink1.x not in plink2. In the plink2 manual, `--adjust cols=+qq` is the same function, but it does not works.)
+- `--adjust qq-plot` : checks the overall distribution on test statistics. (only works in plink1.x not in plink2. In the plink2 manual, `--adjust cols=+qq` is the same function, but it does not work.)
 - `--pfilter 1e-3` : only report statistics with p-values less than 1e-3.
 - `lambda` : median(chi-square)/0.455 for one degrees of freedom.
 
