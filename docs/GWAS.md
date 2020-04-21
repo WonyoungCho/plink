@@ -35,7 +35,7 @@ $ plink2 --bfile ft_pedigree --freq alt1bins=0.01,0.02,0.03,0.04,0.05,0.1,0.2,0.
 - The ranges are `[0,0.01)`, `[0.01,0.02)`,...,`[0.4,0.5]`,`(0.5,0.6]`,...,`[0.8,0.9)`,`1`.
 
 # MAF
-- Remove low maf variants less than 0.01.
+- Remove low maf variants less than 0.01. The threshold can be calculated by 10/(number of samples).
 ```
 $ plink2 --bfile ft_missing --maf 0.01 --make-bed --out ft_maf
 ```
@@ -163,6 +163,8 @@ $ plink --bfile ft_ld --keep-allele-order --fisher --ci 0.95 --adjust
 - `--adjust qq-plot` : checks the overall distribution on test statistics. (only works in plink1.x not in plink2. In the plink2 manual, `--adjust cols=+qq` is the same function, but it does not work.)
 - `--pfilter 1e-3` : only report statistics with p-values less than 1e-3.
 - `lambda` : median(chi-square)/0.455 for one degrees of freedom.
+
+- If the variant has less than the conservative threshold of p-value (Bonferroni-corrected threshold : 0.05/(number of variants)) in association test, we can say the variant is significant.
 
 # Sex info
 ```
