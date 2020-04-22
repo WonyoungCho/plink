@@ -166,6 +166,13 @@ $ plink --bfile ft_ld --keep-allele-order --fisher --ci 0.95 --adjust
 
 - If the variant has less than the conservative threshold of p-value (Bonferroni-corrected threshold : 0.05/(number of variants)) in association test, we can say the variant is significant.
 
+# Weight
+- Give some weight to samples from covariant quantities.
+```
+$ plink2 --bfile ft_ld --glm --covar ft_pca.eigenvec --covar-name PC1 --covar-quantile-normalize PC1 --ci 0.95 --adjust
+```
+- `--covar-quantile-normalize` : Normalize covariant quantitle to normali distribution, N(0,1).
+
 # Sex info
 ```
 $ plink2 --bfile ft_ld --check-sex
