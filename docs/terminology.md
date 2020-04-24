@@ -15,7 +15,7 @@
 
 - Prevalence : the proportion of a population who have a specific characteristic in a given time period.
 
-<https://www.nimh.nih.gov/health/statistics/what-is-prevalence.shtml>
+> -<https://www.nimh.nih.gov/health/statistics/what-is-prevalence.shtml>
 
 **Reference**
 
