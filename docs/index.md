@@ -4,6 +4,10 @@
 
 This site introduces several ways to analyze genomic data and related things using `Plink` and `Python`.
 
+About developer Christopher Chang's interview
+
+http://gigasciencejournal.com/blog/gwas-reloaded-extended-qa-plink1-9-author-chris-chang/
+
 ---
 *What Feynman hated worse than anything else was intellectual pretense: phoniness, false sophistication, jargon.*
 
