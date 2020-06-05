@@ -84,3 +84,16 @@ $ bcftools view -i 'F_MISSING < 0.1' data.vcf.gz -Ov -o out.vcf
 $ bcftools view -i 'N_MISSING < 800' data.vcf.gz -Ov -o out.vcf
 ```
 
+# Query
+- Check samples
+```
+$ bcftools query -l data.vcf.gz
+```
+- Check chromosomes
+```
+$ bcftools index -s data.vcf.gz
+```
+- Check number of variants
+```
+$ bcftools index -n data.vcf.gz
+```
