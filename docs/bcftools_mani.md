@@ -7,7 +7,9 @@
 
 # Preparation
 ```
-$ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz
+$ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz # data.vcf.gz.tbi
+$ bcftools view data.vcf -Oz -o data.vcf.gz && bcftools index data.vcf.gz (-c) # default : -c, data.vcf.gz.csi
+$ bcftools view data.vcf -Oz -o data.vcf.gz && bcftools index data.vcf.gz -t # data.vcf.gz.tbi
 ```
 
 # Manipulation
