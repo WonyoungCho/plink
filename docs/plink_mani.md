@@ -13,6 +13,11 @@ $ plink --vcf data.vcf.gz --make-bed --out data --pheno data_pheno.txt --update-
 $ plink --vcf data.vcf --keep-allele-order --indiv-sort file SampleOrder.lst --vcf-idspace-to _ --const-fid --make-bed --out data 
 ```
 
+## bed to vcf
+```
+$ plilnk2 --bfile data --recode vcf --out data.vcf
+```
+
 
 ## Recode allele type
 <http://zzz.bwh.harvard.edu/plink/dataman.shtml>
@@ -55,6 +60,12 @@ HG00100	HG00100	2
 HG00101	HG00101	1
 HG00102	HG00102	2
 HG00103	HG00103	1
+```
+If 'phenotype.txt has more than 1 phenotype in columns, then use --mpheno.
+```
+$ plink -bfile mydata --pheno phenotype.txt --mpheno 4 --make-bed --out mydata_gene # 4th phenotype is used.
+$ cat phenotype.txt
+fid iid pheno1 pheno2 pheno3 pheno4 pheno5
 ```
 
 ## Extract from genes
