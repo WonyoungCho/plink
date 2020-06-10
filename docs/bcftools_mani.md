@@ -101,3 +101,10 @@ $ bcftools index -s data.vcf.gz
 ```
 $ bcftools index -n data.vcf.gz
 ```
+
+# Filter
+- Filter variants by a list file
+```
+$ bcftools filter -e 'ID=@varList.txt' data.vcf.gz
+```
+
