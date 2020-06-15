@@ -181,6 +181,17 @@ $ plink2 --bfile ft_ld --check-sex
 - No sex (0) : 0.20 < XHE < 0.80
 
 
+# PRS
+```
+$ plink2 --bfile ft_ld --score plink.PHENO1.glm.logistic.hybrid 2 6 10 header
+or
+$ plink --bfile ft_ld --lasso
+$ plink --bfile ft_ld --score plink.lasso 2 header
+```
+- The score file need to have ID(2), A1(risk allele)(6), OR(10).
+<https://www.cog-genomics.org/plink/1.9/score>
+
+
 --------------------------------------------------------
 
 -----------------------------------------------------------
