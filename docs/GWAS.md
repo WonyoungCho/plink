@@ -183,12 +183,13 @@ $ plink2 --bfile ft_ld --check-sex
 
 # PRS
 ```
-$ plink2 --bfile ft_ld --score plink.PHENO1.glm.logistic.hybrid 2 6 10 header
+$ plink2 --bfile ft_ld --score plink.PHENO1.glm.logistic.hybrid 2 6 10 header sum
 or
 $ plink --bfile ft_ld --lasso
-$ plink --bfile ft_ld --score plink.lasso 2 header
+$ plink --bfile ft_ld --score plink.lasso 2 header sum
 ```
 - The score file need to have ID(2), A1(risk allele)(6), OR(10).
+
 <https://www.cog-genomics.org/plink/1.9/score>
 
 
