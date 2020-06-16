@@ -215,3 +215,38 @@ if __name__ == "__main__":
     
     sys.exit(0)
 ```
+
+# ADD
+```
+def plink_cmd(outputFile):
+    inputFile=outputFile+'_ibd'
+
+    df=pd.read_table(outputFile+'.ann',header=None)
+
+    def add_gene(header,col,tempExt,outputExt):
+        cmd='head -n 1 '+outputFile+'.'+tempExt
+        lh = len(subprocess.check_output(cmd,shell=True,encoding='utf-8').split())
+
+        cmd='echo '+header+' > '+outputFile+'.tmp && awk \'{print $'+str(col)+'}\' '+outputFile+'.'+tempExt
+        snps=subprocess.check_output(cmd,shell=True,encoding='utf-8').split('\n')[1:-1]
+
+        genes=parmap.map(find_gene,snps,df,pm_pbar=True,pm_processes=40)
+
+        with open(outputFile+'.tmp','a') as f:
+            for i in genes:
+                f.write(i+'\n')
+
+        cols='\"\\t\"'.join(map(lambda x:'$'+str(x),range(1,col+1)))
+        endCols='\"\\t\"'.join(map(lambda x:'$'+str(x),range(col+1,lh+1)))
+
+        if endCols=='':
+            cmd='awk \'{print '+cols+'}\' '+outputFile+'.'+tempExt+'|paste - '+outputFile+'.tmp >'+outputFile+'.'+outputExt
+
+        else:
+            cmd='awk \'{print '+cols+'}\' '+outputFile+'.'+tempExt+'|paste - '+outputFile+'.tmp <(awk \'{print '+endCols+'}\' '+outputFile+'.'+tempExt+') >'+outputFile+'.'+outputExt
+
+        subprocess.run(cmd,shell=True, executable="/bin/bash", stdout=subprocess.DEVNULL)
+
+    add_gene('GENE',3,'txt','reg')
+
+```
