@@ -111,7 +111,7 @@ $ bcftools filter -e 'ID=@varList.txt' data.vcf.gz
 # Add gene
 <https://www.biostars.org/p/122690/>
 ```
-bcftools annotate data.vcf.gz -a genes.bed.gz -c CHROM,FROM,TO,GENE -h <(echo '##INFO=<ID=GENE,Number=1,Type=String,Description="Gene name">')
+$ bcftools annotate data.vcf.gz -a genes.bed.gz -c CHROM,FROM,TO,GENE -h <(echo '##INFO=<ID=GENE,Number=1,Type=String,Description="Gene name">')
 ```
 A few things to note:
 
@@ -122,3 +122,22 @@ A few things to note:
 - 'CHROM', 'FROM', and 'TO' are required to be passed to the -c option, but these columns do not actually get added to your VCF (only the 'GENE' will get added)
 - Because we're not annotating from a VCF/BCF file, the -h option is required (it will not work otherwise)
 - Whatever we pass to the -h option will simply get added to the VCF meta-information
+
+# Checks sample identity
+<http://www.htslib.org/doc/bcftools.html#gtcheck>
+```
+$ bcftools gtcheck -G 1 data.vcf.gz
+```
+- CN, discordance : number of different genotypes
+- ERR, error rate : number of differences divided by the total number of comparisons. (CN/totla genotypes)
+
+# Multiallele
+```
+$ bcftools norm -m + data.vcf.gz
+1 14356 A T
+1 14356 A G
+into
+1 14356 A T,G
+
+$ bcftools norm -m - data.vcf.gz # reverse way
+```
