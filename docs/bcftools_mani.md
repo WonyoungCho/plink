@@ -108,3 +108,17 @@ $ bcftools index -n data.vcf.gz
 $ bcftools filter -e 'ID=@varList.txt' data.vcf.gz
 ```
 
+# Add gene
+<https://www.biostars.org/p/122690/>
+```
+bcftools annotate data.vcf.gz -a genes.bed.gz -c CHROM,FROM,TO,GENE -h <(echo '##INFO=<ID=GENE,Number=1,Type=String,Description="Gene name">')
+```
+A few things to note:
+
+- vcf and bed must have same format on chromosome and position (vcf : 1 6264553, bed : 1 6264487 6264607 ACOT7)
+- genes.bed.gz must be a standard BED file that has been zipped using bgzip (bgzip genes.bed)
+- genes.bed.gz must indexed using tabix (tabix -p bed genes.bed.gz)
+- genes.bed.gz does not need a header (we define this with the -c option instead)
+- 'CHROM', 'FROM', and 'TO' are required to be passed to the -c option, but these columns do not actually get added to your VCF (only the 'GENE' will get added)
+- Because we're not annotating from a VCF/BCF file, the -h option is required (it will not work otherwise)
+- Whatever we pass to the -h option will simply get added to the VCF meta-information
