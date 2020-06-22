@@ -141,3 +141,8 @@ into
 
 $ bcftools norm -m - data.vcf.gz # reverse way
 ```
+
+# Add ID
+```
+$  bcftools annotate --set-id +'%CHROM\_%POS\_%REF\_%FIRST_ALT' data.vcf.gz
+```
