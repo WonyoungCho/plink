@@ -114,7 +114,6 @@ $ bcftools filter -e 'ID=@varList.txt' data.vcf.gz
 $ bcftools annotate data.vcf.gz -a genes.bed.gz -c CHROM,FROM,TO,GENE -h <(echo '##INFO=<ID=GENE,Number=1,Type=String,Description="Gene name">')
 ```
 A few things to note:
-
 - vcf and bed must have same format on chromosome and position (vcf : 1 6264553, bed : 1 6264487 6264607 ACOT7)
 - genes.bed.gz must be a standard BED file that has been zipped using bgzip (bgzip genes.bed)
 - genes.bed.gz must indexed using tabix (tabix -p bed genes.bed.gz)
