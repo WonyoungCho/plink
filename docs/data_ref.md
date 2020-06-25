@@ -49,10 +49,11 @@
 
 - Reference
 > - Daughter, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/NA12878/10Xgenomics_ChromiumGenome_LongRanger2.1_09302016/NA12878_GRCh38/
+> - Daughter, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/NA12878_HG001/NISTv3.3.2/GRCh38/
 > - Father, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/technical/10Xgenomics_ChromiumGenome_LongRanger2.1_09302016/NA12891_GRCh38/
 > - Mother, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/technical/10Xgenomics_ChromiumGenome_LongRanger2.1_09302016/NA12892_GRCh38/
 
-- Asia
+- Chinese
 > - Son, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/ChineseTrio/HG005_NA24631_son/NISTv3.3.2/GRCh38/
 > - Father, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/ChineseTrio/HG006_NA24694_father/NISTv3.3.2/GRCh38/
 > - Mother, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/ChineseTrio/HG007_NA24695_mother/NISTv3.3.2/GRCh38/
