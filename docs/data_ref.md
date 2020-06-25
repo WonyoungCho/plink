@@ -43,3 +43,22 @@
 - TB : NRAMP1 SLC11A1 HLA-DRB1 VDR IFNG
 - Avellino : EFEMP2 LTBP2 ZNF469 LOX LOXL1
 - 1000G : PDX1 RFX6 HNF1B MEIS1
+
+
+# Trio data
+
+- Reference
+> - Daughter, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/data/NA12878/10Xgenomics_ChromiumGenome_LongRanger2.1_09302016/NA12878_GRCh38/
+> - Father, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/technical/10Xgenomics_ChromiumGenome_LongRanger2.1_09302016/NA12891_GRCh38/
+> - Mother, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/technical/10Xgenomics_ChromiumGenome_LongRanger2.1_09302016/NA12892_GRCh38/
+
+- Asia
+> - Son, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/ChineseTrio/HG005_NA24631_son/NISTv3.3.2/GRCh38/
+> - Father, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/ChineseTrio/HG006_NA24694_father/NISTv3.3.2/GRCh38/
+> - Mother, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/ChineseTrio/HG007_NA24695_mother/NISTv3.3.2/GRCh38/
+
+- Ashkenazim
+> - Son, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/AshkenazimTrio/HG002_NA24385_son/NISTv3.3.2/GRCh38/
+> - Son, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/AshkenazimTrio/HG002_NA24385_son/NISTv4.1/GRCh38/
+> - Father, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/AshkenazimTrio/HG003_NA24149_father/NISTv3.3.2/GRCh38/
+> - Mother, ftp://ftp-trace.ncbi.nlm.nih.gov/giab/ftp/release/AshkenazimTrio/HG004_NA24143_mother/NISTv3.3.2/GRCh38/
