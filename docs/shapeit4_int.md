@@ -61,3 +61,9 @@ $ make
 # UKBioBank data
 - <https://biobank.ctsu.ox.ac.uk/crystal/label.cgi?id=100319>
 
+In order to download UKBioBank data, the program is needed.
+<http://biobank.ctsu.ox.ac.uk/crystal/download.cgi?id=665&ty=ut>
+```
+$ wget -nd biobank.ctsu.ox.ac.uk/crystal/util/ukbgene
+$ chmod 755 ukbgene
+```
