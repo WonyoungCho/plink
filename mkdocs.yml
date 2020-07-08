@@ -37,6 +37,7 @@ pages:
     - BEDOPS: 'bedops_int.md'
     - Bedtools: 'bedtools_int.md'
     - Gviz: 'Gviz_int.md'
+    - Shapeit4: 'shapeit4_int.md'
     - Beagle: 'beagle_int.md'
     - Specification: 'com_spec.md'
     - STUDY: 'study.md'
