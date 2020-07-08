@@ -34,7 +34,7 @@ $ ./bootstrap.sh
 $ ./b2 install
 
 # export path of 'pyconfig.h'
-export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/home/user1/miniconda3/pkgs/python-3.6.9-h265db76_0/include/python3.6m/"
+$ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/home/user1/miniconda3/pkgs/python-3.6.9-h265db76_0/include/python3.6m/"
 ```
 
 
