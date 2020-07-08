@@ -1,3 +1,7 @@
+<https://odelaneau.github.io/shapeit4/>
+
+<https://github.com/odelaneau/shapeit4>
+
 # Prerequisite
 
 - [**HTSlib**](http://www.htslib.org/download/): A great C library for reading/writing high-throughput sequencing data.
