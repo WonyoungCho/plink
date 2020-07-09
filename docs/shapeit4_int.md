@@ -5,9 +5,7 @@
 # Prerequisite
 
 - [**HTSlib**](http://www.htslib.org/download/): A great C library for reading/writing high-throughput sequencing data.
-- [**BOOST**](https://www.boost.org/users/download/): A free peer-reviewed portable C++ source libraries. 
-
-SHAPEIT4 uses two specific BOOST libraries: iostreams and program_options.
+- [**BOOST**](https://www.boost.org/users/download/): A free peer-reviewed portable C++ source libraries. SHAPEIT4 uses two specific BOOST libraries: iostreams and program_options.
 
 ```
 # git 2.x
