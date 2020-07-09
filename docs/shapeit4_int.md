@@ -1,6 +1,5 @@
-<https://odelaneau.github.io/shapeit4/>
-
-<https://github.com/odelaneau/shapeit4>
+- Homepage : <https://odelaneau.github.io/shapeit4/>
+- Source : <https://github.com/odelaneau/shapeit4>
 
 # Prerequisite
 
@@ -38,7 +37,7 @@ $ ./bootstrap.sh
 $ ./b2 install
 
 # export path of 'pyconfig.h'
-$ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/home/user/python3.6/"
+$ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/home/user/python3/"
 ```
 
 
