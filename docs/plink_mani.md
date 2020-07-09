@@ -2,6 +2,11 @@
 
 - Data file : [test_set2.csv](data/test_set2.csv) (<https://github.com/EpistasisLab/scikit-mdr/tree/master/data>)
 
+## Liftover
+If the data made by old version sych as hg19, refer below link and transform to latest version.
+
+<https://shicheng-guo.github.io/bioinformatics/2017/08/01/hapmap3>
+
 ## vcf to bed
 ```
 $ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz
