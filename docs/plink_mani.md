@@ -31,6 +31,8 @@ $ plink --vcf data.vcf.gz --cm-map genetic_map_chr@_combined_b37.txt --make-bed 
 or 
 $ plink --bfile data --cm-map genetic_map_chr@_combined_b37.txt --make-just-bim --out data
 ```
+<https://zzz.bwh.harvard.edu/plink/data.shtml#map>
+- Most analyses do not require a genetic map to be specified in any case; specifying a genetic (cM) map is most crucial for a set of analyses that look for shared segments between individuals. For basic association testing, the genetic distance column can be set at 0.
 
 ## Recode allele type
 <http://zzz.bwh.harvard.edu/plink/dataman.shtml>
