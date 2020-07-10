@@ -23,6 +23,14 @@ $ plink --vcf data.vcf --keep-allele-order --indiv-sort file SampleOrder.lst --v
 $ plilnk2 --bfile data --recode vcf --out data.vcf
 ```
 
+## Genetic map
+- insert cM in bim file
+<https://www.cog-genomics.org/plink/1.9/input#cm_map>
+```
+$ plink --vcf data.vcf.gz --cm-map genetic_map_chr@_combined_b37.txt --make-bed --out data
+or 
+$ plink --bfile data --cm-map genetic_map_chr@_combined_b37.txt --make-just-bim --out data
+```
 
 ## Recode allele type
 <http://zzz.bwh.harvard.edu/plink/dataman.shtml>
