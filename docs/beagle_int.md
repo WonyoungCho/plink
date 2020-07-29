@@ -3,7 +3,9 @@
 
 - Beagle is a software package for phasing genotypes and for imputing ungenotyped markers. Beagle 5.1 is similar to version 5.0, but includes some additional improvements that increase accuracy and reduce computation time.
 
-
+# Ref Panel
+- GRCh38/hg38 files are available at EBI 1000 genomes ftp site at
+<ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/supporting/GRCh38_positions/>
 
 
 
