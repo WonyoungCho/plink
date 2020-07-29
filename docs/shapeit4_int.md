@@ -45,7 +45,7 @@ $ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/home/user/python3/"
 <https://odelaneau.github.io/shapeit4/#installation>
 ```
 $ git clone https://github.com/odelaneau/shapeit4.git
-$ cd git
+$ cd shapeit4
 $ locate libboost_program_options.a libboost_iostreams.a libhts.a
 $ emacs makefile
 HTSLIB_INC (line 5): path to the HTSlib header files
