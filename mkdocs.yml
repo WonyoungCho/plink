@@ -34,6 +34,7 @@ pages:
         - 'Installation' : 'samtools_ins.md'
         - 'Introduction' : 'samtools_int.md'
         - 'Option' : 'samtools_opt.md'
+    - Picard: 'picard_int.md'
     - BEDOPS: 'bedops_int.md'
     - Bedtools: 'bedtools_int.md'
     - Gviz: 'Gviz_int.md'
