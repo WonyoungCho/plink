@@ -9,6 +9,10 @@
 - GRCh37/hg19 files are available at Beagle site already processed to be compatible with Beagle:
 <http://bochet.gcc.biostat.washington.edu/beagle/1000_Genomes_phase3_v5a/>
 
+```
+$ wget -np ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/supporting/GRCh38_positions/*
+```
+
 
 # Reference
 <https://www.protocols.io/view/genotype-imputation-workflow-v3-0-nmndc5e?version_warning=no&step=1>
