@@ -145,3 +145,9 @@ $ bcftools norm -m - data.vcf.gz # reverse way
 ```
 $  bcftools annotate --set-id +'%CHROM\_%POS\_%REF\_%FIRST_ALT' data.vcf.gz
 ```
+
+# Rename CHRM
+```
+$ for i in {1..22} X Y;do echo "chr${i} ${i}";done > rename_chrm.txt
+$ bcftools annotate data.vcf.gz --rename-chrs rename_chrm.txt -Oz -o data_renamed.vcf.gz
+```
