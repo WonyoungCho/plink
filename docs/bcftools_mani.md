@@ -151,3 +151,34 @@ $  bcftools annotate --set-id +'%CHROM\_%POS\_%REF\_%FIRST_ALT' data.vcf.gz
 $ for i in {1..22} X Y;do echo "chr${i} ${i}";done > rename_chrm.txt
 $ bcftools annotate data.vcf.gz --rename-chrs rename_chrm.txt -Oz -o data_renamed.vcf.gz
 ```
+
+# Extract haplotype
+```
+$ samtools faidx hs38DH.fa chr1:10000-1000000 | bcftools consensus -H 1 data.vcf.gz > data_H1.fa
+
+Usage:   bcftools consensus [OPTIONS] <file.vcf.gz>
+Options:
+    -c, --chain <file>         write a chain file for liftover
+    -e, --exclude <expr>       exclude sites for which the expression is true (see man page for details)
+    -f, --fasta-ref <file>     reference sequence in fasta format
+    -H, --haplotype <which>    choose which allele to use from the FORMAT/GT field, note
+                               the codes are case-insensitive:
+                                   1: first allele from GT, regardless of phasing
+                                   2: second allele from GT, regardless of phasing
+                                   R: REF allele in het genotypes
+                                   A: ALT allele
+                                   LR,LA: longer allele and REF/ALT if equal length
+                                   SR,SA: shorter allele and REF/ALT if equal length
+                                   1pIu,2pIu: first/second allele for phased and IUPAC code for unphased GTs
+    -i, --include <expr>       select sites for which the expression is true (see man page for details)
+    -I, --iupac-codes          output variants in the form of IUPAC ambiguity codes
+    -m, --mask <file>          replace regions with N
+    -M, --missing <char>       output <char> instead of skipping the missing genotypes
+    -o, --output <file>        write output to a file [standard output]
+    -p, --prefix <string>      prefix to add to output sequence names
+    -s, --sample <name>        apply variants of the given sample
+Examples:
+   # Get the consensus for one region. The fasta header lines are then expected
+   # in the form ">chr:from-to".
+   samtools faidx ref.fa 8:11870-11890 | bcftools consensus in.vcf.gz > out.fa
+```
