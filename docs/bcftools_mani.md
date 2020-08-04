@@ -188,3 +188,5 @@ Extract sites and loc files for LDhat.
 ```
 $ vcftools --gzvcf data.vcf.gz --ldhat-geno --chr 1 --out data_1
 ```
+<http://vcftools.sourceforge.net/man_latest.html>
+
