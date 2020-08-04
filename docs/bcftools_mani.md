@@ -190,3 +190,4 @@ $ vcftools --gzvcf data.vcf.gz --ldhat-geno --chr 1 --out data_1
 ```
 <http://vcftools.sourceforge.net/man_latest.html>
 
+<http://manpages.ubuntu.com/manpages/bionic/man1/vcftools.1.html>
