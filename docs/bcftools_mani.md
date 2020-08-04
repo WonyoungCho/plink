@@ -182,3 +182,9 @@ Examples:
    # in the form ">chr:from-to".
    samtools faidx ref.fa 8:11870-11890 | bcftools consensus in.vcf.gz > out.fa
 ```
+
+# VCFtools
+extract sites and loc files
+```
+$ vcftools --gzvcf data.vcf.gz --ldhat-geno --chr 1 --out data_1
+```
