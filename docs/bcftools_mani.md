@@ -184,7 +184,7 @@ Examples:
 ```
 
 # VCFtools
-extract sites and loc files
+Extract sites and loc files for LDhat.
 ```
 $ vcftools --gzvcf data.vcf.gz --ldhat-geno --chr 1 --out data_1
 ```
