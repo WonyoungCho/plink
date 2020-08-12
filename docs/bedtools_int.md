@@ -16,6 +16,14 @@ $ mv bedtools.static.binary bedtools
 $ chmod a+x bedtools
 ```
 
+# getfasta
+<https://bedtools.readthedocs.io/en/latest/_images/getfasta-glyph.png>
+```
+$ bedtools getfasta -fi hg38.fa -bed Exome.bed -fo hg38_bed.fa
+```
+<https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html>
+
+# Merge
 - bedtools merge combines overlapping or “book-ended” features in an interval file into a single feature which spans all of the combined features.
 
 <https://bedtools.readthedocs.io/en/latest/content/tools/merge.html>
