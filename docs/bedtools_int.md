@@ -5,6 +5,17 @@
 
 - Souce code : <https://github.com/arq5x/bedtools2>
 
+
+# Install
+<https://github.com/arq5x/bedtools2/releases>
+
+- Download binary file
+```
+$ wget https://github.com/arq5x/bedtools2/releases/download/v2.29.2/bedtools.static.binary
+$ mv bedtools.static.binary bedtools
+$ chmod a+x bedtools
+```
+
 - bedtools merge combines overlapping or “book-ended” features in an interval file into a single feature which spans all of the combined features.
 
 <https://bedtools.readthedocs.io/en/latest/content/tools/merge.html>
