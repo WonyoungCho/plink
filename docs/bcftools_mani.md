@@ -87,6 +87,10 @@ $ bcftools view -i 'F_MISSING < 0.1' data.vcf.gz -Ov -o out.vcf
 ```
 $ bcftools view -i 'N_MISSING < 800' data.vcf.gz -Ov -o out.vcf
 ```
+- Remove by allele frequency.
+```
+$ bcftools view -q 0.01:minor data.vcf.gz -Ov -o out.vcf
+```
 - Remove by minor allele frequency.
 ```
 $ bcftools view -i 'MAF < 0.01' data.vcf.gz -Ov -o out.vcf
