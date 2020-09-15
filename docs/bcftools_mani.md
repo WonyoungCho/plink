@@ -78,7 +78,7 @@ Options:
 $ bcftools +fill-tags data.vcf.gz -Ov -o out.vcf -- -t AF
 ```
 
-# Remove by missing rate
+# Remove variants
 - Remove variants which have missing values less than 10%.
 ```
 $ bcftools view -i 'F_MISSING < 0.1' data.vcf.gz -Ov -o out.vcf
@@ -94,6 +94,14 @@ $ bcftools view -q 0.01:minor data.vcf.gz -Ov -o out.vcf
 - Remove by minor allele frequency.
 ```
 $ bcftools view -i 'MAF > 0.01' data.vcf.gz -Ov -o out.vcf
+```
+- Remove monomorphic sites
+```
+$ bcftools view -c 1 data.vcf.gz -Ov -o out.vcf
+```
+- Remove multi-allele
+```
+$ bcftools norm -d all data.vcf.gz -Ov -o out.vcf
 ```
 
 # Query
