@@ -167,6 +167,12 @@ $  bcftools annotate --set-id +'%CHROM\_%POS\_%REF\_%FIRST_ALT' data.vcf.gz
 $ for i in {1..22} X Y;do echo "chr${i} ${i}";done > rename_chrm.txt
 $ bcftools annotate data.vcf.gz --rename-chrs rename_chrm.txt -Oz -o data_renamed.vcf.gz
 ```
+# Rename samples
+```
+$ bcftools query -l data.vcf.gz | awk '{print $1"\tPre"$1}' > rename.lst
+$ bcftools reheader -s rename.lst data.vcf.gz -o data_renamed.vcf.gz
+```
+
 
 # Extract haplotype
 ```
