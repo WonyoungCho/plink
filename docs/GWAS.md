@@ -116,8 +116,8 @@ $ plink2 --bfile ft_ped --extract plink2.prune.in --make-bed --out ft_ld
 ```
 - Recombination unit is CM(centi-morgan). It is approximately 1 Mb. So LD should be within the size.
 - R2 : to remove SNPs if R2 is not less than 0.7.
-> - plink2.prune.in : R2 < 0.7
-> - plink2.prune.out : R2 >= 0.7
+> - plink2.prune.in : R2 >= 0.7
+> - plink2.prune.out : R2 < 0.7
 - VIF = 1 : completely independent
 - VIF = 2~10 : usual cut-off
 
