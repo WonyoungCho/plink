@@ -26,6 +26,8 @@ $ plilnk2 --bfile data --recode vcf --out data.vcf
 ## Update variant informatino
 ```
 $ plink2 --bfile data --set-all-var-ids @_#_\$r_\$a --make-bed --out data_up
+or
+$ plink2 --bfile data --set-missing-var-ids @_#_\$r_\$a --make-bed --out data_up # only for missing variants
 ```
 <https://www.cog-genomics.org/plink/2.0/data#set_all_var_ids>
 
