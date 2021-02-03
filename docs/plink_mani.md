@@ -23,6 +23,13 @@ $ plink --vcf data.vcf --keep-allele-order --indiv-sort file SampleOrder.lst --v
 $ plilnk2 --bfile data --recode vcf --out data.vcf
 ```
 
+## Update variant informatino
+```
+$ plink2 --bfile data --set-all-var-ids @_#_\$r_\$a --make-bed --out data_up
+```
+<https://www.cog-genomics.org/plink/2.0/data#set_all_var_ids>
+
+
 ## Genetic map
 - insert cM in bim file
 <https://www.cog-genomics.org/plink/1.9/input#cm_map>
