@@ -436,6 +436,8 @@ $ less plink.assoc.logistic
 ```
 # LD calculation
 
+D': If D'=0.8, it means that basically the two SNPs are coinherited roughly 80% of the time.
+
 <http://zzz.bwh.harvard.edu/plink/ld.shtml>
 
 ```
