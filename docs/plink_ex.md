@@ -437,6 +437,7 @@ $ less plink.assoc.logistic
 # LD calculation
 
 D': If D'=0.8, it means that basically the two SNPs are coinherited roughly 80% of the time.
+<https://www.researchgate.net/post/I-have-Linkage-Disequilibrium-LD-data-for-two-SNPs-r2-is-about-014-D-is-around-08-Could-these-SNPs-be-said-to-be-in-strong-LD>
 
 <http://zzz.bwh.harvard.edu/plink/ld.shtml>
 
