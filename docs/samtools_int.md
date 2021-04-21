@@ -45,6 +45,8 @@ $ samtools tview -p chr22 myfile.bam hg38.fa
 ```
 - g : `goto` =10000
 - <http://blog.xyxu.top/2017-07-26-samtools-tview.html>
+- Underline: Secondary or orphan
+- Base quality : Blue(0-9) Green(10-19), Yellow(20-29), White(>=30)
 
 # Extract
 ```
