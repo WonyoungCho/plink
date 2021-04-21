@@ -44,6 +44,7 @@ $ samtools tview -p chr22 myfile.bam hg38.fa
 22758816
 ```
 - g : `goto` =10000
+- <http://blog.xyxu.top/2017-07-26-samtools-tview.html>
 
 # Extract
 ```
