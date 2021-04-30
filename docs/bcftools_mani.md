@@ -8,6 +8,8 @@
 
 # Preparation
 ```
+$ wget https://github.com/samtools/bcftools/releases/download/1.12/bcftools-1.12.tar.bz2
+$ tar -jxvf bcftools-1.12.tar.bz2
 $ bgzip -c data.vcf > data.vcf.gz && tabix -p vcf data.vcf.gz # data.vcf.gz.tbi
 $ bcftools view data.vcf -Oz -o data.vcf.gz && bcftools index data.vcf.gz (-c) # default : -c, data.vcf.gz.csi
 $ bcftools view data.vcf -Oz -o data.vcf.gz && bcftools index data.vcf.gz -t # data.vcf.gz.tbi
