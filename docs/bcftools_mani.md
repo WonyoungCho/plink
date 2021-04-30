@@ -1,5 +1,6 @@
 **BCFtools** is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.
 
+- Homepage : <http://www.htslib.org/>
 - GitHub : <https://github.com/samtools/bcftools>
 - Manual : <http://samtools.github.io/bcftools/bcftools.html>
 - Document : <https://samtools.github.io/bcftools/howtos/index.html>
