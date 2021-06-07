@@ -131,5 +131,5 @@ X 10000000 20000000 R3
 
 ## Make contig
 ```
-$ awk '!/^#/ { a[$1]++ } END {for (i in a) print i,a[i]}' data.vcf|sort -V|awk '{print "##contig=<ID=chr"$1",length="$2">"}'
+$ awk '!/^#/ { a[$1]++ } END {for (i in a) print i,a[i]}' data.vcf|sort -V|awk '{print "##contig=<ID="$1",length="$2">"}'
 ```
