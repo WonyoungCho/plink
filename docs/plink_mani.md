@@ -128,3 +128,8 @@ For example,
 X 10000000 20000000 R3
 ```
 <https://www.cog-genomics.org/plink/1.9/filter#snp>
+
+## Make contig
+```
+$ awk '!/^#/ { a[$1]++ } END {for (i in a) print i,a[i]}' data.vcf|sort -V|awk '{print "##contig=<ID=chr"$1",length="$2">"}'
+```
