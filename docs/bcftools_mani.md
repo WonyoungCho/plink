@@ -80,6 +80,11 @@ Options:
 
 <https://github.com/samtools/bcftools/blob/develop/doc/bcftools.txt>
 
+# Fill 0/0 to ./.
+```
+$ bcftools +setGT sample_test.vcf.gz -Oz -o sample_test_filled.vcf.gz -- -t . -n 0
+```
+
 # Add allele frequency
 ```
 $ bcftools +fill-tags data.vcf.gz -Ov -o out.vcf -- -t AF
