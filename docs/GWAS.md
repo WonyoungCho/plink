@@ -2,7 +2,7 @@
 
 As a prior to analyze data, QC (quality control) is needed.
 
-I have been using [**plink**](https://www.cog-genomics.org/plink/2.0/) for QC and **python** for showwing data.
+I have been using [**plink**](https://www.cog-genomics.org/plink/2.0/) for QC and **python** for manipulating data.
 
 If you have *vcf* files instead of plink formated files, then convert to plink format.
 
